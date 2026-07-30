@@ -1,0 +1,58 @@
+name: Scrape Azure model catalogs
+
+on:
+  schedule:
+    # Every day at 01:00 UTC — staggered from the AWS (00:00) and Google (02:00)
+    # workflows so they don't race on the commit/push. Cron is best-effort;
+    # exact timing isn't important for a daily snapshot.
+    - cron: "0 1 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write # push the updated snapshots back to the repo
+
+# Never run two Azure scrapes concurrently (a manual run during a scheduled one
+# would otherwise race on the commit/push).
+concurrency:
+  group: scrape-azure
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@08807647e7069bb48b6ef5acd8ec9567f424441b # v8.1.0
+        with:
+          # Cache downloaded wheels between runs; key on the scripts' inline
+          # (PEP 723) dependency blocks so it invalidates when deps change.
+          enable-cache: true
+          cache-dependency-glob: "scripts/providers/azure/*.py"
+
+      # The Foundry catalog API is anonymous — no credentials needed at all.
+      - name: Scrape Foundry MaaS models
+        run: uv run scripts/providers/azure/list_foundry_models.py
+
+      - name: Stage and summarize changes
+        id: summary
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/providers/azure
+          if git diff --staged --quiet; then
+            echo "No catalog changes."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+          # Deterministic commit message: counts in the subject, ids in the body.
+          python3 scripts/diff_summary.py data/providers/azure/foundry_models.json --title "Azure model catalogs" > "$RUNNER_TEMP/commit_msg.txt"
+
+      - name: Commit and push
+        if: steps.summary.outputs.changed == 'true'
+        run: |
+          git commit -F "$RUNNER_TEMP/commit_msg.txt"
+          git pull --rebase --autostash
+          git push

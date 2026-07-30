@@ -1,0 +1,123 @@
+region,modelId,modelName,providerName,startOfLifeTime,status
+us-east-1,amazon.titan-embed-g1-text-02,Titan Text Embeddings v2,Amazon,2023-11-29,ACTIVE
+us-east-1,amazon.titan-embed-image-v1,Titan Multimodal Embeddings G1,Amazon,2023-11-29,ACTIVE
+us-east-1,amazon.titan-embed-image-v1:0,Titan Multimodal Embeddings G1,Amazon,2023-11-29,ACTIVE
+us-east-1,mistral.mistral-7b-instruct-v0:2,Mistral 7B Instruct,Mistral AI,2024-03-01,ACTIVE
+us-east-1,mistral.mixtral-8x7b-instruct-v0:1,Mixtral 8x7B Instruct,Mistral AI,2024-03-01,ACTIVE
+us-east-1,anthropic.claude-3-sonnet-20240229-v1:0,Claude 3 Sonnet,Anthropic,2024-03-04,LEGACY
+us-east-1,anthropic.claude-3-sonnet-20240229-v1:0:200k,Claude 3 Sonnet,Anthropic,2024-03-04,LEGACY
+us-east-1,anthropic.claude-3-sonnet-20240229-v1:0:28k,Claude 3 Sonnet,Anthropic,2024-03-04,LEGACY
+us-east-1,anthropic.claude-3-haiku-20240307-v1:0,Claude 3 Haiku,Anthropic,2024-03-13,LEGACY
+us-east-1,anthropic.claude-3-haiku-20240307-v1:0:200k,Claude 3 Haiku,Anthropic,2024-03-13,LEGACY
+us-east-1,anthropic.claude-3-haiku-20240307-v1:0:48k,Claude 3 Haiku,Anthropic,2024-03-13,LEGACY
+us-east-1,mistral.mistral-large-2402-v1:0,Mistral Large (24.02),Mistral AI,2024-04-03,ACTIVE
+us-east-1,meta.llama3-70b-instruct-v1:0,Llama 3 70B Instruct,Meta,2024-04-23,ACTIVE
+us-east-1,meta.llama3-8b-instruct-v1:0,Llama 3 8B Instruct,Meta,2024-04-23,ACTIVE
+us-east-1,amazon.titan-embed-text-v2:0,Titan Text Embeddings V2,Amazon,2024-04-30,ACTIVE
+us-east-1,amazon.titan-embed-text-v2:0:8k,Titan Text Embeddings V2,Amazon,2024-04-30,ACTIVE
+us-east-1,cohere.command-r-plus-v1:0,Command R+,Cohere,2024-04-30,LEGACY
+us-east-1,cohere.command-r-v1:0,Command R,Cohere,2024-04-30,LEGACY
+us-east-1,mistral.mistral-small-2402-v1:0,Mistral Small (24.02),Mistral AI,2024-05-24,ACTIVE
+us-east-1,meta.llama3-1-70b-instruct-v1:0,Llama 3.1 70B Instruct,Meta,2024-07-23,ACTIVE
+us-east-1,meta.llama3-1-8b-instruct-v1:0,Llama 3.1 8B Instruct,Meta,2024-07-23,ACTIVE
+us-east-1,ai21.jamba-1-5-large-v1:0,Jamba 1.5 Large,AI21 Labs,2024-09-23,LEGACY
+us-east-1,ai21.jamba-1-5-mini-v1:0,Jamba 1.5 Mini,AI21 Labs,2024-09-23,LEGACY
+us-east-1,cohere.rerank-v3-5:0,Rerank 3.5,Cohere,2024-12-01,ACTIVE
+us-east-1,amazon.nova-pro-v1:0,Nova Pro,Amazon,2024-12-03,ACTIVE
+us-east-1,amazon.nova-pro-v1:0:24k,Nova Pro,Amazon,2024-12-03,ACTIVE
+us-east-1,amazon.nova-pro-v1:0:300k,Nova Pro,Amazon,2024-12-03,ACTIVE
+us-east-1,amazon.nova-lite-v1:0,Nova Lite,Amazon,2024-12-03,ACTIVE
+us-east-1,amazon.nova-lite-v1:0:24k,Nova Lite,Amazon,2024-12-03,ACTIVE
+us-east-1,amazon.nova-lite-v1:0:300k,Nova Lite,Amazon,2024-12-03,ACTIVE
+us-east-1,amazon.nova-micro-v1:0,Nova Micro,Amazon,2024-12-03,ACTIVE
+us-east-1,amazon.nova-micro-v1:0:128k,Nova Micro,Amazon,2024-12-03,ACTIVE
+us-east-1,amazon.nova-micro-v1:0:24k,Nova Micro,Amazon,2024-12-03,ACTIVE
+us-east-1,amazon.nova-reel-v1:0,Nova Reel,Amazon,2024-12-03,LEGACY
+us-east-1,amazon.nova-reel-v1:1,Nova Reel,Amazon,2024-12-03,LEGACY
+us-east-1,meta.llama3-3-70b-instruct-v1:0,Llama 3.3 70B Instruct,Meta,2024-12-19,ACTIVE
+us-east-1,cohere.embed-english-v3,Embed English,Cohere,2025-01-24,ACTIVE
+us-east-1,cohere.embed-english-v3:0:512,Embed English,Cohere,2025-01-24,ACTIVE
+us-east-1,cohere.embed-multilingual-v3,Embed Multilingual,Cohere,2025-01-24,ACTIVE
+us-east-1,cohere.embed-multilingual-v3:0:512,Embed Multilingual,Cohere,2025-01-24,ACTIVE
+us-east-1,amazon.nova-canvas-v1:0,Nova Canvas,Amazon,2025-02-18,LEGACY
+us-east-1,deepseek.r1-v1:0,DeepSeek-R1,DeepSeek,2025-03-10,ACTIVE
+us-east-1,amazon.titan-embed-text-v1,Titan Embeddings G1 - Text,Amazon,2025-04-03,ACTIVE
+us-east-1,amazon.titan-embed-text-v1:2:8k,Titan Embeddings G1 - Text,Amazon,2025-04-03,ACTIVE
+us-east-1,amazon.nova-sonic-v1:0,Nova Sonic,Amazon,2025-04-08,LEGACY
+us-east-1,mistral.pixtral-large-2502-v1:0,Pixtral Large (25.02),Mistral AI,2025-04-08,ACTIVE
+us-east-1,meta.llama4-maverick-17b-instruct-v1:0,Llama 4 Maverick 17B Instruct,Meta,2025-04-28,ACTIVE
+us-east-1,meta.llama4-scout-17b-instruct-v1:0,Llama 4 Scout 17B Instruct,Meta,2025-04-28,ACTIVE
+us-east-1,amazon.nova-premier-v1:0,Nova Premier,Amazon,2025-04-30,LEGACY
+us-east-1,amazon.nova-premier-v1:0:1000k,Nova Premier,Amazon,2025-04-30,LEGACY
+us-east-1,amazon.nova-premier-v1:0:20k,Nova Premier,Amazon,2025-04-30,LEGACY
+us-east-1,amazon.nova-premier-v1:0:8k,Nova Premier,Amazon,2025-04-30,LEGACY
+us-east-1,amazon.nova-premier-v1:0:mm,Nova Premier,Amazon,2025-04-30,LEGACY
+us-east-1,anthropic.claude-sonnet-4-20250514-v1:0,Claude Sonnet 4,Anthropic,2025-05-22,LEGACY
+us-east-1,twelvelabs.marengo-embed-2-7-v1:0,Marengo Embed v2.7,TwelveLabs,2025-07-15,LEGACY
+us-east-1,anthropic.claude-opus-4-1-20250805-v1:0,Claude Opus 4.1,Anthropic,2025-08-05,LEGACY
+us-east-1,openai.gpt-oss-120b-1:0,gpt-oss-120b,OpenAI,2025-08-06,ACTIVE
+us-east-1,openai.gpt-oss-20b-1:0,gpt-oss-20b,OpenAI,2025-08-06,ACTIVE
+us-east-1,stability.stable-conservative-upscale-v1:0,Stable Image Conservative Upscale,Stability AI,2025-09-03,ACTIVE
+us-east-1,stability.stable-creative-upscale-v1:0,Stable Image Creative Upscale,Stability AI,2025-09-03,ACTIVE
+us-east-1,stability.stable-fast-upscale-v1:0,Stable Image Fast Upscale,Stability AI,2025-09-03,ACTIVE
+us-east-1,stability.stable-image-control-sketch-v1:0,Stable Image Control Sketch,Stability AI,2025-09-03,ACTIVE
+us-east-1,stability.stable-image-control-structure-v1:0,Stable Image Control Structure,Stability AI,2025-09-03,ACTIVE
+us-east-1,stability.stable-image-erase-object-v1:0,Stable Image Erase Object,Stability AI,2025-09-03,ACTIVE
+us-east-1,stability.stable-image-inpaint-v1:0,Stable Image Inpaint,Stability AI,2025-09-03,ACTIVE
+us-east-1,stability.stable-image-remove-background-v1:0,Stable Image Remove Background,Stability AI,2025-09-03,ACTIVE
+us-east-1,stability.stable-image-search-recolor-v1:0,Stable Image Search and Recolor,Stability AI,2025-09-03,ACTIVE
+us-east-1,stability.stable-image-search-replace-v1:0,Stable Image Search and Replace,Stability AI,2025-09-03,ACTIVE
+us-east-1,stability.stable-image-style-guide-v1:0,Stable Image Style Guide,Stability AI,2025-09-03,ACTIVE
+us-east-1,stability.stable-outpaint-v1:0,Stable Image Outpaint,Stability AI,2025-09-03,ACTIVE
+us-east-1,stability.stable-style-transfer-v1:0,Stable Image Style Transfer,Stability AI,2025-09-03,ACTIVE
+us-east-1,qwen.qwen3-32b-v1:0,Qwen3 32B (dense),Qwen,2025-09-15,ACTIVE
+us-east-1,qwen.qwen3-coder-30b-a3b-v1:0,Qwen3-Coder-30B-A3B-Instruct,Qwen,2025-09-15,ACTIVE
+us-east-1,anthropic.claude-sonnet-4-5-20250929-v1:0,Claude Sonnet 4.5,Anthropic,2025-09-29,ACTIVE
+us-east-1,cohere.embed-v4:0,Embed v4,Cohere,2025-10-02,ACTIVE
+us-east-1,anthropic.claude-haiku-4-5-20251001-v1:0,Claude Haiku 4.5,Anthropic,2025-10-15,ACTIVE
+us-east-1,amazon.nova-2-multimodal-embeddings-v1:0,Amazon Nova Multimodal Embeddings,Amazon,2025-10-28,ACTIVE
+us-east-1,twelvelabs.marengo-embed-3-0-v1:0,Marengo Embed 3.0,TwelveLabs,2025-10-28,ACTIVE
+us-east-1,writer.palmyra-x4-v1:0,Palmyra X4,Writer,2025-11-21,ACTIVE
+us-east-1,writer.palmyra-x5-v1:0,Palmyra X5,Writer,2025-11-21,ACTIVE
+us-east-1,anthropic.claude-opus-4-5-20251101-v1:0,Claude Opus 4.5,Anthropic,2025-11-24,ACTIVE
+us-east-1,google.gemma-3-12b-it,Gemma 3 12B IT,Google,2025-12-02,ACTIVE
+us-east-1,google.gemma-3-27b-it,Gemma 3 27B PT,Google,2025-12-02,ACTIVE
+us-east-1,google.gemma-3-4b-it,Gemma 3 4B IT,Google,2025-12-02,ACTIVE
+us-east-1,minimax.minimax-m2,MiniMax M2,MiniMax,2025-12-02,ACTIVE
+us-east-1,mistral.magistral-small-2509,Magistral Small 2509,Mistral AI,2025-12-02,ACTIVE
+us-east-1,mistral.ministral-3-14b-instruct,Ministral 14B 3.0,Mistral AI,2025-12-02,ACTIVE
+us-east-1,mistral.ministral-3-3b-instruct,Ministral 3B,Mistral AI,2025-12-02,ACTIVE
+us-east-1,mistral.ministral-3-8b-instruct,Ministral 3 8B,Mistral AI,2025-12-02,ACTIVE
+us-east-1,mistral.mistral-large-3-675b-instruct,Mistral Large 3,Mistral AI,2025-12-02,ACTIVE
+us-east-1,mistral.voxtral-mini-3b-2507,Voxtral Mini 3B 2507,Mistral AI,2025-12-02,ACTIVE
+us-east-1,mistral.voxtral-small-24b-2507,Voxtral Small 24B 2507,Mistral AI,2025-12-02,ACTIVE
+us-east-1,moonshot.kimi-k2-thinking,Kimi K2 Thinking,Moonshot AI,2025-12-02,ACTIVE
+us-east-1,nvidia.nemotron-nano-12b-v2,NVIDIA Nemotron Nano 12B v2 VL BF16,NVIDIA,2025-12-02,ACTIVE
+us-east-1,nvidia.nemotron-nano-9b-v2,NVIDIA Nemotron Nano 9B v2,NVIDIA,2025-12-02,ACTIVE
+us-east-1,openai.gpt-oss-safeguard-120b,GPT OSS Safeguard 120B,OpenAI,2025-12-02,ACTIVE
+us-east-1,openai.gpt-oss-safeguard-20b,GPT OSS Safeguard 20B,OpenAI,2025-12-02,ACTIVE
+us-east-1,qwen.qwen3-next-80b-a3b,Qwen3 Next 80B A3B,Qwen,2025-12-02,ACTIVE
+us-east-1,qwen.qwen3-vl-235b-a22b,Qwen3 VL 235B A22B,Qwen,2025-12-02,ACTIVE
+us-east-1,amazon.nova-2-lite-v1:0,Nova 2 Lite,Amazon,2025-12-02,ACTIVE
+us-east-1,amazon.nova-2-lite-v1:0:256k,Nova 2 Lite,Amazon,2025-12-02,ACTIVE
+us-east-1,amazon.nova-2-sonic-v1:0,Nova 2 Sonic,Amazon,2025-12-02,ACTIVE
+us-east-1,twelvelabs.pegasus-1-2-v1:0,Pegasus v1.2,TwelveLabs,2025-12-16,ACTIVE
+us-east-1,nvidia.nemotron-nano-3-30b,Nemotron Nano 3 30B,NVIDIA,2025-12-23,ACTIVE
+us-east-1,anthropic.claude-opus-4-6-v1,Claude Opus 4.6,Anthropic,2026-02-05,ACTIVE
+us-east-1,deepseek.v3.2,DeepSeek V3.2,DeepSeek,2026-02-06,ACTIVE
+us-east-1,minimax.minimax-m2.1,MiniMax M2.1,MiniMax,2026-02-06,ACTIVE
+us-east-1,moonshotai.kimi-k2.5,Kimi K2.5,Moonshot AI,2026-02-06,ACTIVE
+us-east-1,qwen.qwen3-coder-next,Qwen3 Coder Next,Qwen,2026-02-06,ACTIVE
+us-east-1,zai.glm-4.7,GLM 4.7,Z.AI,2026-02-06,ACTIVE
+us-east-1,zai.glm-4.7-flash,GLM 4.7 Flash,Z.AI,2026-02-06,ACTIVE
+us-east-1,anthropic.claude-sonnet-4-6,Claude Sonnet 4.6,Anthropic,2026-02-17,ACTIVE
+us-east-1,mistral.devstral-2-123b,Devstral 2 123B,Mistral AI,2026-02-17,ACTIVE
+us-east-1,minimax.minimax-m2.5,MiniMax M2.5,MiniMax,2026-03-18,ACTIVE
+us-east-1,nvidia.nemotron-super-3-120b,NVIDIA Nemotron 3 Super 120B A12B,NVIDIA,2026-03-18,ACTIVE
+us-east-1,zai.glm-5,GLM 5,Z.AI,2026-03-18,ACTIVE
+us-east-1,writer.palmyra-vision-7b,Writer Palmyra Vision 7B,Writer,2026-03-20,ACTIVE
+us-east-1,anthropic.claude-opus-4-7,Claude Opus 4.7,Anthropic,2026-04-16,ACTIVE
+us-east-1,anthropic.claude-opus-4-8,Claude Opus 4.8,Anthropic,2026-05-28,ACTIVE
+us-east-1,anthropic.claude-fable-5,Claude Fable 5,Anthropic,2026-06-09,ACTIVE
+us-east-1,anthropic.claude-sonnet-5,Claude Sonnet 5,Anthropic,2026-06-30,ACTIVE
+us-east-1,anthropic.claude-opus-5,Claude Opus 5,Anthropic,2026-07-23,ACTIVE

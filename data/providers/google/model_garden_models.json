@@ -1,0 +1,244 @@
+{
+  "us-central1": {
+    "meta/llama-3.3-70b-instruct-maas": {
+      "name": "publishers/meta/models/llama-3.3-70b-instruct-maas",
+      "versionId": "001",
+      "launchStage": "GA",
+      "openSourceCategory": "THIRD_PARTY_OWNED_OSS",
+      "publisherModelTemplate": "projects/{project}/locations/{location}/publishers/google/models/llama-3.3-70b-instruct-maas@001"
+    },
+    "mistralai/mistral-small-2503": {
+      "name": "publishers/mistralai/models/mistral-small-2503",
+      "versionId": "001",
+      "launchStage": "GA",
+      "openSourceCategory": "THIRD_PARTY_OWNED_OSS",
+      "publisherModelTemplate": "projects/{project}/locations/{location}/publishers/google/models/mistral-small-2503@001"
+    },
+    "qwen/qwen3-coder-480b-a35b-instruct-maas": {
+      "name": "publishers/qwen/models/qwen3-coder-480b-a35b-instruct-maas",
+      "versionId": "001",
+      "launchStage": "GA",
+      "openSourceCategory": "THIRD_PARTY_OWNED_OSS",
+      "publisherModelTemplate": "projects/{project}/locations/{location}/publishers/google/models/qwen3-coder-480b-a35b-instruct-maas@001"
+    },
+    "meta/llama-4-maverick-17b-128e-instruct-maas": {
+      "name": "publishers/meta/models/llama-4-maverick-17b-128e-instruct-maas",
+      "versionId": "001",
+      "launchStage": "GA",
+      "openSourceCategory": "THIRD_PARTY_OWNED_OSS"
+    },
+    "mistralai/mistral-medium-3": {
+      "name": "publishers/mistralai/models/mistral-medium-3",
+      "versionId": "001",
+      "launchStage": "GA",
+      "openSourceCategory": "PROPRIETARY",
+      "publisherModelTemplate": "projects/{project}/locations/{location}/publishers/google/models/mistral-medium-3@001"
+    },
+    "mistralai/mistral-ocr-2505": {
+      "name": "publishers/mistralai/models/mistral-ocr-2505",
+      "versionId": "001",
+      "launchStage": "GA",
+      "openSourceCategory": "PROPRIETARY",
+      "publisherModelTemplate": "projects/{project}/locations/{location}/publishers/google/models/mistral-ocr-2505@001"
+    },
+    "deepseek-ai/deepseek-r1-0528-maas": {
+      "name": "publishers/deepseek-ai/models/deepseek-r1-0528-maas",
+      "versionId": "001",
+      "launchStage": "GA",
+      "openSourceCategory": "THIRD_PARTY_OWNED_OSS",
+      "publisherModelTemplate": "projects/{project}/locations/{location}/publishers/google/models/deepseek-r1-0528-maas@001"
+    },
+    "qwen/qwen3-235b-a22b-instruct-2507-maas": {
+      "name": "publishers/qwen/models/qwen3-235b-a22b-instruct-2507-maas",
+      "versionId": "001",
+      "launchStage": "GA",
+      "openSourceCategory": "THIRD_PARTY_OWNED_OSS",
+      "publisherModelTemplate": "projects/{project}/locations/{location}/publishers/google/models/qwen3-235b-a22b-instruct-2507-maas@001"
+    },
+    "anthropic/claude-opus-4-1": {
+      "name": "publishers/anthropic/models/claude-opus-4-1",
+      "versionId": "20250805",
+      "launchStage": "GA",
+      "openSourceCategory": "PROPRIETARY"
+    },
+    "openai/gpt-oss-120b-maas": {
+      "name": "publishers/openai/models/gpt-oss-120b-maas",
+      "versionId": "001",
+      "launchStage": "GA",
+      "openSourceCategory": "THIRD_PARTY_OWNED_OSS",
+      "publisherModelTemplate": "projects/{project}/locations/{location}/publishers/google/models/gpt-oss-120b-maas@001"
+    },
+    "deepseek-ai/deepseek-v3.1-maas": {
+      "name": "publishers/deepseek-ai/models/deepseek-v3.1-maas",
+      "versionId": "001",
+      "launchStage": "GA",
+      "openSourceCategory": "THIRD_PARTY_OWNED_OSS",
+      "publisherModelTemplate": "projects/{project}/locations/{location}/publishers/google/models/deepseek-v3.1-maas@001"
+    },
+    "qwen/qwen3-next-80b-a3b-instruct-maas": {
+      "name": "publishers/qwen/models/qwen3-next-80b-a3b-instruct-maas",
+      "versionId": "001",
+      "launchStage": "GA",
+      "openSourceCategory": "THIRD_PARTY_OWNED_OSS",
+      "publisherModelTemplate": "projects/{project}/locations/{location}/publishers/google/models/qwen3-next-80b-a3b-instruct-maas@001"
+    },
+    "qwen/qwen3-next-80b-a3b-thinking-maas": {
+      "name": "publishers/qwen/models/qwen3-next-80b-a3b-thinking-maas",
+      "versionId": "001",
+      "launchStage": "GA",
+      "openSourceCategory": "THIRD_PARTY_OWNED_OSS",
+      "publisherModelTemplate": "projects/{project}/locations/{location}/publishers/google/models/qwen3-next-80b-a3b-thinking-maas@001"
+    },
+    "intfloat/multilingual-e5-large-instruct-maas": {
+      "name": "publishers/intfloat/models/multilingual-e5-large-instruct-maas",
+      "versionId": "001",
+      "launchStage": "GA",
+      "openSourceCategory": "THIRD_PARTY_OWNED_OSS",
+      "publisherModelTemplate": "projects/{project}/locations/{location}/publishers/google/models/multilingual-e5-large-instruct-maas@001"
+    },
+    "anthropic/claude-sonnet-4-5": {
+      "name": "publishers/anthropic/models/claude-sonnet-4-5",
+      "versionId": "20250929",
+      "launchStage": "GA",
+      "openSourceCategory": "PROPRIETARY"
+    },
+    "anthropic/claude-haiku-4-5": {
+      "name": "publishers/anthropic/models/claude-haiku-4-5",
+      "versionId": "20251001",
+      "launchStage": "GA",
+      "openSourceCategory": "PROPRIETARY"
+    },
+    "mistralai/codestral-2": {
+      "name": "publishers/mistralai/models/codestral-2",
+      "versionId": "001",
+      "launchStage": "GA",
+      "openSourceCategory": "PROPRIETARY",
+      "publisherModelTemplate": "projects/{project}/locations/{location}/publishers/google/models/codestral-2@001"
+    },
+    "deepseek-ai/deepseek-ocr-maas": {
+      "name": "publishers/deepseek-ai/models/deepseek-ocr-maas",
+      "versionId": "001",
+      "launchStage": "GA",
+      "openSourceCategory": "THIRD_PARTY_OWNED_OSS",
+      "publisherModelTemplate": "projects/{project}/locations/{location}/publishers/google/models/deepseek-ocr-maas@001"
+    },
+    "minimaxai/minimax-m2-maas": {
+      "name": "publishers/minimaxai/models/minimax-m2-maas",
+      "versionId": "001",
+      "launchStage": "GA",
+      "openSourceCategory": "THIRD_PARTY_OWNED_OSS",
+      "publisherModelTemplate": "projects/{project}/locations/{location}/publishers/google/models/minimax-m2-maas@001"
+    },
+    "moonshotai/kimi-k2-thinking-maas": {
+      "name": "publishers/moonshotai/models/kimi-k2-thinking-maas",
+      "versionId": "001",
+      "launchStage": "GA",
+      "openSourceCategory": "THIRD_PARTY_OWNED_OSS",
+      "publisherModelTemplate": "projects/{project}/locations/{location}/publishers/google/models/kimi-k2-thinking-maas@001"
+    },
+    "xai/grok-4.1-fast-non-reasoning": {
+      "name": "publishers/xai/models/grok-4.1-fast-non-reasoning",
+      "versionId": "001",
+      "launchStage": "EXPERIMENTAL",
+      "openSourceCategory": "PROPRIETARY",
+      "publisherModelTemplate": "projects/{project}/locations/{location}/publishers/google/models/grok-4.1-fast-non-reasoning@001"
+    },
+    "xai/grok-4.1-fast-reasoning": {
+      "name": "publishers/xai/models/grok-4.1-fast-reasoning",
+      "versionId": "001",
+      "launchStage": "EXPERIMENTAL",
+      "openSourceCategory": "PROPRIETARY",
+      "publisherModelTemplate": "projects/{project}/locations/{location}/publishers/google/models/grok-4.1-fast-reasoning@001"
+    },
+    "anthropic/claude-opus-4-5": {
+      "name": "publishers/anthropic/models/claude-opus-4-5",
+      "versionId": "20251101",
+      "launchStage": "GA",
+      "openSourceCategory": "PROPRIETARY"
+    },
+    "deepseek-ai/deepseek-v3.2-maas": {
+      "name": "publishers/deepseek-ai/models/deepseek-v3.2-maas",
+      "versionId": "001",
+      "launchStage": "GA",
+      "openSourceCategory": "THIRD_PARTY_OWNED_OSS",
+      "publisherModelTemplate": "projects/{project}/locations/{location}/publishers/google/models/deepseek-v3.2-maas@001"
+    },
+    "zai-org/glm-4.7-maas": {
+      "name": "publishers/zai-org/models/glm-4.7-maas",
+      "versionId": "001",
+      "launchStage": "GA",
+      "openSourceCategory": "THIRD_PARTY_OWNED_OSS",
+      "publisherModelTemplate": "projects/{project}/locations/{location}/publishers/google/models/glm-4.7-maas@001"
+    },
+    "anthropic/claude-opus-4-6": {
+      "name": "publishers/anthropic/models/claude-opus-4-6",
+      "versionId": "default",
+      "launchStage": "GA",
+      "openSourceCategory": "PROPRIETARY"
+    },
+    "zai-org/glm-5-maas": {
+      "name": "publishers/zai-org/models/glm-5-maas",
+      "versionId": "001",
+      "launchStage": "EXPERIMENTAL",
+      "openSourceCategory": "THIRD_PARTY_OWNED_OSS",
+      "publisherModelTemplate": "projects/{project}/locations/{location}/publishers/google/models/glm-5-maas@001"
+    },
+    "anthropic/claude-sonnet-4-6": {
+      "name": "publishers/anthropic/models/claude-sonnet-4-6",
+      "versionId": "default",
+      "launchStage": "GA",
+      "openSourceCategory": "PROPRIETARY"
+    },
+    "xai/grok-4.20-non-reasoning": {
+      "name": "publishers/xai/models/grok-4.20-non-reasoning",
+      "versionId": "001",
+      "launchStage": "GA",
+      "openSourceCategory": "PROPRIETARY",
+      "publisherModelTemplate": "projects/{project}/locations/{location}/publishers/google/models/grok-4.20-non-reasoning@001"
+    },
+    "xai/grok-4.20-reasoning": {
+      "name": "publishers/xai/models/grok-4.20-reasoning",
+      "versionId": "001",
+      "launchStage": "GA",
+      "openSourceCategory": "PROPRIETARY",
+      "publisherModelTemplate": "projects/{project}/locations/{location}/publishers/google/models/grok-4.20-reasoning@001"
+    },
+    "anthropic/claude-opus-4-7": {
+      "name": "publishers/anthropic/models/claude-opus-4-7",
+      "versionId": "default",
+      "launchStage": "GA",
+      "openSourceCategory": "PROPRIETARY"
+    },
+    "xai/grok-4.3": {
+      "name": "publishers/xai/models/grok-4.3",
+      "versionId": "001",
+      "launchStage": "EXPERIMENTAL",
+      "openSourceCategory": "PROPRIETARY",
+      "publisherModelTemplate": "projects/{project}/locations/{location}/publishers/google/models/grok-4.3@001"
+    },
+    "anthropic/claude-opus-4-8": {
+      "name": "publishers/anthropic/models/claude-opus-4-8",
+      "versionId": "default",
+      "launchStage": "GA",
+      "openSourceCategory": "PROPRIETARY"
+    },
+    "anthropic/claude-fable-5": {
+      "name": "publishers/anthropic/models/claude-fable-5",
+      "versionId": "default",
+      "launchStage": "GA",
+      "openSourceCategory": "PROPRIETARY"
+    },
+    "anthropic/claude-sonnet-5": {
+      "name": "publishers/anthropic/models/claude-sonnet-5",
+      "versionId": "default",
+      "launchStage": "GA",
+      "openSourceCategory": "PROPRIETARY"
+    },
+    "anthropic/claude-opus-5": {
+      "name": "publishers/anthropic/models/claude-opus-5",
+      "versionId": "default",
+      "launchStage": "GA",
+      "openSourceCategory": "PROPRIETARY"
+    }
+  }
+}

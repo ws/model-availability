@@ -1,0 +1,78 @@
+name: Scrape Google model catalogs
+
+on:
+  schedule:
+    # Every day at 02:00 UTC — staggered from the AWS workflow (00:00) so the
+    # two don't race on the commit/push. Cron is best-effort; exact timing isn't
+    # important for a daily snapshot.
+    - cron: "0 2 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write # push the updated snapshots back to the repo
+  id-token: write # mint the OIDC token for Workload Identity Federation
+
+# Never run two Google scrapes concurrently (a manual run during a scheduled one
+# would otherwise race on the commit/push).
+concurrency:
+  group: scrape-google
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    env:
+      # Quota/billing project — an identifier, not a credential (repo variable).
+      GOOGLE_CLOUD_PROJECT: ${{ vars.GOOGLE_CLOUD_PROJECT }}
+    steps:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+
+      # OIDC via Workload Identity Federation — keyless, the GCP analog of the
+      # AWS role. Exports ADC (GOOGLE_APPLICATION_CREDENTIALS) that the Model
+      # Garden scraper's google.auth.default() picks up. No service-account key
+      # stored in the repo.
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@7c6bc770dae815cd3e89ee6cdf493a5fab2cc093 # v3
+        with:
+          workload_identity_provider: ${{ secrets.GCP_WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@08807647e7069bb48b6ef5acd8ec9567f424441b # v8.1.0
+        with:
+          # Cache downloaded wheels between runs; key on the scripts' inline
+          # (PEP 723) dependency blocks so it invalidates when deps change.
+          enable-cache: true
+          cache-dependency-glob: "scripts/providers/google/*.py"
+
+      # First-party models via the Gemini API — keyless: the script scopes the
+      # WIF service-account ADC (from the auth step) to generative-language.
+      # User ADC can't mint that scope, but service accounts can.
+      - name: Scrape Gemini API models
+        run: uv run scripts/providers/google/list_gemini_api_models.py
+
+      # Third-party Model Garden models — keyless via the ADC from the auth step.
+      - name: Scrape Model Garden models
+        run: uv run scripts/providers/google/list_model_garden_models.py
+
+      - name: Stage and summarize changes
+        id: summary
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/providers/google
+          if git diff --staged --quiet; then
+            echo "No catalog changes."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+          # Deterministic commit message: counts in the subject, ids in the body.
+          python3 scripts/diff_summary.py data/providers/google/gemini_api_models.json data/providers/google/model_garden_models.json --title "Google model catalogs" > "$RUNNER_TEMP/commit_msg.txt"
+
+      - name: Commit and push
+        if: steps.summary.outputs.changed == 'true'
+        run: |
+          git commit -F "$RUNNER_TEMP/commit_msg.txt"
+          git pull --rebase --autostash
+          git push

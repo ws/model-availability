@@ -1,0 +1,56 @@
+id,displayName,description
+gemini-2.0-flash,Gemini 2.0 Flash,Gemini 2.0 Flash
+gemini-2.0-flash-001,Gemini 2.0 Flash 001,"Stable version of Gemini 2.0 Flash, our fast and versatile multimodal model for scaling across diverse tasks, released in January of 2025."
+gemini-2.0-flash-lite,Gemini 2.0 Flash-Lite,Gemini 2.0 Flash-Lite
+gemini-2.0-flash-lite-001,Gemini 2.0 Flash-Lite 001,Stable version of Gemini 2.0 Flash-Lite
+gemini-2.5-flash-preview-tts,Gemini 2.5 Flash Preview TTS,Gemini 2.5 Flash Preview TTS
+gemini-2.5-pro-preview-tts,Gemini 2.5 Pro Preview TTS,Gemini 2.5 Pro Preview TTS
+gemini-embedding-001,Gemini Embedding 001,Obtain a distributed representation of a text.
+gemini-2.5-flash,Gemini 2.5 Flash,"Stable version of Gemini 2.5 Flash, our mid-size multimodal model that supports up to 1 million tokens, released in June of 2025."
+gemini-2.5-flash-lite,Gemini 2.5 Flash-Lite,"Stable version of Gemini 2.5 Flash-Lite, released in July of 2025"
+gemini-2.5-pro,Gemini 2.5 Pro,"Stable release (June 17th, 2025) of Gemini 2.5 Pro"
+imagen-4.0-fast-generate-001,Imagen 4 Fast,Vertex served Imagen 4.0 Fast model
+imagen-4.0-generate-001,Imagen 4,Vertex served Imagen 4.0 model
+gemini-2.5-flash-image,Nano Banana,Gemini 2.5 Flash Preview Image
+gemini-flash-latest,Gemini Flash Latest,Latest release of Gemini Flash
+gemini-flash-lite-latest,Gemini Flash-Lite Latest,Latest release of Gemini Flash-Lite
+gemini-robotics-er-1.5-preview,Gemini Robotics-ER 1.5 Preview,Gemini Robotics-ER 1.5 Preview
+gemini-2.5-computer-use-preview-10-2025,Gemini 2.5 Computer Use Preview 10-2025,Gemini 2.5 Computer Use Preview 10-2025
+veo-3.1-fast-generate-preview,Veo 3.1 fast,Veo 3.1 fast
+veo-3.1-generate-preview,Veo 3.1,Veo 3.1
+gemini-3-pro-preview,Gemini 3 Pro Preview,Gemini 3 Pro Preview
+gemini-3-pro-image-preview,Nano Banana Pro,Gemini 3 Pro Image Preview
+imagen-4.0-ultra-generate-001,Imagen 4 Ultra,Vertex served Imagen 4.0 ultra model
+nano-banana-pro-preview,Nano Banana Pro,Gemini 3 Pro Image Preview
+deep-research-pro-preview-12-2025,Deep Research Pro Preview (Dec-12-2025),"Preview release (December 12th, 2025) of Deep Research Pro"
+gemini-2.5-flash-native-audio-latest,Gemini 2.5 Flash Native Audio Latest,Latest release of Gemini 2.5 Flash Native Audio
+gemini-2.5-flash-native-audio-preview-09-2025,Gemini 2.5 Flash Native Audio Preview 09-2025,Gemini 2.5 Flash Native Audio Preview 09-2025
+gemini-2.5-flash-native-audio-preview-12-2025,Gemini 2.5 Flash Native Audio Preview 12-2025,Gemini 2.5 Flash Native Audio Preview 12-2025
+gemini-3-flash-preview,Gemini 3 Flash Preview,Gemini 3 Flash Preview
+gemini-3.1-pro-preview,Gemini 3.1 Pro Preview,Gemini 3.1 Pro Preview
+gemini-3.1-pro-preview-customtools,Gemini 3.1 Pro Preview Custom Tools,Gemini 3.1 Pro Preview optimized for custom tool usage
+gemini-3.1-flash-image-preview,Nano Banana 2,Gemini 3.1 Flash Image Preview.
+gemini-3.1-flash-lite-preview,Gemini 3.1 Flash Lite Preview,Gemini 3.1 Flash Lite Preview
+gemini-embedding-2-preview,Gemini Embedding 2 Preview,Obtain a distributed representation of multimodal content.
+gemini-3.1-flash-live-preview,Gemini 3.1 Flash Live Preview,Gemini 3.1 Flash Live Preview
+lyria-3-clip-preview,Lyria 3 Clip Preview,Lyria 3 30s model Preview
+lyria-3-pro-preview,Lyria 3 Pro Preview,Lyria 3 Pro Preview
+veo-3.1-lite-generate-preview,Veo 3.1 lite,Veo 3.1 lite
+gemma-4-26b-a4b-it,Gemma 4 26B A4B IT,Gemma 4 26B A4B IT
+gemma-4-31b-it,Gemma 4 31B IT,Gemma 4 31B IT
+gemini-robotics-er-1.6-preview,Gemini Robotics-ER 1.6 Preview,Gemini Robotics-ER 1.6 Preview
+gemini-3.1-flash-tts-preview,Gemini 3.1 Flash TTS Preview,Gemini 3.1 Flash TTS Preview
+deep-research-max-preview-04-2026,Deep Research Max Preview (Apr-21-2026),"Preview release (April 21st, 2026) of Deep Research Max"
+deep-research-preview-04-2026,Deep Research Preview (Apr-21-2026),"Preview release (April 21th, 2026) of Deep Research"
+gemini-embedding-2,Gemini Embedding 2,Obtain a distributed representation of multimodal content.
+gemini-pro-latest,Gemini Pro Latest,Latest release of Gemini Pro
+gemini-3.1-flash-lite,Gemini 3.1 Flash Lite,Gemini 3.1 Flash Lite
+antigravity-preview-05-2026,Antigravity Agent Preview,Preview release of Antigravity Agent (05-2026)
+gemini-3.5-flash,Gemini 3.5 Flash,Gemini 3.5 Flash
+gemini-3-pro-image,Nano Banana Pro,Gemini 3 Pro Image
+gemini-3.1-flash-image,Nano Banana 2,Gemini 3.1 Flash Image.
+gemini-3.5-live-translate-preview,Gemini 3.5 Live Translate Preview,Gemini 3.5 Live Translate Preview
+gemini-3.1-flash-lite-image,Nano Banana 2 Lite,Gemini 3.1 Flash Lite Image.
+gemini-omni-flash-preview,Gemini Omni Flash Preview,Gemini Omni Flash Preview
+gemini-3.5-flash-lite,Gemini 3.5 Flash Lite,Gemini 3.5 Flash Lite
+gemini-3.6-flash,Gemini 3.6 Flash,Gemini 3.6 Flash

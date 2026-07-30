@@ -1,0 +1,210 @@
+name,displayName,publisher,lifecycle
+AI21-Jamba-Instruct,AI21-Jamba-Instruct,AI21 Labs,Retired
+Azure-AI-Content-Safety,Azure-AI-Content-Safety,Microsoft,Generally available
+Azure-AI-Content-Understanding,Azure-AI-Content-Understanding,Microsoft,Generally available
+Azure-AI-Document-Intelligence,Azure-AI-Document-Intelligence,Microsoft,Generally available
+Azure-AI-Vision,Azure-AI-Vision,Microsoft,Generally available
+Azure-Content-Understanding-Layout,Azure-Content-Understanding-Layout,Microsoft,Generally available
+Azure-Content-Understanding-Read,Azure-Content-Understanding-Read,Microsoft,Generally available
+Azure-Language-Conversational-PII-redaction,Azure-Language-Conversational-PII-redaction,Microsoft,Generally available
+Azure-Language-Document-PII-redaction,Azure-Language-Document-PII-redaction,Microsoft,Generally available
+Azure-Language-Language-detection,Azure-Language-Language-detection,Microsoft,Generally available
+Azure-Language-Text-Analytics-for-Health,Azure-Language-Text-Analytics-for-Health,Microsoft,Generally available
+Azure-Language-Text-PII-redaction,Azure-Language-Text-PII-redaction,Microsoft,Generally available
+Azure-Speech-Speech-Translation,Azure-Speech-Speech-Translation,Microsoft,Generally available
+Azure-Speech-Speech-to-text,Azure-Speech-Speech-to-text,Microsoft,Generally available
+Azure-Speech-Text-to-speech,Azure-Speech-Text-to-speech,Microsoft,Generally available
+Azure-Speech-Text-to-speech-Avatar,Azure-Speech-Text-to-speech-Avatar,Microsoft,Generally available
+Azure-Speech-Voice-Live,Azure-Speech-Voice-Live,Microsoft,Generally available
+Azure-Translator-Document-translation,Azure-Translator-Document-translation,Microsoft,Generally available
+Azure-Translator-Text-translation,Azure-Translator-Text-translation,Microsoft,Generally available
+Codestral-2501,Codestral 25.01,Mistral AI,Generally Available
+Cohere-command-a-plus-05-2026,Cohere-command-a-plus-05-2026,Cohere,Preview
+Cohere-embed-v3-english,Cohere Embed v3 English,Cohere,Generally Available
+Cohere-embed-v3-multilingual,Cohere Embed v3 Multilingual,Cohere,Generally Available
+Cohere-rerank-v4.0-fast,Cohere Rerank v4.0 Fast,Cohere,Generally available
+Cohere-rerank-v4.0-pro,Cohere Rerank v4.0 Pro,Cohere,Generally Available
+CxrReportGen-Premium,CXRReportGen Premium,Microsoft,
+DeepSeek-R1,DeepSeek-R1,DeepSeek,Deprecated
+DeepSeek-R1-0528,DeepSeek-R1-0528,DeepSeek,Retired
+DeepSeek-V3-0324,DeepSeek-V3-0324,DeepSeek,Retired
+DeepSeek-V3.1,DeepSeek-V3.1,DeepSeek,Retired
+DeepSeek-V3.2,DeepSeek-V3.2,DeepSeek,Generally Available
+DeepSeek-V3.2-Speciale,DeepSeek-V3.2-Speciale,DeepSeek,Generally Available
+DeepSeek-V4-Flash,DeepSeek-V4-Flash,DeepSeek,Preview
+DeepSeek-V4-Pro,DeepSeek-V4-Pro,DeepSeek,Preview
+FLUX.2-flex,FLUX.2-flex,Black Forest Labs,Generally Available
+FLUX.2-pro,FLUX.2 [pro],Black Forest Labs,Generally Available
+FW-DeepSeek-V3.1,DeepSeek V3.1,Fireworks,Generally Available
+FW-DeepSeek-V3.2,DeepSeek V3.2,Fireworks,Generally Available
+FW-DeepSeek-V4-Flash,DeepSeek V4 Flash,Fireworks,Generally Available
+FW-DeepSeek-V4-Pro,DeepSeek V4 Pro,Fireworks,Generally Available
+FW-GLM-4.7,GLM 4.7,Fireworks,Generally Available
+FW-GLM-5,GLM 5,Fireworks,Generally Available
+FW-GLM-5.1,GLM 5.1,Fireworks,Generally Available
+FW-GLM-5.2,GLM 5.2,Fireworks,Generally Available
+FW-GPT-OSS-120B,OpenAI gpt-oss-120b,Fireworks,Generally Available
+FW-GPT-OSS-20B,OpenAI gpt-oss-20b,Fireworks,Generally Available
+FW-Gemma-4-26B-A4B-IT,Gemma 4 26B A4B IT,Fireworks,Generally Available
+FW-Gemma-4-31B-IT,Gemma 4 31B IT,Fireworks,Generally Available
+FW-Kimi-K2-Instruct-0905,Kimi K2 Instruct,Fireworks,Generally Available
+FW-Kimi-K2-Thinking,Kimi K2 Thinking,Fireworks,Generally Available
+FW-Kimi-K2.5,Kimi K2.5,Fireworks,Generally Available
+FW-Kimi-K2.6,Kimi K2.6,Fireworks,Generally Available
+FW-Kimi-K2.7-Code,Kimi K2.7 Code,Fireworks,Generally Available
+FW-Kimi-K3,Kimi K3,Fireworks,Generally Available
+FW-Llama-v3.1-8B-Instruct,Llama 3.1 8B Instruct,Fireworks,
+FW-MiniMax-M2.5,MiniMax M2.5,Fireworks,Generally Available
+FW-MiniMax-M3,MiniMax M3,Fireworks,Generally Available
+FW-Ministral-3-3B-Instruct-2512,Ministral 3 3B Instruct 2512,Fireworks,Generally Available
+FW-Nemotron-3-Super-120B-A12B-BF16,Nemotron Super 120B,Fireworks,Generally Available
+FW-Qwen3-14B,Qwen3 14B,Fireworks,Generally Available
+FW-Qwen3-32B,Qwen3 32B,Fireworks,Generally Available
+FW-Qwen3.5-122B-A10B,Qwen3.5 122B A10B,Fireworks,Generally Available
+FW-Qwen3.5-27B,Qwen3.5 27B,Fireworks,Generally Available
+FW-Qwen3.5-35B-A3B,Qwen3.5 35B A3B,Fireworks,Generally Available
+FW-Qwen3.5-397B-A17B,Qwen3.5 397B A17B,Fireworks,Generally Available
+FW-Qwen3.5-4B,Qwen3.5 4B,Fireworks,Generally Available
+FW-Qwen3.5-9B,Qwen3.5 9B,Fireworks,Generally Available
+FW-Qwen3.6-27B,Qwen3.6 27B,Fireworks,Generally Available
+FW-Qwen3.6-35B-A3B,Qwen3.6 35B A3B,Fireworks,Generally Available
+Flux-1.1-Pro,FLUX1.1 [pro],Black Forest Labs,Generally Available
+Flux.1-Kontext-pro,FLUX.1 Kontext [pro],Black Forest Labs,Generally Available
+Kimi-K2.5,Kimi-K2.5,Moonshot AI,Preview
+Kimi-K2.6,Kimi-K2.6,Moonshot AI,Preview
+Kimi-K2.7-Code,Kimi-K2.7-Code,Moonshot AI,Preview
+Llama-3.2-11B-Vision-Instruct,Llama-3.2-11B-Vision-Instruct,Meta,Retired
+Llama-3.2-90B-Vision-Instruct,Llama-3.2-90B-Vision-Instruct,Meta,Retired
+Llama-3.3-70B-Instruct,Llama-3.3-70B-Instruct,Meta,
+Llama-4-Maverick-17B-128E-Instruct-FP8,Llama 4 Maverick 17B 128E Instruct FP8,Meta,Generally available
+Llama-4-Scout-17B-16E-Instruct,Llama 4 Scout 17B 16E Instruct,Meta,Generally Available
+MAI-Image-2.5,MAI-Image-2.5,Microsoft,Preview
+MAI-Image-2.5-Flash,MAI-Image-2.5-Flash,Microsoft,Preview
+MAI-Image-2.5-Pro,MAI-Image-2.5-Pro,Microsoft,Preview
+MAI-Image-2e,MAI-Image-2e,Microsoft,Deprecated
+MAI-Transcribe-1,MAI-Transcribe-1,Microsoft,Preview
+MAI-Transcribe-1.5,MAI-Transcribe-1.5,Microsoft,Preview
+MAI-Voice-1,MAI-Voice-1,Microsoft,Preview
+MAI-Voice-2,MAI-Voice-2,Microsoft,Preview
+MAI-Voice-2-Flash,MAI-Voice-2-Flash,Microsoft,Preview
+MedImageInsight-Premium,MedImageInsight Premium,Microsoft,
+Meta-Llama-3-70B-Instruct,Meta-Llama-3-70B-Instruct,Meta,Retired
+Meta-Llama-3-8B-Instruct,Meta-Llama-3-8B-Instruct,Meta,Retired
+Meta-Llama-3.1-405B-Instruct,Meta-Llama-3.1-405B-Instruct,Meta,Retired
+Meta-Llama-3.1-70B-Instruct,Meta-Llama-3.1-70B-Instruct,Meta,Retired
+Meta-Llama-3.1-8B-Instruct,Meta-Llama-3.1-8B-Instruct,Meta,Retired
+Ministral-3B,Ministral 3B,Mistral AI,Generally Available
+Mistral-Large-3,Mistral Large 3,Mistral AI,Generally Available
+Phi-3-medium-4k-instruct,Phi-3-medium instruct (4k),Microsoft,Retired
+Phi-3-mini-128k-instruct,Phi-3-mini instruct (128k),Microsoft,Retired
+Phi-3-mini-4k-instruct,Phi-3-mini instruct (4k),Microsoft,Retired
+Phi-3-small-128k-instruct,Phi-3-small instruct (128k),Microsoft,Retired
+Phi-3-small-8k-instruct,Phi-3-small instruct (8k),Microsoft,
+Phi-3-vision-128k-instruct,Phi-3-vision-128k-instruct,Microsoft,
+Phi-3.5-MoE-instruct,Phi-3.5-MoE instruct (128k),Microsoft,Retired
+Phi-3.5-mini-instruct,Phi-3.5-mini instruct (128k),Microsoft,Retired
+Phi-3.5-vision-instruct,Phi-3.5-vision instruct (128k),Microsoft,Retired
+Phi-4,Phi-4,Microsoft,
+Stable-Diffusion-3.5-Large,Stable Diffusion 3.5 Large,StabilityAI,Generally Available
+Stable-Image-Core,Stable Image Core,StabilityAI,Generally Available
+Stable-Image-Ultra,Stable Image Ultra,StabilityAI,Generally Available
+claude-fable-5,Claude Fable 5,Anthropic,Preview
+claude-haiku-4-5,Claude Haiku 4.5,Anthropic,Generally Available
+claude-mythos-5,Claude Mythos 5 (gated),Anthropic,Preview
+claude-mythos-preview,Claude Mythos Preview (gated research preview),Anthropic,Preview
+claude-opus-4-1,Claude Opus 4.1,Anthropic,Generally Available
+claude-opus-4-5,Claude Opus 4.5,Anthropic,Generally Available
+claude-opus-4-6,Claude Opus 4.6,Anthropic,Generally Available
+claude-opus-4-7,Claude Opus 4.7,Anthropic,Generally Available
+claude-opus-4-8,Claude Opus 4.8,Anthropic,Generally Available
+claude-opus-5,Claude Opus 5,Anthropic,Generally Available
+claude-sonnet-4-5,Claude Sonnet 4.5,Anthropic,Generally Available
+claude-sonnet-4-6,Claude Sonnet 4.6,Anthropic,Generally Available
+claude-sonnet-5,Claude Sonnet 5,Anthropic,Generally Available
+codex-mini,codex-mini,OpenAI,Deprecated
+cohere-command-a,Cohere Command A,Cohere,
+computer-use-preview,computer-use-preview,OpenAI,Preview
+davinci-002,davinci-002,,Retired
+embed-v-4-0,Cohere Embed 4,Cohere,Generally available
+gpt-35-turbo,gpt-35-turbo,OpenAI,Retired
+gpt-35-turbo-instruct,gpt-35-turbo-instruct,OpenAI,Retired
+gpt-4,gpt-4,OpenAI,Retired
+gpt-4-32k,gpt-4-32k,OpenAI,Retired
+gpt-4.1,OpenAI GPT-4.1,OpenAI,Deprecated
+gpt-4.1-mini,OpenAI GPT-4.1-mini,OpenAI,Deprecated
+gpt-4.1-nano,OpenAI GPT-4.1-nano,OpenAI,Deprecated
+gpt-4o,OpenAI GPT-4o,OpenAI,Deprecated
+gpt-4o-mini,OpenAI GPT-4o mini,OpenAI,Deprecated
+gpt-4o-mini-transcribe,gpt-4o-mini-transcribe,OpenAI,Generally Available
+gpt-4o-mini-tts,gpt-4o-mini-tts,OpenAI,Generally Available
+gpt-4o-transcribe,gpt-4o-transcribe,OpenAI,Generally Available
+gpt-4o-transcribe-diarize,OpenAI gpt-4o-transcribe-diarize,OpenAI,Generally Available
+gpt-5,OpenAI gpt-5,OpenAI,Generally Available
+gpt-5-chat,OpenAI gpt-5-chat (preview),OpenAI,Retired
+gpt-5-codex,gpt-5-codex,OpenAI,Generally Available
+gpt-5-mini,OpenAI gpt-5-mini,OpenAI,Generally Available
+gpt-5-nano,OpenAI gpt-5-nano,OpenAI,Generally Available
+gpt-5-pro,OpenAI gpt-5-pro,OpenAI,Generally Available
+gpt-5.1,OpenAI gpt-5.1,OpenAI,Generally Available
+gpt-5.1-chat,OpenAI gpt-5.1-chat (preview),OpenAI,Retired
+gpt-5.1-codex,gpt-5.1-codex,OpenAI,Generally Available
+gpt-5.1-codex-max,gpt-5.1-codex-max,OpenAI,Generally Available
+gpt-5.1-codex-mini,gpt-5.1-codex-mini,OpenAI,Generally Available
+gpt-5.2,OpenAI gpt-5.2,OpenAI,Generally Available
+gpt-5.2-chat,OpenAI gpt-5.2-chat (preview),OpenAI,Retired
+gpt-5.2-codex,gpt-5.2-codex,OpenAI,Generally Available
+gpt-5.3-chat,OpenAI gpt-5.3-chat (preview),OpenAI,Retired
+gpt-5.3-codex,gpt-5.3-codex,OpenAI,Generally Available
+gpt-5.4,OpenAI gpt-5.4,OpenAI,Generally Available
+gpt-5.4-mini,OpenAI gpt-5.4-mini,OpenAI,Generally Available
+gpt-5.4-nano,OpenAI gpt-5.4-nano,OpenAI,Generally Available
+gpt-5.4-pro,OpenAI gpt-5.4,OpenAI,Generally Available
+gpt-5.5,OpenAI gpt-5.5,OpenAI,Generally Available
+gpt-5.6-luna,OpenAI gpt-5.6-luna,OpenAI,Generally Available
+gpt-5.6-sol,OpenAI gpt-5.6-sol,OpenAI,Generally Available
+gpt-5.6-terra,OpenAI gpt-5.6-terra,OpenAI,Generally Available
+gpt-audio,OpenAI gpt-audio,OpenAI,Generally Available
+gpt-audio-1.5,OpenAI gpt-audio,OpenAI,Generally Available
+gpt-audio-mini,OpenAI gpt-audio-mini,OpenAI,Generally Available
+gpt-chat-latest,OpenAI gpt-chat-latest (preview),OpenAI,Preview
+gpt-image-1-mini,GPT-image-1-mini,OpenAI,Generally Available
+gpt-image-1.5,GPT-image-1.5,OpenAI,Generally Available
+gpt-image-2,GPT-image-2,OpenAI,Generally Available
+gpt-oss-120b,gpt-oss-120b,OpenAI,
+gpt-oss-20b,gpt-oss-20b,OpenAI,Generally Available
+gpt-realtime,OpenAI gpt-realtime,OpenAI,Generally Available
+gpt-realtime-1.5,OpenAI gpt-realtime,OpenAI,Generally Available
+gpt-realtime-2,OpenAI gpt-realtime-2,OpenAI,Preview
+gpt-realtime-2.1,OpenAI gpt-realtime-2.1,OpenAI,Preview
+gpt-realtime-2.1-mini,OpenAI gpt-realtime-2.1-mini,OpenAI,Preview
+gpt-realtime-mini,OpenAI gpt-realtime-mini,OpenAI,Generally Available
+gpt-realtime-translate,OpenAI gpt-realtime-translate,OpenAI,Generally available
+gpt-realtime-whisper,OpenAI gpt-realtime-whisper,OpenAI,Generally available
+grok-4,Grok 4,xAI,Generally Available
+grok-4-1-fast-non-reasoning,Grok 4.1 Fast Non Reasoning,xAI,Generally Available
+grok-4-1-fast-reasoning,Grok 4.1 Fast Reasoning,xAI,Generally Available
+grok-4-20-non-reasoning,Grok 4.2 Non-Reasoning,xAI,Preview
+grok-4-20-reasoning,Grok 4.2 Reasoning,xAI,Preview
+grok-4.3,Grok 4.3,xAI,Preview
+grok-code-fast-1,Grok Code Fast 1,xAI,Generally Available
+mistral-document-ai-2505,Mistral Document AI (25.05),Mistral AI,Retired
+mistral-document-ai-2512,Mistral Document AI (25.12),Mistral AI,Generally Available
+mistral-medium-2505,Mistral Medium 3 (25.05),Mistral AI,Generally Available
+mistral-medium-3-5,mistral-medium-3-5,Mistral AI,Preview
+mistral-ocr-4-0,mistral-ocr-4-0,Mistral AI,Generally Available
+mistral-small-2503,Mistral Small 3.1,Mistral AI,Generally Available
+model-router,Model router,Microsoft,Generally Available
+o1,OpenAI o1,OpenAI,Deprecated
+o3,OpenAI o3,OpenAI,Generally Available
+o3-deep-research,o3-deep-research,OpenAI,Generally Available
+o3-mini,OpenAI o3-mini,OpenAI,Deprecated
+o3-pro,o3-pro,OpenAI,Generally Available
+o4-mini,OpenAI o4-mini,OpenAI,Deprecated
+qwen3-32b,qwen3-32b,Alibaba,Generally Available
+sora-2,OpenAI Sora-2,OpenAI,Preview
+text-embedding-3-large,OpenAI Text Embedding 3 (large),OpenAI,Generally Available
+text-embedding-3-small,OpenAI Text Embedding 3 (small),OpenAI,Generally Available
+text-embedding-ada-002,text-embedding-ada-002,OpenAI,Generally Available
+tts,tts,OpenAI,Generally Available
+tts-hd,tts-hd,OpenAI,Generally Available
+whisper,whisper,OpenAI,Generally Available

@@ -1,0 +1,514 @@
+{
+  "text-embedding-ada-002": {
+    "id": "text-embedding-ada-002",
+    "created": 1671217299
+  },
+  "whisper-1": {
+    "id": "whisper-1",
+    "created": 1677532384
+  },
+  "gpt-3.5-turbo": {
+    "id": "gpt-3.5-turbo",
+    "created": 1677610602
+  },
+  "tts-1": {
+    "id": "tts-1",
+    "created": 1681940951
+  },
+  "gpt-3.5-turbo-16k": {
+    "id": "gpt-3.5-turbo-16k",
+    "created": 1683758102
+  },
+  "gpt-4-0613": {
+    "id": "gpt-4-0613",
+    "created": 1686588896
+  },
+  "gpt-4": {
+    "id": "gpt-4",
+    "created": 1687882411
+  },
+  "davinci-002": {
+    "id": "davinci-002",
+    "created": 1692634301
+  },
+  "babbage-002": {
+    "id": "babbage-002",
+    "created": 1692634615
+  },
+  "gpt-3.5-turbo-instruct": {
+    "id": "gpt-3.5-turbo-instruct",
+    "created": 1692901427
+  },
+  "gpt-3.5-turbo-instruct-0914": {
+    "id": "gpt-3.5-turbo-instruct-0914",
+    "created": 1694122472
+  },
+  "gpt-3.5-turbo-1106": {
+    "id": "gpt-3.5-turbo-1106",
+    "created": 1698959748
+  },
+  "tts-1-hd": {
+    "id": "tts-1-hd",
+    "created": 1699046015
+  },
+  "tts-1-1106": {
+    "id": "tts-1-1106",
+    "created": 1699053241
+  },
+  "tts-1-hd-1106": {
+    "id": "tts-1-hd-1106",
+    "created": 1699053533
+  },
+  "text-embedding-3-small": {
+    "id": "text-embedding-3-small",
+    "created": 1705948997
+  },
+  "text-embedding-3-large": {
+    "id": "text-embedding-3-large",
+    "created": 1705953180
+  },
+  "gpt-3.5-turbo-0125": {
+    "id": "gpt-3.5-turbo-0125",
+    "created": 1706048358
+  },
+  "gpt-4-turbo": {
+    "id": "gpt-4-turbo",
+    "created": 1712361441
+  },
+  "gpt-4-turbo-2024-04-09": {
+    "id": "gpt-4-turbo-2024-04-09",
+    "created": 1712601677
+  },
+  "gpt-4o": {
+    "id": "gpt-4o",
+    "created": 1715367049
+  },
+  "gpt-4o-2024-05-13": {
+    "id": "gpt-4o-2024-05-13",
+    "created": 1715368132
+  },
+  "gpt-4o-mini-2024-07-18": {
+    "id": "gpt-4o-mini-2024-07-18",
+    "created": 1721172717
+  },
+  "gpt-4o-mini": {
+    "id": "gpt-4o-mini",
+    "created": 1721172741
+  },
+  "gpt-4o-2024-08-06": {
+    "id": "gpt-4o-2024-08-06",
+    "created": 1722814719
+  },
+  "omni-moderation-latest": {
+    "id": "omni-moderation-latest",
+    "created": 1731689265
+  },
+  "omni-moderation-2024-09-26": {
+    "id": "omni-moderation-2024-09-26",
+    "created": 1732734466
+  },
+  "o1-2024-12-17": {
+    "id": "o1-2024-12-17",
+    "created": 1734326976
+  },
+  "o1": {
+    "id": "o1",
+    "created": 1734375816
+  },
+  "o3-mini": {
+    "id": "o3-mini",
+    "created": 1737146383
+  },
+  "o3-mini-2025-01-31": {
+    "id": "o3-mini-2025-01-31",
+    "created": 1738010200
+  },
+  "gpt-4o-2024-11-20": {
+    "id": "gpt-4o-2024-11-20",
+    "created": 1739331543
+  },
+  "gpt-4o-mini-search-preview-2025-03-11": {
+    "id": "gpt-4o-mini-search-preview-2025-03-11",
+    "created": 1741390858
+  },
+  "gpt-4o-mini-search-preview": {
+    "id": "gpt-4o-mini-search-preview",
+    "created": 1741391161
+  },
+  "gpt-4o-transcribe": {
+    "id": "gpt-4o-transcribe",
+    "created": 1742068463
+  },
+  "gpt-4o-mini-transcribe": {
+    "id": "gpt-4o-mini-transcribe",
+    "created": 1742068596
+  },
+  "o1-pro-2025-03-19": {
+    "id": "o1-pro-2025-03-19",
+    "created": 1742251504
+  },
+  "o1-pro": {
+    "id": "o1-pro",
+    "created": 1742251791
+  },
+  "gpt-4o-mini-tts": {
+    "id": "gpt-4o-mini-tts",
+    "created": 1742403959
+  },
+  "o3-2025-04-16": {
+    "id": "o3-2025-04-16",
+    "created": 1744133301
+  },
+  "o4-mini-2025-04-16": {
+    "id": "o4-mini-2025-04-16",
+    "created": 1744133506
+  },
+  "o3": {
+    "id": "o3",
+    "created": 1744225308
+  },
+  "o4-mini": {
+    "id": "o4-mini",
+    "created": 1744225351
+  },
+  "gpt-4.1-2025-04-14": {
+    "id": "gpt-4.1-2025-04-14",
+    "created": 1744315746
+  },
+  "gpt-4.1": {
+    "id": "gpt-4.1",
+    "created": 1744316542
+  },
+  "gpt-4.1-mini-2025-04-14": {
+    "id": "gpt-4.1-mini-2025-04-14",
+    "created": 1744317547
+  },
+  "gpt-4.1-mini": {
+    "id": "gpt-4.1-mini",
+    "created": 1744318173
+  },
+  "gpt-4.1-nano-2025-04-14": {
+    "id": "gpt-4.1-nano-2025-04-14",
+    "created": 1744321025
+  },
+  "gpt-4.1-nano": {
+    "id": "gpt-4.1-nano",
+    "created": 1744321707
+  },
+  "gpt-image-1": {
+    "id": "gpt-image-1",
+    "created": 1745517030
+  },
+  "o4-mini-deep-research": {
+    "id": "o4-mini-deep-research",
+    "created": 1749685485
+  },
+  "gpt-4o-transcribe-diarize": {
+    "id": "gpt-4o-transcribe-diarize",
+    "created": 1750798887
+  },
+  "o4-mini-deep-research-2025-06-26": {
+    "id": "o4-mini-deep-research-2025-06-26",
+    "created": 1750866121
+  },
+  "gpt-5-chat-latest": {
+    "id": "gpt-5-chat-latest",
+    "created": 1754073306
+  },
+  "gpt-5-2025-08-07": {
+    "id": "gpt-5-2025-08-07",
+    "created": 1754075360
+  },
+  "gpt-5": {
+    "id": "gpt-5",
+    "created": 1754425777
+  },
+  "gpt-5-mini-2025-08-07": {
+    "id": "gpt-5-mini-2025-08-07",
+    "created": 1754425867
+  },
+  "gpt-5-mini": {
+    "id": "gpt-5-mini",
+    "created": 1754425928
+  },
+  "gpt-5-nano-2025-08-07": {
+    "id": "gpt-5-nano-2025-08-07",
+    "created": 1754426303
+  },
+  "gpt-5-nano": {
+    "id": "gpt-5-nano",
+    "created": 1754426384
+  },
+  "gpt-audio-2025-08-28": {
+    "id": "gpt-audio-2025-08-28",
+    "created": 1756256146
+  },
+  "gpt-realtime": {
+    "id": "gpt-realtime",
+    "created": 1756271701
+  },
+  "gpt-realtime-2025-08-28": {
+    "id": "gpt-realtime-2025-08-28",
+    "created": 1756271773
+  },
+  "gpt-audio": {
+    "id": "gpt-audio",
+    "created": 1756339249
+  },
+  "gpt-5-codex": {
+    "id": "gpt-5-codex",
+    "created": 1757527818
+  },
+  "gpt-image-1-mini": {
+    "id": "gpt-image-1-mini",
+    "created": 1758845821
+  },
+  "gpt-5-pro-2025-10-06": {
+    "id": "gpt-5-pro-2025-10-06",
+    "created": 1759469707
+  },
+  "gpt-5-pro": {
+    "id": "gpt-5-pro",
+    "created": 1759469822
+  },
+  "gpt-audio-mini": {
+    "id": "gpt-audio-mini",
+    "created": 1759512027
+  },
+  "gpt-audio-mini-2025-10-06": {
+    "id": "gpt-audio-mini-2025-10-06",
+    "created": 1759512137
+  },
+  "gpt-5-search-api": {
+    "id": "gpt-5-search-api",
+    "created": 1759514629
+  },
+  "gpt-realtime-mini": {
+    "id": "gpt-realtime-mini",
+    "created": 1759517133
+  },
+  "gpt-realtime-mini-2025-10-06": {
+    "id": "gpt-realtime-mini-2025-10-06",
+    "created": 1759517175
+  },
+  "sora-2": {
+    "id": "sora-2",
+    "created": 1759708615
+  },
+  "sora-2-pro": {
+    "id": "sora-2-pro",
+    "created": 1759708663
+  },
+  "gpt-5-search-api-2025-10-14": {
+    "id": "gpt-5-search-api-2025-10-14",
+    "created": 1760043960
+  },
+  "gpt-5.1-chat-latest": {
+    "id": "gpt-5.1-chat-latest",
+    "created": 1762547951
+  },
+  "gpt-5.1-2025-11-13": {
+    "id": "gpt-5.1-2025-11-13",
+    "created": 1762800353
+  },
+  "gpt-5.1": {
+    "id": "gpt-5.1",
+    "created": 1762800673
+  },
+  "gpt-5.1-codex": {
+    "id": "gpt-5.1-codex",
+    "created": 1762988221
+  },
+  "gpt-5.1-codex-mini": {
+    "id": "gpt-5.1-codex-mini",
+    "created": 1763007109
+  },
+  "gpt-5.1-codex-max": {
+    "id": "gpt-5.1-codex-max",
+    "created": 1763671532
+  },
+  "gpt-image-1.5": {
+    "id": "gpt-image-1.5",
+    "created": 1764030620
+  },
+  "gpt-5.2-2025-12-11": {
+    "id": "gpt-5.2-2025-12-11",
+    "created": 1765313028
+  },
+  "gpt-5.2": {
+    "id": "gpt-5.2",
+    "created": 1765313051
+  },
+  "gpt-5.2-pro-2025-12-11": {
+    "id": "gpt-5.2-pro-2025-12-11",
+    "created": 1765343959
+  },
+  "gpt-5.2-pro": {
+    "id": "gpt-5.2-pro",
+    "created": 1765343983
+  },
+  "gpt-5.2-chat-latest": {
+    "id": "gpt-5.2-chat-latest",
+    "created": 1765344352
+  },
+  "gpt-4o-mini-transcribe-2025-12-15": {
+    "id": "gpt-4o-mini-transcribe-2025-12-15",
+    "created": 1765610407
+  },
+  "gpt-4o-mini-transcribe-2025-03-20": {
+    "id": "gpt-4o-mini-transcribe-2025-03-20",
+    "created": 1765610545
+  },
+  "gpt-4o-mini-tts-2025-03-20": {
+    "id": "gpt-4o-mini-tts-2025-03-20",
+    "created": 1765610731
+  },
+  "gpt-4o-mini-tts-2025-12-15": {
+    "id": "gpt-4o-mini-tts-2025-12-15",
+    "created": 1765610837
+  },
+  "gpt-realtime-mini-2025-12-15": {
+    "id": "gpt-realtime-mini-2025-12-15",
+    "created": 1765612007
+  },
+  "gpt-audio-mini-2025-12-15": {
+    "id": "gpt-audio-mini-2025-12-15",
+    "created": 1765760008
+  },
+  "chatgpt-image-latest": {
+    "id": "chatgpt-image-latest",
+    "created": 1765925279
+  },
+  "gpt-5.2-codex": {
+    "id": "gpt-5.2-codex",
+    "created": 1766164985
+  },
+  "gpt-5.3-codex": {
+    "id": "gpt-5.3-codex",
+    "created": 1770537915
+  },
+  "gpt-realtime-1.5": {
+    "id": "gpt-realtime-1.5",
+    "created": 1771461469
+  },
+  "gpt-audio-1.5": {
+    "id": "gpt-audio-1.5",
+    "created": 1771550885
+  },
+  "gpt-4o-search-preview": {
+    "id": "gpt-4o-search-preview",
+    "created": 1771905534
+  },
+  "gpt-4o-search-preview-2025-03-11": {
+    "id": "gpt-4o-search-preview-2025-03-11",
+    "created": 1771905621
+  },
+  "gpt-5.3-chat-latest": {
+    "id": "gpt-5.3-chat-latest",
+    "created": 1772236571
+  },
+  "gpt-5.4-2026-03-05": {
+    "id": "gpt-5.4-2026-03-05",
+    "created": 1772654062
+  },
+  "gpt-5.4-pro": {
+    "id": "gpt-5.4-pro",
+    "created": 1772659601
+  },
+  "gpt-5.4-pro-2026-03-05": {
+    "id": "gpt-5.4-pro-2026-03-05",
+    "created": 1772659657
+  },
+  "gpt-5.4": {
+    "id": "gpt-5.4",
+    "created": 1772691852
+  },
+  "gpt-5.4-nano-2026-03-17": {
+    "id": "gpt-5.4-nano-2026-03-17",
+    "created": 1773450837
+  },
+  "gpt-5.4-nano": {
+    "id": "gpt-5.4-nano",
+    "created": 1773450870
+  },
+  "gpt-5.4-mini-2026-03-17": {
+    "id": "gpt-5.4-mini-2026-03-17",
+    "created": 1773451076
+  },
+  "gpt-5.4-mini": {
+    "id": "gpt-5.4-mini",
+    "created": 1773451123
+  },
+  "gpt-image-2": {
+    "id": "gpt-image-2",
+    "created": 1776399795
+  },
+  "gpt-image-2-2026-04-21": {
+    "id": "gpt-image-2-2026-04-21",
+    "created": 1776399994
+  },
+  "gpt-5.5": {
+    "id": "gpt-5.5",
+    "created": 1776824847
+  },
+  "gpt-5.5-2026-04-23": {
+    "id": "gpt-5.5-2026-04-23",
+    "created": 1776839241
+  },
+  "gpt-5.5-pro": {
+    "id": "gpt-5.5-pro",
+    "created": 1776894349
+  },
+  "gpt-5.5-pro-2026-04-23": {
+    "id": "gpt-5.5-pro-2026-04-23",
+    "created": 1776894470
+  },
+  "chat-latest": {
+    "id": "chat-latest",
+    "created": 1777704602
+  },
+  "gpt-realtime-translate": {
+    "id": "gpt-realtime-translate",
+    "created": 1777950216
+  },
+  "gpt-realtime-2": {
+    "id": "gpt-realtime-2",
+    "created": 1778006032
+  },
+  "gpt-realtime-whisper": {
+    "id": "gpt-realtime-whisper",
+    "created": 1778012060
+  },
+  "gpt-5.6-sol": {
+    "id": "gpt-5.6-sol",
+    "created": 1782228018
+  },
+  "gpt-5.6-terra": {
+    "id": "gpt-5.6-terra",
+    "created": 1782228459
+  },
+  "gpt-5.6-luna": {
+    "id": "gpt-5.6-luna",
+    "created": 1782228658
+  },
+  "gpt-realtime-2.1": {
+    "id": "gpt-realtime-2.1",
+    "created": 1782254687
+  },
+  "gpt-realtime-2.1-mini": {
+    "id": "gpt-realtime-2.1-mini",
+    "created": 1782254706
+  },
+  "gpt-transcribe": {
+    "id": "gpt-transcribe",
+    "created": 1785168027
+  },
+  "gpt-live-transcribe": {
+    "id": "gpt-live-transcribe",
+    "created": 1785168034
+  },
+  "ra-gpt-5.6-sol": {
+    "id": "ra-gpt-5.6-sol",
+    "created": 1785364983
+  }
+}

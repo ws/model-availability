@@ -1,0 +1,13 @@
+# Local credentials — never commit
+.env
+
+# Python / uv
+__pycache__/
+*.pyc
+
+# Atomic-write temp files from the scrapers
+*.json.tmp
+*.csv.tmp
+
+# macOS
+.DS_Store
