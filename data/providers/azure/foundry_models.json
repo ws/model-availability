@@ -5675,13 +5675,15 @@
     "displayName": "Meta-Llama-3.1-8B-Instruct",
     "publisher": "Meta",
     "registryName": "azureml-meta",
-    "version": "5",
-    "lifecycle": "Retired",
+    "version": "6",
+    "lifecycle": null,
     "deploymentOptions": [
-      "Serverless API"
+      "MaaP",
+      "ServerlessMaaS",
+      "UnifiedEndpointMaaS"
     ],
     "allowedDeploymentTemplates": [],
-    "assetId": "azureml://registries/azureml-meta/models/Meta-Llama-3.1-8B-Instruct/versions/5",
+    "assetId": "azureml://registries/azureml-meta/models/Meta-Llama-3.1-8B-Instruct/versions/6",
     "author": null,
     "azureOffers": [
       "VM",
@@ -5689,7 +5691,7 @@
     ],
     "deploymentOptionDetails": {},
     "deprecation": {
-      "inferenceRetirementDate": null
+      "inferenceRetirementDate": "2026-06-13T00:00:00+00:00"
     },
     "fineTuningTasks": [
       "chat-completion"
@@ -6553,6 +6555,91 @@
       "rateLimitTier": "low"
     },
     "summary": "Phi-4 14B, a highly capable model for low latency scenarios.",
+    "tradeRestricted": false,
+    "variantInformation": null
+  },
+  "Phi-4-mini-instruct": {
+    "name": "Phi-4-mini-instruct",
+    "displayName": "Phi-4-mini-instruct",
+    "publisher": "Microsoft",
+    "registryName": "azureml",
+    "version": "1",
+    "lifecycle": null,
+    "deploymentOptions": [
+      "MaaP",
+      "ServerlessMaaS",
+      "UnifiedEndpointMaaS"
+    ],
+    "allowedDeploymentTemplates": [],
+    "assetId": "azureml://registries/azureml/models/Phi-4-mini-instruct/versions/1",
+    "author": null,
+    "azureOffers": [
+      "VM",
+      "standard-paygo"
+    ],
+    "deploymentOptionDetails": {},
+    "deprecation": {
+      "inferenceRetirementDate": null
+    },
+    "fineTuningTasks": [
+      "chat-completion"
+    ],
+    "hiddenLayerScanned": true,
+    "hostedOn": [],
+    "inferenceTasks": [
+      "chat-completion"
+    ],
+    "isDirectFromAzure": null,
+    "keywords": [
+      "Agents",
+      "Multilingual",
+      "Reasoning"
+    ],
+    "license": "MIT",
+    "minQuotaTier": null,
+    "modelCapabilities": [],
+    "modelLimits": {
+      "otherLimits": {},
+      "supportedInputModalities": [
+        "text"
+      ],
+      "supportedLanguages": [
+        "ar",
+        "cs",
+        "da",
+        "de",
+        "en",
+        "es",
+        "fi",
+        "fr",
+        "he",
+        "hu",
+        "it",
+        "ja",
+        "ko",
+        "nl",
+        "no",
+        "pl",
+        "pt",
+        "ru",
+        "sv",
+        "th",
+        "tr",
+        "uk",
+        "zh"
+      ],
+      "supportedOutputModalities": [
+        "text"
+      ],
+      "textLimits": {
+        "inputContextWindow": 128000,
+        "maxOutputTokens": 4096
+      }
+    },
+    "playgroundLimits": {
+      "rateLimitTier": "low"
+    },
+    "summary": "3.8B parameters Small Language Model outperforming larger models in reasoning, math, coding, and function-calling",
     "tradeRestricted": false,
     "variantInformation": null
   },
