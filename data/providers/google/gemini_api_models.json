@@ -919,5 +919,39 @@
     "thinking": true,
     "topK": 64,
     "topP": 0.95
+  },
+  "gemini-robotics-er-2-preview": {
+    "name": "models/gemini-robotics-er-2-preview",
+    "displayName": "Gemini Robotics-ER 2 Preview",
+    "description": "Gemini Robotics-ER 2 Preview",
+    "version": "2-preview",
+    "inputTokenLimit": 131072,
+    "maxTemperature": 2,
+    "outputTokenLimit": 65536,
+    "supportedGenerationMethods": [
+      "batchGenerateContent",
+      "countTokens",
+      "createCachedContent",
+      "generateContent"
+    ],
+    "temperature": 1,
+    "thinking": true,
+    "topK": 64,
+    "topP": 0.95
+  },
+  "gemini-robotics-er-2-streaming-preview": {
+    "name": "models/gemini-robotics-er-2-streaming-preview",
+    "displayName": "Gemini Robotics-ER 2 Streaming Preview",
+    "description": "Gemini Robotics-ER 2 Streaming Preview",
+    "version": "2-streaming-preview",
+    "inputTokenLimit": 131072,
+    "maxTemperature": 2,
+    "outputTokenLimit": 65536,
+    "supportedGenerationMethods": [
+      "bidiGenerateContent"
+    ],
+    "temperature": 1,
+    "topK": 64,
+    "topP": 0.95
   }
 }
