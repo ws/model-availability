@@ -4,9 +4,6 @@ us-east-1,amazon.titan-embed-image-v1,Titan Multimodal Embeddings G1,Amazon,2023
 us-east-1,amazon.titan-embed-image-v1:0,Titan Multimodal Embeddings G1,Amazon,2023-11-29,ACTIVE
 us-east-1,mistral.mistral-7b-instruct-v0:2,Mistral 7B Instruct,Mistral AI,2024-03-01,ACTIVE
 us-east-1,mistral.mixtral-8x7b-instruct-v0:1,Mixtral 8x7B Instruct,Mistral AI,2024-03-01,ACTIVE
-us-east-1,anthropic.claude-3-sonnet-20240229-v1:0,Claude 3 Sonnet,Anthropic,2024-03-04,LEGACY
-us-east-1,anthropic.claude-3-sonnet-20240229-v1:0:200k,Claude 3 Sonnet,Anthropic,2024-03-04,LEGACY
-us-east-1,anthropic.claude-3-sonnet-20240229-v1:0:28k,Claude 3 Sonnet,Anthropic,2024-03-04,LEGACY
 us-east-1,anthropic.claude-3-haiku-20240307-v1:0,Claude 3 Haiku,Anthropic,2024-03-13,LEGACY
 us-east-1,anthropic.claude-3-haiku-20240307-v1:0:200k,Claude 3 Haiku,Anthropic,2024-03-13,LEGACY
 us-east-1,anthropic.claude-3-haiku-20240307-v1:0:48k,Claude 3 Haiku,Anthropic,2024-03-13,LEGACY
