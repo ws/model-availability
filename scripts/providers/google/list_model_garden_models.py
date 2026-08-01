@@ -76,7 +76,7 @@ import google.auth.transport
 # Shared canonicalizer (lib/common.py). Repo root on sys.path so this
 # stdlib-only helper imports without a PEP 723 dependency entry.
 sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
-from lib.common import normalize_deep
+from lib.common import DriftGate, normalize_deep
 
 DEFAULT_REGION = "us-central1"
 # Wildcard parent that lists models across every publisher (the console's
@@ -372,7 +372,13 @@ def main() -> int:
     parser.add_argument(
         "--allow-drift",
         action="store_true",
-        help="Accept removal of committed models instead of erroring",
+        help="Accept any drift instead of erroring (skips the marker handshake)",
+    )
+    parser.add_argument(
+        "--accept-pending",
+        action="store_true",
+        help="Accept exactly the drift recorded in the pending-drift marker "
+        "(the workflow passes this on re-runs — the ack half of the handshake)",
     )
     parser.add_argument(
         "--project",
@@ -398,24 +404,31 @@ def main() -> int:
 
     snapshot = read_snapshot(args.output)
 
+    # No gate under --all: that's an unordered inspection dump with no drift
+    # check, so it must neither consume nor clear a pending acknowledgement.
+    gate = None
     if not args.all:
         models = [m for m in models if is_third_party_payg(m)]
 
         # Drift detection: the committed catalog is the source of truth for
         # what we already represent in this region. New models are free (they
         # append at the bottom), but a model we already have vanishing upstream
-        # would drop it from the file, so that fails for human review. Skipped
-        # under --all (that's an unordered inspection dump).
-        drift = vanished_keys(models, set(snapshot.get(args.region, {})))
-        if drift and not args.allow_drift:
+        # would drop it from the file, so that fails for human review,
+        # acknowledged through the DriftGate handshake. The kind is
+        # region-qualified so an acknowledgement recorded for one region can
+        # never authorize a removal in another.
+        gate = DriftGate(args.output, allow_all=args.allow_drift, accept_pending=args.accept_pending)
+        drift = gate.unacked(
+            f"vanished:{args.region}", vanished_keys(models, set(snapshot.get(args.region, {})))
+        )
+        if drift:
             print(
-                f"error: {len(drift)} committed model(s) no longer returned by "
-                "the API — review and re-run with --allow-drift to accept the "
-                "removal:",
+                f"error: {len(drift)} committed model(s) no longer returned by the API:",
                 file=sys.stderr,
             )
             for key in drift:
                 print(f"  {key}", file=sys.stderr)
+            gate.record()
             return 1
 
     # Emit in the hardcoded MODEL_ORDER.
@@ -438,6 +451,8 @@ def main() -> int:
     tmp.replace(args.output)
 
     write_csv(snapshot, args.output.with_suffix(".csv"))
+    if gate is not None:
+        gate.clear()
 
     publisher_count = len({publisher_of(m) for m in catalog.values()})
     print(

@@ -26,6 +26,11 @@ jobs:
       GOOGLE_CLOUD_PROJECT: ${{ vars.GOOGLE_CLOUD_PROJECT }}
     steps:
       - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with:
+          # Check out the branch tip, not the run's original SHA: a re-run of a
+          # failed drift run must see the pending-drift marker that the failed
+          # attempt committed (the ack-by-re-run handshake below).
+          ref: main
 
       # OIDC via Workload Identity Federation — keyless, the GCP analog of the
       # AWS role. Exports ADC (GOOGLE_APPLICATION_CREDENTIALS) that the Model
@@ -48,12 +53,39 @@ jobs:
       # First-party models via the Gemini API — keyless: the script scopes the
       # WIF service-account ADC (from the auth step) to generative-language.
       # User ADC can't mint that scope, but service accounts can.
+      # A re-run or manual dispatch is the human acknowledgement of recorded
+      # drift (doable from the GitHub mobile app); scheduled runs never
+      # accept, so unacknowledged drift keeps failing daily.
       - name: Scrape Gemini API models
-        run: uv run scripts/providers/google/list_gemini_api_models.py
+        run: >
+          uv run scripts/providers/google/list_gemini_api_models.py
+          ${{ (github.run_attempt > 1 || github.event_name == 'workflow_dispatch') && '--accept-pending' || '' }}
 
       # Third-party Model Garden models — keyless via the ADC from the auth step.
       - name: Scrape Model Garden models
-        run: uv run scripts/providers/google/list_model_garden_models.py
+        run: >
+          uv run scripts/providers/google/list_model_garden_models.py
+          ${{ (github.run_attempt > 1 || github.event_name == 'workflow_dispatch') && '--accept-pending' || '' }}
+
+      # Drift-ack handshake, step 1: a drift failure above recorded exactly
+      # what it saw in a pending-drift marker. Commit it (and only it — a
+      # snapshot the earlier scrape step wrote before the failure waits for
+      # the next successful run and its deterministic message) so the next
+      # re-run checks it out and accepts exactly that drift. Auth/network
+      # failures write no marker, so this stages nothing and stays a no-op.
+      - name: Commit pending-drift marker
+        if: failure()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          find data/providers/google -name '*.pending-drift.json' -exec git add -- {} +
+          if git diff --staged --quiet; then
+            echo "No pending-drift marker to commit."
+            exit 0
+          fi
+          git commit -m "Google: record pending drift (re-run the workflow to accept)"
+          git pull --rebase --autostash
+          git push
 
       - name: Stage and summarize changes
         id: summary

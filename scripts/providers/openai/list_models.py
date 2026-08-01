@@ -22,7 +22,9 @@ bottom. A sibling models.csv is written for human review.
 
 Drift detection: the committed catalog is the source of truth for what we
 already represent. New models are free (pure additions), but a model we already
-have vanishing upstream fails the run for human review (--allow-drift accepts).
+have vanishing upstream fails the run for human review. Acknowledge via the
+DriftGate handshake (re-run the failed workflow, or --accept-pending locally)
+to accept exactly the recorded drift, or --allow-drift to accept everything.
 
 The shebang loads a .env file (uv's built-in --env-file) from the current
 working directory, so run this from the repo root.
@@ -48,7 +50,7 @@ from openai.auth import SubjectTokenProvider
 # Shared canonicalizer (lib/common.py). Repo root on sys.path so this
 # stdlib-only helper imports without a PEP 723 dependency entry.
 sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
-from lib.common import normalize_deep
+from lib.common import DriftGate, normalize_deep
 
 DEFAULT_WIF_AUDIENCE = "https://api.openai.com/v1"
 
@@ -217,7 +219,13 @@ def main() -> int:
     parser.add_argument(
         "--allow-drift",
         action="store_true",
-        help="Accept removal of committed models instead of erroring",
+        help="Accept any drift instead of erroring (skips the marker handshake)",
+    )
+    parser.add_argument(
+        "--accept-pending",
+        action="store_true",
+        help="Accept exactly the drift recorded in the pending-drift marker "
+        "(the workflow passes this on re-runs — the ack half of the handshake)",
     )
     parser.add_argument(
         "--output",
@@ -238,30 +246,33 @@ def main() -> int:
 
     # Drift detection: the committed catalog is the source of truth for what we
     # already represent. New models are free (pure additions), but a model we
-    # already have vanishing upstream fails for human review.
-    drift = vanished_ids(models, read_existing_ids(args.output))
-    if drift and not args.allow_drift:
-        print(
-            f"error: {len(drift)} committed model(s) no longer returned by the "
-            "API — review and re-run with --allow-drift to accept the removal:",
-            file=sys.stderr,
-        )
-        for mid in drift:
-            print(f"  {mid}", file=sys.stderr)
-        return 1
-
-    # `created` should be immutable. Pin it to the committed value within 24h
-    # (ignoring any harmless wobble); a larger jump fails for human review.
-    created_drift = reconcile_created(models, read_existing_created(args.output))
-    if created_drift and not args.allow_drift:
-        print(
-            f"error: {len(created_drift)} committed model(s) changed `created` by "
-            "more than 24h — it should be immutable; review and re-run with "
-            "--allow-drift to accept:",
-            file=sys.stderr,
-        )
-        for mid in created_drift:
-            print(f"  {mid}", file=sys.stderr)
+    # already have vanishing upstream — or `created` (immutable; pinned to the
+    # committed value within 24h) jumping — fails for human review, acknowledged
+    # through the DriftGate handshake. Both checks run before failing so one
+    # marker records the whole picture and one acknowledgement covers it.
+    gate = DriftGate(args.output, allow_all=args.allow_drift, accept_pending=args.accept_pending)
+    vanished = gate.unacked("vanished", vanished_ids(models, read_existing_ids(args.output)))
+    created_drift = gate.unacked(
+        "created", reconcile_created(models, read_existing_created(args.output))
+    )
+    if vanished or created_drift:
+        if vanished:
+            print(
+                f"error: {len(vanished)} committed model(s) no longer returned "
+                "by the API:",
+                file=sys.stderr,
+            )
+            for mid in vanished:
+                print(f"  {mid}", file=sys.stderr)
+        if created_drift:
+            print(
+                f"error: {len(created_drift)} committed model(s) changed "
+                "`created` by more than 24h — it should be immutable:",
+                file=sys.stderr,
+            )
+            for mid in created_drift:
+                print(f"  {mid}", file=sys.stderr)
+        gate.record()
         return 1
 
     catalog = order_by_created(models)
@@ -278,6 +289,7 @@ def main() -> int:
     tmp.replace(args.output)
 
     write_csv(catalog, args.output.with_suffix(".csv"))
+    gate.clear()
 
     print(f"Wrote {len(catalog)} OpenAI models to {args.output}", file=sys.stderr)
     return 0

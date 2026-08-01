@@ -20,6 +20,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with:
+          # Check out the branch tip, not the run's original SHA: a re-run of a
+          # failed drift run must see the pending-drift marker that the failed
+          # attempt committed (the ack-by-re-run handshake below).
+          ref: main
 
       - name: Install uv
         uses: astral-sh/setup-uv@08807647e7069bb48b6ef5acd8ec9567f424441b # v8.1.0
@@ -52,7 +57,30 @@ jobs:
           ANTHROPIC_SERVICE_ACCOUNT_ID: ${{ vars.ANTHROPIC_SERVICE_ACCOUNT_ID }}
           ANTHROPIC_WORKSPACE_ID: ${{ vars.ANTHROPIC_WORKSPACE_ID }}
           ANTHROPIC_IDENTITY_TOKEN_FILE: ${{ runner.temp }}/anthropic_oidc_token
-        run: uv run scripts/providers/anthropic/list_models.py
+        # A re-run or manual dispatch is the human acknowledgement of recorded
+        # drift (doable from the GitHub mobile app); scheduled runs never
+        # accept, so unacknowledged drift keeps failing daily.
+        run: >
+          uv run scripts/providers/anthropic/list_models.py
+          ${{ (github.run_attempt > 1 || github.event_name == 'workflow_dispatch') && '--accept-pending' || '' }}
+
+      # Drift-ack handshake, step 1: a drift failure above recorded exactly
+      # what it saw in a pending-drift marker. Commit it so the next re-run
+      # checks it out and accepts exactly that drift. Auth/network failures
+      # write no marker, so this stages nothing and stays a no-op.
+      - name: Commit pending-drift marker
+        if: failure()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          find data/providers/anthropic -name '*.pending-drift.json' -exec git add -- {} +
+          if git diff --staged --quiet; then
+            echo "No pending-drift marker to commit."
+            exit 0
+          fi
+          git commit -m "Anthropic: record pending drift (re-run the workflow to accept)"
+          git pull --rebase --autostash
+          git push
 
       - name: Stage and summarize changes
         id: summary

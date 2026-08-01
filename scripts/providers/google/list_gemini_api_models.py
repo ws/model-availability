@@ -73,7 +73,7 @@ import google.auth.transport
 # Shared canonicalizer (lib/common.py). Repo root on sys.path so this
 # stdlib-only helper imports without a PEP 723 dependency entry.
 sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
-from lib.common import normalize_deep
+from lib.common import DriftGate, normalize_deep
 
 BASE_URL = "https://generativelanguage.googleapis.com/v1beta/models"
 PAGE_SIZE = 200
@@ -320,7 +320,13 @@ def main() -> int:
     parser.add_argument(
         "--allow-drift",
         action="store_true",
-        help="Accept removal of committed models instead of erroring",
+        help="Accept any drift instead of erroring (skips the marker handshake)",
+    )
+    parser.add_argument(
+        "--accept-pending",
+        action="store_true",
+        help="Accept exactly the drift recorded in the pending-drift marker "
+        "(the workflow passes this on re-runs — the ack half of the handshake)",
     )
     parser.add_argument(
         "--output",
@@ -359,16 +365,18 @@ def main() -> int:
     # Drift detection: the committed catalog is the source of truth for what we
     # already represent. New models are free (they append at the bottom), but a
     # model we already have vanishing upstream would drop it from the file, so
-    # that fails the run for human review.
-    drift = vanished_ids(models, read_existing_ids(args.output) - EXCLUDE)
-    if drift and not args.allow_drift:
+    # that fails the run for human review, acknowledged through the DriftGate
+    # handshake (re-run the failed workflow, or --accept-pending locally).
+    gate = DriftGate(args.output, allow_all=args.allow_drift, accept_pending=args.accept_pending)
+    drift = gate.unacked("vanished", vanished_ids(models, read_existing_ids(args.output) - EXCLUDE))
+    if drift:
         print(
-            f"error: {len(drift)} committed model(s) no longer returned by the "
-            "API — review and re-run with --allow-drift to accept the removal:",
+            f"error: {len(drift)} committed model(s) no longer returned by the API:",
             file=sys.stderr,
         )
         for mid in drift:
             print(f"  {mid}", file=sys.stderr)
+        gate.record()
         return 1
 
     # Emit in the hardcoded MODEL_ORDER. Key by the bare model id, with the full
@@ -387,6 +395,7 @@ def main() -> int:
     tmp.replace(args.output)
 
     write_csv(catalog, args.output.with_suffix(".csv"))
+    gate.clear()
 
     print(f"Wrote {len(catalog)} Gemini API models to {args.output}", file=sys.stderr)
     return 0
