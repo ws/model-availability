@@ -2572,6 +2572,70 @@
     "tradeRestricted": true,
     "variantInformation": null
   },
+  "FW-GLM-5.2-Fast": {
+    "name": "FW-GLM-5.2-Fast",
+    "displayName": "GLM 5.2 Fast",
+    "publisher": "Fireworks",
+    "registryName": "azureml-fireworks",
+    "version": "1",
+    "lifecycle": "Generally Available",
+    "deploymentOptions": [
+      "Serverless API",
+      "UnifiedEndpointMaaS"
+    ],
+    "allowedDeploymentTemplates": [],
+    "assetId": "azureml://registries/azureml-fireworks/models/FW-GLM-5.2-Fast/versions/1",
+    "author": "zAI",
+    "azureOffers": [
+      "PTU",
+      "standard-paygo"
+    ],
+    "deploymentOptionDetails": {},
+    "deprecation": {
+      "inferenceRetirementDate": null
+    },
+    "fineTuningTasks": [],
+    "hiddenLayerScanned": null,
+    "hostedOn": [],
+    "inferenceTasks": [
+      "chat-completion"
+    ],
+    "isDirectFromAzure": null,
+    "keywords": [
+      "Agents",
+      "Coding"
+    ],
+    "license": "other",
+    "minQuotaTier": null,
+    "modelCapabilities": [
+      "agentsV2",
+      "reasoning",
+      "streaming",
+      "tool-calling"
+    ],
+    "modelLimits": {
+      "otherLimits": {},
+      "supportedInputModalities": [
+        "text"
+      ],
+      "supportedLanguages": [
+        "en"
+      ],
+      "supportedOutputModalities": [
+        "text"
+      ],
+      "textLimits": {
+        "inputContextWindow": 1048576,
+        "maxOutputTokens": null
+      }
+    },
+    "playgroundLimits": {
+      "rateLimitTier": null
+    },
+    "summary": "GLM 5.2 Fast is Fireworks' high-throughput serverless path for GLM 5.2, using the same weights and quality as Standard with the full 1M-token context and about 2x Standard throughput.",
+    "tradeRestricted": true,
+    "variantInformation": null
+  },
   "FW-GPT-OSS-120B": {
     "name": "FW-GPT-OSS-120B",
     "displayName": "OpenAI gpt-oss-120b",
@@ -5675,13 +5739,15 @@
     "displayName": "Meta-Llama-3.1-8B-Instruct",
     "publisher": "Meta",
     "registryName": "azureml-meta",
-    "version": "5",
-    "lifecycle": "Retired",
+    "version": "6",
+    "lifecycle": null,
     "deploymentOptions": [
-      "Serverless API"
+      "MaaP",
+      "ServerlessMaaS",
+      "UnifiedEndpointMaaS"
     ],
     "allowedDeploymentTemplates": [],
-    "assetId": "azureml://registries/azureml-meta/models/Meta-Llama-3.1-8B-Instruct/versions/5",
+    "assetId": "azureml://registries/azureml-meta/models/Meta-Llama-3.1-8B-Instruct/versions/6",
     "author": null,
     "azureOffers": [
       "VM",
@@ -5689,7 +5755,7 @@
     ],
     "deploymentOptionDetails": {},
     "deprecation": {
-      "inferenceRetirementDate": null
+      "inferenceRetirementDate": "2026-06-13T00:00:00+00:00"
     },
     "fineTuningTasks": [
       "chat-completion"
@@ -6553,6 +6619,91 @@
       "rateLimitTier": "low"
     },
     "summary": "Phi-4 14B, a highly capable model for low latency scenarios.",
+    "tradeRestricted": false,
+    "variantInformation": null
+  },
+  "Phi-4-mini-instruct": {
+    "name": "Phi-4-mini-instruct",
+    "displayName": "Phi-4-mini-instruct",
+    "publisher": "Microsoft",
+    "registryName": "azureml",
+    "version": "1",
+    "lifecycle": null,
+    "deploymentOptions": [
+      "MaaP",
+      "ServerlessMaaS",
+      "UnifiedEndpointMaaS"
+    ],
+    "allowedDeploymentTemplates": [],
+    "assetId": "azureml://registries/azureml/models/Phi-4-mini-instruct/versions/1",
+    "author": null,
+    "azureOffers": [
+      "VM",
+      "standard-paygo"
+    ],
+    "deploymentOptionDetails": {},
+    "deprecation": {
+      "inferenceRetirementDate": null
+    },
+    "fineTuningTasks": [
+      "chat-completion"
+    ],
+    "hiddenLayerScanned": true,
+    "hostedOn": [],
+    "inferenceTasks": [
+      "chat-completion"
+    ],
+    "isDirectFromAzure": null,
+    "keywords": [
+      "Agents",
+      "Multilingual",
+      "Reasoning"
+    ],
+    "license": "MIT",
+    "minQuotaTier": null,
+    "modelCapabilities": [],
+    "modelLimits": {
+      "otherLimits": {},
+      "supportedInputModalities": [
+        "text"
+      ],
+      "supportedLanguages": [
+        "ar",
+        "cs",
+        "da",
+        "de",
+        "en",
+        "es",
+        "fi",
+        "fr",
+        "he",
+        "hu",
+        "it",
+        "ja",
+        "ko",
+        "nl",
+        "no",
+        "pl",
+        "pt",
+        "ru",
+        "sv",
+        "th",
+        "tr",
+        "uk",
+        "zh"
+      ],
+      "supportedOutputModalities": [
+        "text"
+      ],
+      "textLimits": {
+        "inputContextWindow": 128000,
+        "maxOutputTokens": 4096
+      }
+    },
+    "playgroundLimits": {
+      "rateLimitTier": "low"
+    },
+    "summary": "3.8B parameters Small Language Model outperforming larger models in reasoning, math, coding, and function-calling",
     "tradeRestricted": false,
     "variantInformation": null
   },
