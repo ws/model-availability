@@ -106,7 +106,6 @@ Phi-3.5-MoE-instruct,Phi-3.5-MoE instruct (128k),Microsoft,Retired
 Phi-3.5-mini-instruct,Phi-3.5-mini instruct (128k),Microsoft,Retired
 Phi-3.5-vision-instruct,Phi-3.5-vision instruct (128k),Microsoft,Retired
 Phi-4,Phi-4,Microsoft,
-Phi-4-mini-instruct,Phi-4-mini-instruct,Microsoft,
 Stable-Diffusion-3.5-Large,Stable Diffusion 3.5 Large,StabilityAI,Generally Available
 Stable-Image-Core,Stable Image Core,StabilityAI,Generally Available
 Stable-Image-Ultra,Stable Image Ultra,StabilityAI,Generally Available
