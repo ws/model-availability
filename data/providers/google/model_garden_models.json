@@ -232,13 +232,15 @@
       "name": "publishers/anthropic/models/claude-sonnet-5",
       "versionId": "default",
       "launchStage": "GA",
-      "openSourceCategory": "PROPRIETARY"
+      "openSourceCategory": "PROPRIETARY",
+      "publisherModelTemplate": "projects/{project}/locations/{location}/publishers/google/models/claude-sonnet-5@default"
     },
     "anthropic/claude-opus-5": {
       "name": "publishers/anthropic/models/claude-opus-5",
       "versionId": "default",
       "launchStage": "GA",
-      "openSourceCategory": "PROPRIETARY"
+      "openSourceCategory": "PROPRIETARY",
+      "publisherModelTemplate": "projects/{project}/locations/{location}/publishers/google/models/claude-opus-5@default"
     }
   }
 }
