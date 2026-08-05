@@ -9,8 +9,7 @@
   },
   "gpt-3.5-turbo": {
     "id": "gpt-3.5-turbo",
-    "created": 1677610602,
-    "deprecation_date": "2026-10-23"
+    "created": 1677610602
   },
   "tts-1": {
     "id": "tts-1",
@@ -22,28 +21,23 @@
   },
   "gpt-4-0613": {
     "id": "gpt-4-0613",
-    "created": 1686588896,
-    "deprecation_date": "2026-10-23"
+    "created": 1686588896
   },
   "gpt-4": {
     "id": "gpt-4",
-    "created": 1687882411,
-    "deprecation_date": "2026-10-23"
+    "created": 1687882411
   },
   "davinci-002": {
     "id": "davinci-002",
-    "created": 1692634301,
-    "deprecation_date": "2026-09-28"
+    "created": 1692634301
   },
   "babbage-002": {
     "id": "babbage-002",
-    "created": 1692634615,
-    "deprecation_date": "2026-09-28"
+    "created": 1692634615
   },
   "gpt-3.5-turbo-instruct": {
     "id": "gpt-3.5-turbo-instruct",
-    "created": 1692901427,
-    "deprecation_date": "2026-09-28"
+    "created": 1692901427
   },
   "gpt-3.5-turbo-instruct-0914": {
     "id": "gpt-3.5-turbo-instruct-0914",
@@ -51,8 +45,7 @@
   },
   "gpt-3.5-turbo-1106": {
     "id": "gpt-3.5-turbo-1106",
-    "created": 1698959748,
-    "deprecation_date": "2026-09-28"
+    "created": 1698959748
   },
   "tts-1-hd": {
     "id": "tts-1-hd",
@@ -76,18 +69,15 @@
   },
   "gpt-3.5-turbo-0125": {
     "id": "gpt-3.5-turbo-0125",
-    "created": 1706048358,
-    "deprecation_date": "2026-10-23"
+    "created": 1706048358
   },
   "gpt-4-turbo": {
     "id": "gpt-4-turbo",
-    "created": 1712361441,
-    "deprecation_date": "2026-10-23"
+    "created": 1712361441
   },
   "gpt-4-turbo-2024-04-09": {
     "id": "gpt-4-turbo-2024-04-09",
-    "created": 1712601677,
-    "deprecation_date": "2026-10-23"
+    "created": 1712601677
   },
   "gpt-4o": {
     "id": "gpt-4o",
@@ -95,8 +85,7 @@
   },
   "gpt-4o-2024-05-13": {
     "id": "gpt-4o-2024-05-13",
-    "created": 1715368132,
-    "deprecation_date": "2026-10-23"
+    "created": 1715368132
   },
   "gpt-4o-mini-2024-07-18": {
     "id": "gpt-4o-mini-2024-07-18",
@@ -120,23 +109,19 @@
   },
   "o1-2024-12-17": {
     "id": "o1-2024-12-17",
-    "created": 1734326976,
-    "deprecation_date": "2026-10-23"
+    "created": 1734326976
   },
   "o1": {
     "id": "o1",
-    "created": 1734375816,
-    "deprecation_date": "2026-10-23"
+    "created": 1734375816
   },
   "o3-mini": {
     "id": "o3-mini",
-    "created": 1737146383,
-    "deprecation_date": "2026-10-23"
+    "created": 1737146383
   },
   "o3-mini-2025-01-31": {
     "id": "o3-mini-2025-01-31",
-    "created": 1738010200,
-    "deprecation_date": "2026-10-23"
+    "created": 1738010200
   },
   "gpt-4o-2024-11-20": {
     "id": "gpt-4o-2024-11-20",
@@ -144,8 +129,7 @@
   },
   "gpt-4o-mini-search-preview-2025-03-11": {
     "id": "gpt-4o-mini-search-preview-2025-03-11",
-    "created": 1741390858,
-    "deprecation_date": "2026-07-23"
+    "created": 1741390858
   },
   "gpt-4o-mini-search-preview": {
     "id": "gpt-4o-mini-search-preview",
@@ -161,13 +145,11 @@
   },
   "o1-pro-2025-03-19": {
     "id": "o1-pro-2025-03-19",
-    "created": 1742251504,
-    "deprecation_date": "2026-10-23"
+    "created": 1742251504
   },
   "o1-pro": {
     "id": "o1-pro",
-    "created": 1742251791,
-    "deprecation_date": "2026-10-23"
+    "created": 1742251791
   },
   "gpt-4o-mini-tts": {
     "id": "gpt-4o-mini-tts",
@@ -175,13 +157,11 @@
   },
   "o3-2025-04-16": {
     "id": "o3-2025-04-16",
-    "created": 1744133301,
-    "deprecation_date": "2026-12-11"
+    "created": 1744133301
   },
   "o4-mini-2025-04-16": {
     "id": "o4-mini-2025-04-16",
-    "created": 1744133506,
-    "deprecation_date": "2026-10-23"
+    "created": 1744133506
   },
   "o3": {
     "id": "o3",
@@ -189,8 +169,7 @@
   },
   "o4-mini": {
     "id": "o4-mini",
-    "created": 1744225351,
-    "deprecation_date": "2026-10-23"
+    "created": 1744225351
   },
   "gpt-4.1-2025-04-14": {
     "id": "gpt-4.1-2025-04-14",
@@ -210,23 +189,19 @@
   },
   "gpt-4.1-nano-2025-04-14": {
     "id": "gpt-4.1-nano-2025-04-14",
-    "created": 1744321025,
-    "deprecation_date": "2026-10-23"
+    "created": 1744321025
   },
   "gpt-4.1-nano": {
     "id": "gpt-4.1-nano",
-    "created": 1744321707,
-    "deprecation_date": "2026-10-23"
+    "created": 1744321707
   },
   "gpt-image-1": {
     "id": "gpt-image-1",
-    "created": 1745517030,
-    "deprecation_date": "2026-10-23"
+    "created": 1745517030
   },
   "o4-mini-deep-research": {
     "id": "o4-mini-deep-research",
-    "created": 1749685485,
-    "deprecation_date": "2026-07-23"
+    "created": 1749685485
   },
   "gpt-4o-transcribe-diarize": {
     "id": "gpt-4o-transcribe-diarize",
@@ -234,18 +209,15 @@
   },
   "o4-mini-deep-research-2025-06-26": {
     "id": "o4-mini-deep-research-2025-06-26",
-    "created": 1750866121,
-    "deprecation_date": "2026-07-23"
+    "created": 1750866121
   },
   "gpt-5-chat-latest": {
     "id": "gpt-5-chat-latest",
-    "created": 1754073306,
-    "deprecation_date": "2026-07-23"
+    "created": 1754073306
   },
   "gpt-5-2025-08-07": {
     "id": "gpt-5-2025-08-07",
-    "created": 1754075360,
-    "deprecation_date": "2026-12-11"
+    "created": 1754075360
   },
   "gpt-5": {
     "id": "gpt-5",
@@ -253,8 +225,7 @@
   },
   "gpt-5-mini-2025-08-07": {
     "id": "gpt-5-mini-2025-08-07",
-    "created": 1754425867,
-    "deprecation_date": "2026-12-11"
+    "created": 1754425867
   },
   "gpt-5-mini": {
     "id": "gpt-5-mini",
@@ -262,8 +233,7 @@
   },
   "gpt-5-nano-2025-08-07": {
     "id": "gpt-5-nano-2025-08-07",
-    "created": 1754426303,
-    "deprecation_date": "2026-12-11"
+    "created": 1754426303
   },
   "gpt-5-nano": {
     "id": "gpt-5-nano",
@@ -275,8 +245,7 @@
   },
   "gpt-realtime": {
     "id": "gpt-realtime",
-    "created": 1756271701,
-    "deprecation_date": "2027-01-20"
+    "created": 1756271701
   },
   "gpt-realtime-2025-08-28": {
     "id": "gpt-realtime-2025-08-28",
@@ -284,23 +253,19 @@
   },
   "gpt-audio": {
     "id": "gpt-audio",
-    "created": 1756339249,
-    "deprecation_date": "2027-01-20"
+    "created": 1756339249
   },
   "gpt-5-codex": {
     "id": "gpt-5-codex",
-    "created": 1757527818,
-    "deprecation_date": "2026-07-23"
+    "created": 1757527818
   },
   "gpt-image-1-mini": {
     "id": "gpt-image-1-mini",
-    "created": 1758845821,
-    "deprecation_date": "2026-12-01"
+    "created": 1758845821
   },
   "gpt-5-pro-2025-10-06": {
     "id": "gpt-5-pro-2025-10-06",
-    "created": 1759469707,
-    "deprecation_date": "2026-12-11"
+    "created": 1759469707
   },
   "gpt-5-pro": {
     "id": "gpt-5-pro",
@@ -308,13 +273,11 @@
   },
   "gpt-audio-mini": {
     "id": "gpt-audio-mini",
-    "created": 1759512027,
-    "deprecation_date": "2027-01-20"
+    "created": 1759512027
   },
   "gpt-audio-mini-2025-10-06": {
     "id": "gpt-audio-mini-2025-10-06",
-    "created": 1759512137,
-    "deprecation_date": "2026-07-23"
+    "created": 1759512137
   },
   "gpt-5-search-api": {
     "id": "gpt-5-search-api",
@@ -322,18 +285,15 @@
   },
   "gpt-realtime-mini": {
     "id": "gpt-realtime-mini",
-    "created": 1759517133,
-    "deprecation_date": "2027-01-20"
+    "created": 1759517133
   },
   "sora-2": {
     "id": "sora-2",
-    "created": 1759708615,
-    "deprecation_date": "2026-09-24"
+    "created": 1759708615
   },
   "sora-2-pro": {
     "id": "sora-2-pro",
-    "created": 1759708663,
-    "deprecation_date": "2026-09-24"
+    "created": 1759708663
   },
   "gpt-5-search-api-2025-10-14": {
     "id": "gpt-5-search-api-2025-10-14",
@@ -341,8 +301,7 @@
   },
   "gpt-5.1-chat-latest": {
     "id": "gpt-5.1-chat-latest",
-    "created": 1762547951,
-    "deprecation_date": "2026-07-23"
+    "created": 1762547951
   },
   "gpt-5.1-2025-11-13": {
     "id": "gpt-5.1-2025-11-13",
@@ -354,23 +313,19 @@
   },
   "gpt-5.1-codex": {
     "id": "gpt-5.1-codex",
-    "created": 1762988221,
-    "deprecation_date": "2026-07-23"
+    "created": 1762988221
   },
   "gpt-5.1-codex-mini": {
     "id": "gpt-5.1-codex-mini",
-    "created": 1763007109,
-    "deprecation_date": "2026-07-23"
+    "created": 1763007109
   },
   "gpt-5.1-codex-max": {
     "id": "gpt-5.1-codex-max",
-    "created": 1763671532,
-    "deprecation_date": "2026-07-23"
+    "created": 1763671532
   },
   "gpt-image-1.5": {
     "id": "gpt-image-1.5",
-    "created": 1764030620,
-    "deprecation_date": "2026-12-01"
+    "created": 1764030620
   },
   "gpt-5.2-2025-12-11": {
     "id": "gpt-5.2-2025-12-11",
@@ -390,8 +345,7 @@
   },
   "gpt-5.2-chat-latest": {
     "id": "gpt-5.2-chat-latest",
-    "created": 1765344352,
-    "deprecation_date": "2026-08-10"
+    "created": 1765344352
   },
   "gpt-4o-mini-transcribe-2025-12-15": {
     "id": "gpt-4o-mini-transcribe-2025-12-15",
@@ -399,13 +353,11 @@
   },
   "gpt-4o-mini-transcribe-2025-03-20": {
     "id": "gpt-4o-mini-transcribe-2025-03-20",
-    "created": 1765610545,
-    "deprecation_date": "2027-01-20"
+    "created": 1765610545
   },
   "gpt-4o-mini-tts-2025-03-20": {
     "id": "gpt-4o-mini-tts-2025-03-20",
-    "created": 1765610731,
-    "deprecation_date": "2026-07-23"
+    "created": 1765610731
   },
   "gpt-4o-mini-tts-2025-12-15": {
     "id": "gpt-4o-mini-tts-2025-12-15",
@@ -421,13 +373,11 @@
   },
   "chatgpt-image-latest": {
     "id": "chatgpt-image-latest",
-    "created": 1765925279,
-    "deprecation_date": "2026-12-01"
+    "created": 1765925279
   },
   "gpt-5.2-codex": {
     "id": "gpt-5.2-codex",
-    "created": 1766164985,
-    "deprecation_date": "2026-07-23"
+    "created": 1766164985
   },
   "gpt-5.3-codex": {
     "id": "gpt-5.3-codex",
@@ -447,13 +397,11 @@
   },
   "gpt-4o-search-preview-2025-03-11": {
     "id": "gpt-4o-search-preview-2025-03-11",
-    "created": 1771905621,
-    "deprecation_date": "2026-07-23"
+    "created": 1771905621
   },
   "gpt-5.3-chat-latest": {
     "id": "gpt-5.3-chat-latest",
-    "created": 1772236571,
-    "deprecation_date": "2026-08-10"
+    "created": 1772236571
   },
   "gpt-5.4-2026-03-05": {
     "id": "gpt-5.4-2026-03-05",
