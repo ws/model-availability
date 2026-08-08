@@ -2887,6 +2887,71 @@
     "tradeRestricted": true,
     "variantInformation": null
   },
+  "FW-Inkling": {
+    "name": "FW-Inkling",
+    "displayName": "Inkling",
+    "publisher": "Fireworks",
+    "registryName": "azureml-fireworks",
+    "version": "1",
+    "lifecycle": "Generally Available",
+    "deploymentOptions": [
+      "Serverless API",
+      "UnifiedEndpointMaaS"
+    ],
+    "allowedDeploymentTemplates": [],
+    "assetId": "azureml://registries/azureml-fireworks/models/FW-Inkling/versions/1",
+    "author": "Thinking Machines Lab",
+    "azureOffers": [
+      "PTU",
+      "standard-paygo"
+    ],
+    "deploymentOptionDetails": {},
+    "deprecation": {
+      "inferenceRetirementDate": null
+    },
+    "fineTuningTasks": [],
+    "hiddenLayerScanned": null,
+    "hostedOn": [],
+    "inferenceTasks": [
+      "chat-completion"
+    ],
+    "isDirectFromAzure": null,
+    "keywords": [
+      "Agents",
+      "Coding",
+      "Conversation"
+    ],
+    "license": "other",
+    "minQuotaTier": null,
+    "modelCapabilities": [
+      "agentsV2",
+      "reasoning",
+      "streaming",
+      "tool-calling"
+    ],
+    "modelLimits": {
+      "otherLimits": {},
+      "supportedInputModalities": [
+        "text"
+      ],
+      "supportedLanguages": [
+        "en"
+      ],
+      "supportedOutputModalities": [
+        "text"
+      ],
+      "textLimits": {
+        "inputContextWindow": 1048576,
+        "maxOutputTokens": null
+      }
+    },
+    "playgroundLimits": {
+      "rateLimitTier": null
+    },
+    "summary": "Inkling is a 975B-parameter sparse Mixture-of-Experts model from Thinking Machines Lab with 41B active parameters, controllable thinking effort, and a 1M-token context window.",
+    "tradeRestricted": true,
+    "variantInformation": null
+  },
   "FW-Kimi-K2-Instruct-0905": {
     "name": "FW-Kimi-K2-Instruct-0905",
     "displayName": "Kimi K2 Instruct",
@@ -3606,6 +3671,80 @@
       "rateLimitTier": null
     },
     "summary": "Nemotron Super 120B is a 120B-parameter Mixture-of-Experts language model from NVIDIA with 12B active parameters, a hybrid Mamba-2 and LatentMoE architecture, configurable reasoning mode, multilingual support, and a 262,144-token context window — optimized",
+    "tradeRestricted": true,
+    "variantInformation": null
+  },
+  "FW-Nemotron-3-Ultra-NVFP4": {
+    "name": "FW-Nemotron-3-Ultra-NVFP4",
+    "displayName": "Nemotron 3 Ultra NVFP4",
+    "publisher": "Fireworks",
+    "registryName": "azureml-fireworks",
+    "version": "1",
+    "lifecycle": "Generally Available",
+    "deploymentOptions": [
+      "Serverless API",
+      "UnifiedEndpointMaaS"
+    ],
+    "allowedDeploymentTemplates": [],
+    "assetId": "azureml://registries/azureml-fireworks/models/FW-Nemotron-3-Ultra-NVFP4/versions/1",
+    "author": "Nvidia",
+    "azureOffers": [
+      "PTU",
+      "standard-paygo"
+    ],
+    "deploymentOptionDetails": {},
+    "deprecation": {
+      "inferenceRetirementDate": null
+    },
+    "fineTuningTasks": [],
+    "hiddenLayerScanned": null,
+    "hostedOn": [],
+    "inferenceTasks": [
+      "chat-completion"
+    ],
+    "isDirectFromAzure": null,
+    "keywords": [
+      "Agents",
+      "Coding",
+      "Conversation"
+    ],
+    "license": "other",
+    "minQuotaTier": null,
+    "modelCapabilities": [
+      "agentsV2",
+      "reasoning",
+      "streaming",
+      "tool-calling"
+    ],
+    "modelLimits": {
+      "otherLimits": {},
+      "supportedInputModalities": [
+        "text"
+      ],
+      "supportedLanguages": [
+        "de",
+        "en",
+        "es",
+        "fr",
+        "hi",
+        "it",
+        "ja",
+        "ko",
+        "pt",
+        "zh"
+      ],
+      "supportedOutputModalities": [
+        "text"
+      ],
+      "textLimits": {
+        "inputContextWindow": 262144,
+        "maxOutputTokens": null
+      }
+    },
+    "playgroundLimits": {
+      "rateLimitTier": null
+    },
+    "summary": "Nemotron 3 Ultra NVFP4 is a frontier-scale Mixture-of-Experts language model from NVIDIA with approximately 550B total parameters and 55B active parameters, a hybrid Mamba-2 and LatentMoE architecture, configurable reasoning, function calling, and a 262,14",
     "tradeRestricted": true,
     "variantInformation": null
   },
@@ -6616,91 +6755,6 @@
       "rateLimitTier": "low"
     },
     "summary": "Phi-4 14B, a highly capable model for low latency scenarios.",
-    "tradeRestricted": false,
-    "variantInformation": null
-  },
-  "Phi-4-mini-instruct": {
-    "name": "Phi-4-mini-instruct",
-    "displayName": "Phi-4-mini-instruct",
-    "publisher": "Microsoft",
-    "registryName": "azureml",
-    "version": "1",
-    "lifecycle": null,
-    "deploymentOptions": [
-      "MaaP",
-      "ServerlessMaaS",
-      "UnifiedEndpointMaaS"
-    ],
-    "allowedDeploymentTemplates": [],
-    "assetId": "azureml://registries/azureml/models/Phi-4-mini-instruct/versions/1",
-    "author": null,
-    "azureOffers": [
-      "VM",
-      "standard-paygo"
-    ],
-    "deploymentOptionDetails": {},
-    "deprecation": {
-      "inferenceRetirementDate": null
-    },
-    "fineTuningTasks": [
-      "chat-completion"
-    ],
-    "hiddenLayerScanned": true,
-    "hostedOn": [],
-    "inferenceTasks": [
-      "chat-completion"
-    ],
-    "isDirectFromAzure": null,
-    "keywords": [
-      "Agents",
-      "Multilingual",
-      "Reasoning"
-    ],
-    "license": "MIT",
-    "minQuotaTier": null,
-    "modelCapabilities": [],
-    "modelLimits": {
-      "otherLimits": {},
-      "supportedInputModalities": [
-        "text"
-      ],
-      "supportedLanguages": [
-        "ar",
-        "cs",
-        "da",
-        "de",
-        "en",
-        "es",
-        "fi",
-        "fr",
-        "he",
-        "hu",
-        "it",
-        "ja",
-        "ko",
-        "nl",
-        "no",
-        "pl",
-        "pt",
-        "ru",
-        "sv",
-        "th",
-        "tr",
-        "uk",
-        "zh"
-      ],
-      "supportedOutputModalities": [
-        "text"
-      ],
-      "textLimits": {
-        "inputContextWindow": 128000,
-        "maxOutputTokens": 4096
-      }
-    },
-    "playgroundLimits": {
-      "rateLimitTier": "low"
-    },
-    "summary": "3.8B parameters Small Language Model outperforming larger models in reasoning, math, coding, and function-calling",
     "tradeRestricted": false,
     "variantInformation": null
   },

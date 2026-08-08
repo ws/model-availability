@@ -48,6 +48,7 @@ FW-GPT-OSS-120B,OpenAI gpt-oss-120b,Fireworks,Generally Available
 FW-GPT-OSS-20B,OpenAI gpt-oss-20b,Fireworks,Generally Available
 FW-Gemma-4-26B-A4B-IT,Gemma 4 26B A4B IT,Fireworks,Generally Available
 FW-Gemma-4-31B-IT,Gemma 4 31B IT,Fireworks,Generally Available
+FW-Inkling,Inkling,Fireworks,Generally Available
 FW-Kimi-K2-Instruct-0905,Kimi K2 Instruct,Fireworks,Generally Available
 FW-Kimi-K2-Thinking,Kimi K2 Thinking,Fireworks,Generally Available
 FW-Kimi-K2.5,Kimi K2.5,Fireworks,Generally Available
@@ -59,6 +60,7 @@ FW-MiniMax-M2.5,MiniMax M2.5,Fireworks,Generally Available
 FW-MiniMax-M3,MiniMax M3,Fireworks,Generally Available
 FW-Ministral-3-3B-Instruct-2512,Ministral 3 3B Instruct 2512,Fireworks,Generally Available
 FW-Nemotron-3-Super-120B-A12B-BF16,Nemotron Super 120B,Fireworks,Generally Available
+FW-Nemotron-3-Ultra-NVFP4,Nemotron 3 Ultra NVFP4,Fireworks,Generally Available
 FW-Qwen3-14B,Qwen3 14B,Fireworks,Generally Available
 FW-Qwen3-32B,Qwen3 32B,Fireworks,Generally Available
 FW-Qwen3.5-122B-A10B,Qwen3.5 122B A10B,Fireworks,Generally Available
@@ -106,7 +108,6 @@ Phi-3.5-MoE-instruct,Phi-3.5-MoE instruct (128k),Microsoft,Retired
 Phi-3.5-mini-instruct,Phi-3.5-mini instruct (128k),Microsoft,Retired
 Phi-3.5-vision-instruct,Phi-3.5-vision instruct (128k),Microsoft,Retired
 Phi-4,Phi-4,Microsoft,
-Phi-4-mini-instruct,Phi-4-mini-instruct,Microsoft,
 Stable-Diffusion-3.5-Large,Stable Diffusion 3.5 Large,StabilityAI,Retired
 Stable-Image-Core,Stable Image Core,StabilityAI,Retired
 Stable-Image-Ultra,Stable Image Ultra,StabilityAI,Retired
