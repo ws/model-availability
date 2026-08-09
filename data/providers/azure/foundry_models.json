@@ -5875,15 +5875,13 @@
     "displayName": "Meta-Llama-3.1-8B-Instruct",
     "publisher": "Meta",
     "registryName": "azureml-meta",
-    "version": "6",
-    "lifecycle": null,
+    "version": "5",
+    "lifecycle": "Retired",
     "deploymentOptions": [
-      "MaaP",
-      "ServerlessMaaS",
-      "UnifiedEndpointMaaS"
+      "Serverless API"
     ],
     "allowedDeploymentTemplates": [],
-    "assetId": "azureml://registries/azureml-meta/models/Meta-Llama-3.1-8B-Instruct/versions/6",
+    "assetId": "azureml://registries/azureml-meta/models/Meta-Llama-3.1-8B-Instruct/versions/5",
     "author": null,
     "azureOffers": [
       "VM",
@@ -5891,7 +5889,7 @@
     ],
     "deploymentOptionDetails": {},
     "deprecation": {
-      "inferenceRetirementDate": "2026-06-13T00:00:00+00:00"
+      "inferenceRetirementDate": null
     },
     "fineTuningTasks": [
       "chat-completion"
