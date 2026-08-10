@@ -4708,13 +4708,15 @@
     "displayName": "Llama-3.2-11B-Vision-Instruct",
     "publisher": "Meta",
     "registryName": "azureml-meta",
-    "version": "2",
-    "lifecycle": "Retired",
+    "version": "6",
+    "lifecycle": null,
     "deploymentOptions": [
-      "Serverless API"
+      "MaaP",
+      "ServerlessMaaS",
+      "UnifiedEndpointMaaS"
     ],
     "allowedDeploymentTemplates": [],
-    "assetId": "azureml://registries/azureml-meta/models/Llama-3.2-11B-Vision-Instruct/versions/2",
+    "assetId": "azureml://registries/azureml-meta/models/Llama-3.2-11B-Vision-Instruct/versions/6",
     "author": null,
     "azureOffers": [
       "VM",
@@ -4722,7 +4724,7 @@
     ],
     "deploymentOptionDetails": {},
     "deprecation": {
-      "inferenceRetirementDate": null
+      "inferenceRetirementDate": "2026-06-13T00:00:00+00:00"
     },
     "fineTuningTasks": [],
     "hiddenLayerScanned": null,
@@ -4738,7 +4740,9 @@
     ],
     "license": "custom",
     "minQuotaTier": null,
-    "modelCapabilities": [],
+    "modelCapabilities": [
+      "streaming"
+    ],
     "modelLimits": {
       "otherLimits": {},
       "supportedInputModalities": [
@@ -4775,13 +4779,15 @@
     "displayName": "Llama-3.2-90B-Vision-Instruct",
     "publisher": "Meta",
     "registryName": "azureml-meta",
-    "version": "3",
-    "lifecycle": "Retired",
+    "version": "5",
+    "lifecycle": null,
     "deploymentOptions": [
-      "Serverless API"
+      "MaaP",
+      "ServerlessMaaS",
+      "UnifiedEndpointMaaS"
     ],
     "allowedDeploymentTemplates": [],
-    "assetId": "azureml://registries/azureml-meta/models/Llama-3.2-90B-Vision-Instruct/versions/3",
+    "assetId": "azureml://registries/azureml-meta/models/Llama-3.2-90B-Vision-Instruct/versions/5",
     "author": null,
     "azureOffers": [
       "VM",
@@ -4789,7 +4795,7 @@
     ],
     "deploymentOptionDetails": {},
     "deprecation": {
-      "inferenceRetirementDate": null
+      "inferenceRetirementDate": "2026-06-13T00:00:00+00:00"
     },
     "fineTuningTasks": [],
     "hiddenLayerScanned": null,
@@ -4805,7 +4811,9 @@
     ],
     "license": "custom",
     "minQuotaTier": null,
-    "modelCapabilities": [],
+    "modelCapabilities": [
+      "streaming"
+    ],
     "modelLimits": {
       "otherLimits": {},
       "supportedInputModalities": [
@@ -4987,13 +4995,15 @@
     "displayName": "Llama 4 Scout 17B 16E Instruct",
     "publisher": "Meta",
     "registryName": "azureml-meta",
-    "version": "1",
-    "lifecycle": "Generally Available",
+    "version": "4",
+    "lifecycle": null,
     "deploymentOptions": [
-      "Serverless API"
+      "MaaP",
+      "ServerlessMaaS",
+      "UnifiedEndpointMaaS"
     ],
     "allowedDeploymentTemplates": [],
-    "assetId": "azureml://registries/azureml-meta/models/Llama-4-Scout-17B-16E-Instruct/versions/1",
+    "assetId": "azureml://registries/azureml-meta/models/Llama-4-Scout-17B-16E-Instruct/versions/4",
     "author": null,
     "azureOffers": [
       "VM",
@@ -5003,7 +5013,9 @@
     "deprecation": {
       "inferenceRetirementDate": null
     },
-    "fineTuningTasks": [],
+    "fineTuningTasks": [
+      "chat-completion"
+    ],
     "hiddenLayerScanned": true,
     "hostedOn": [],
     "inferenceTasks": [
@@ -5018,8 +5030,8 @@
     "license": "custom",
     "minQuotaTier": null,
     "modelCapabilities": [
-      "agent",
-      "assistant",
+      "agents",
+      "assistants",
       "streaming",
       "tool-calling"
     ],
@@ -5875,13 +5887,15 @@
     "displayName": "Meta-Llama-3.1-8B-Instruct",
     "publisher": "Meta",
     "registryName": "azureml-meta",
-    "version": "5",
-    "lifecycle": "Retired",
+    "version": "6",
+    "lifecycle": null,
     "deploymentOptions": [
-      "Serverless API"
+      "MaaP",
+      "ServerlessMaaS",
+      "UnifiedEndpointMaaS"
     ],
     "allowedDeploymentTemplates": [],
-    "assetId": "azureml://registries/azureml-meta/models/Meta-Llama-3.1-8B-Instruct/versions/5",
+    "assetId": "azureml://registries/azureml-meta/models/Meta-Llama-3.1-8B-Instruct/versions/6",
     "author": null,
     "azureOffers": [
       "VM",
@@ -5889,7 +5903,7 @@
     ],
     "deploymentOptionDetails": {},
     "deprecation": {
-      "inferenceRetirementDate": null
+      "inferenceRetirementDate": "2026-06-13T00:00:00+00:00"
     },
     "fineTuningTasks": [
       "chat-completion"
@@ -6753,6 +6767,304 @@
       "rateLimitTier": "low"
     },
     "summary": "Phi-4 14B, a highly capable model for low latency scenarios.",
+    "tradeRestricted": false,
+    "variantInformation": null
+  },
+  "Phi-4-mini-instruct": {
+    "name": "Phi-4-mini-instruct",
+    "displayName": "Phi-4-mini-instruct",
+    "publisher": "Microsoft",
+    "registryName": "azureml",
+    "version": "1",
+    "lifecycle": null,
+    "deploymentOptions": [
+      "MaaP",
+      "ServerlessMaaS",
+      "UnifiedEndpointMaaS"
+    ],
+    "allowedDeploymentTemplates": [],
+    "assetId": "azureml://registries/azureml/models/Phi-4-mini-instruct/versions/1",
+    "author": null,
+    "azureOffers": [
+      "VM",
+      "standard-paygo"
+    ],
+    "deploymentOptionDetails": {},
+    "deprecation": {
+      "inferenceRetirementDate": null
+    },
+    "fineTuningTasks": [
+      "chat-completion"
+    ],
+    "hiddenLayerScanned": true,
+    "hostedOn": [],
+    "inferenceTasks": [
+      "chat-completion"
+    ],
+    "isDirectFromAzure": null,
+    "keywords": [
+      "Agents",
+      "Multilingual",
+      "Reasoning"
+    ],
+    "license": "MIT",
+    "minQuotaTier": null,
+    "modelCapabilities": [],
+    "modelLimits": {
+      "otherLimits": {},
+      "supportedInputModalities": [
+        "text"
+      ],
+      "supportedLanguages": [
+        "ar",
+        "cs",
+        "da",
+        "de",
+        "en",
+        "es",
+        "fi",
+        "fr",
+        "he",
+        "hu",
+        "it",
+        "ja",
+        "ko",
+        "nl",
+        "no",
+        "pl",
+        "pt",
+        "ru",
+        "sv",
+        "th",
+        "tr",
+        "uk",
+        "zh"
+      ],
+      "supportedOutputModalities": [
+        "text"
+      ],
+      "textLimits": {
+        "inputContextWindow": 128000,
+        "maxOutputTokens": 4096
+      }
+    },
+    "playgroundLimits": {
+      "rateLimitTier": "low"
+    },
+    "summary": "3.8B parameters Small Language Model outperforming larger models in reasoning, math, coding, and function-calling",
+    "tradeRestricted": false,
+    "variantInformation": null
+  },
+  "Phi-4-mini-reasoning": {
+    "name": "Phi-4-mini-reasoning",
+    "displayName": "Phi-4-mini-reasoning",
+    "publisher": "Microsoft",
+    "registryName": "azureml",
+    "version": "1",
+    "lifecycle": null,
+    "deploymentOptions": [
+      "MaaP",
+      "ServerlessMaaS",
+      "UnifiedEndpointMaaS"
+    ],
+    "allowedDeploymentTemplates": [],
+    "assetId": "azureml://registries/azureml/models/Phi-4-mini-reasoning/versions/1",
+    "author": null,
+    "azureOffers": [
+      "VM",
+      "standard-paygo"
+    ],
+    "deploymentOptionDetails": {},
+    "deprecation": {
+      "inferenceRetirementDate": null
+    },
+    "fineTuningTasks": [],
+    "hiddenLayerScanned": null,
+    "hostedOn": [],
+    "inferenceTasks": [
+      "chat-completion"
+    ],
+    "isDirectFromAzure": null,
+    "keywords": [
+      "Large context",
+      "Low latency",
+      "Reasoning"
+    ],
+    "license": "MIT",
+    "minQuotaTier": null,
+    "modelCapabilities": [
+      "reasoning"
+    ],
+    "modelLimits": {
+      "otherLimits": {},
+      "supportedInputModalities": [
+        "text"
+      ],
+      "supportedLanguages": [
+        "en"
+      ],
+      "supportedOutputModalities": [
+        "text"
+      ],
+      "textLimits": {
+        "inputContextWindow": 128000,
+        "maxOutputTokens": 128000
+      }
+    },
+    "playgroundLimits": {
+      "rateLimitTier": "low"
+    },
+    "summary": "Lightweight math reasoning model optimized for multi-step problem solving",
+    "tradeRestricted": false,
+    "variantInformation": null
+  },
+  "Phi-4-multimodal-instruct": {
+    "name": "Phi-4-multimodal-instruct",
+    "displayName": "Phi-4-multimodal-instruct",
+    "publisher": "Microsoft",
+    "registryName": "azureml",
+    "version": "2",
+    "lifecycle": null,
+    "deploymentOptions": [
+      "MaaP",
+      "ServerlessMaaS",
+      "UnifiedEndpointMaaS"
+    ],
+    "allowedDeploymentTemplates": [],
+    "assetId": "azureml://registries/azureml/models/Phi-4-multimodal-instruct/versions/2",
+    "author": null,
+    "azureOffers": [
+      "VM",
+      "standard-paygo"
+    ],
+    "deploymentOptionDetails": {},
+    "deprecation": {
+      "inferenceRetirementDate": null
+    },
+    "fineTuningTasks": [],
+    "hiddenLayerScanned": true,
+    "hostedOn": [],
+    "inferenceTasks": [
+      "chat-completion"
+    ],
+    "isDirectFromAzure": null,
+    "keywords": [
+      "Audio",
+      "Summarization",
+      "Vision"
+    ],
+    "license": "MIT",
+    "minQuotaTier": null,
+    "modelCapabilities": [
+      "streaming"
+    ],
+    "modelLimits": {
+      "otherLimits": {},
+      "supportedInputModalities": [
+        "audio",
+        "image",
+        "text"
+      ],
+      "supportedLanguages": [
+        "ar",
+        "cs",
+        "da",
+        "de",
+        "en",
+        "es",
+        "fi",
+        "fr",
+        "he",
+        "hu",
+        "it",
+        "ja",
+        "ko",
+        "nl",
+        "pl",
+        "pt",
+        "ru",
+        "sv",
+        "th",
+        "tr",
+        "uk",
+        "zh"
+      ],
+      "supportedOutputModalities": [
+        "text"
+      ],
+      "textLimits": {
+        "inputContextWindow": 128000,
+        "maxOutputTokens": 4096
+      }
+    },
+    "playgroundLimits": {
+      "rateLimitTier": "low"
+    },
+    "summary": "First small multimodal model to have 3 modality inputs (text, audio, image), excelling in quality and efficiency",
+    "tradeRestricted": false,
+    "variantInformation": null
+  },
+  "Phi-4-reasoning": {
+    "name": "Phi-4-reasoning",
+    "displayName": "Phi-4-reasoning",
+    "publisher": "Microsoft",
+    "registryName": "azureml",
+    "version": "1",
+    "lifecycle": null,
+    "deploymentOptions": [
+      "MaaP",
+      "ServerlessMaaS",
+      "UnifiedEndpointMaaS"
+    ],
+    "allowedDeploymentTemplates": [],
+    "assetId": "azureml://registries/azureml/models/Phi-4-reasoning/versions/1",
+    "author": null,
+    "azureOffers": [
+      "VM",
+      "standard-paygo"
+    ],
+    "deploymentOptionDetails": {},
+    "deprecation": {
+      "inferenceRetirementDate": null
+    },
+    "fineTuningTasks": [],
+    "hiddenLayerScanned": null,
+    "hostedOn": [],
+    "inferenceTasks": [
+      "chat-completion"
+    ],
+    "isDirectFromAzure": null,
+    "keywords": [
+      "Large context",
+      "Low latency",
+      "Reasoning"
+    ],
+    "license": "MIT",
+    "minQuotaTier": null,
+    "modelCapabilities": [
+      "reasoning",
+      "streaming"
+    ],
+    "modelLimits": {
+      "otherLimits": {},
+      "supportedInputModalities": [
+        "text"
+      ],
+      "supportedLanguages": [
+        "en"
+      ],
+      "supportedOutputModalities": [
+        "text"
+      ],
+      "textLimits": {
+        "inputContextWindow": 32768,
+        "maxOutputTokens": 32768
+      }
+    },
+    "playgroundLimits": {
+      "rateLimitTier": "low"
+    },
+    "summary": "State-of-the-art open-weight reasoning model.",
     "tradeRestricted": false,
     "variantInformation": null
   },
@@ -8093,6 +8405,63 @@
       "rateLimitTier": "low"
     },
     "summary": "computer-use-preview is the model for Computer Use Agent for use in Responses API. You can use computer-use-preview model to get instructions to control a browser on your computer screen and take action on a user's behalf.",
+    "tradeRestricted": true,
+    "variantInformation": null
+  },
+  "davinci-002": {
+    "name": "davinci-002",
+    "displayName": "davinci-002",
+    "publisher": "OpenAI",
+    "registryName": "azure-openai",
+    "version": "3",
+    "lifecycle": null,
+    "deploymentOptions": [
+      "AOAI",
+      "MaaP",
+      "UnifiedEndpointMaaS"
+    ],
+    "allowedDeploymentTemplates": [],
+    "assetId": "azureml://registries/azure-openai/models/davinci-002/versions/3",
+    "author": null,
+    "azureOffers": [
+      "VM",
+      "standard-paygo"
+    ],
+    "deploymentOptionDetails": {},
+    "deprecation": {
+      "inferenceRetirementDate": null
+    },
+    "fineTuningTasks": [
+      "completions"
+    ],
+    "hiddenLayerScanned": null,
+    "hostedOn": [],
+    "inferenceTasks": [
+      "completions"
+    ],
+    "isDirectFromAzure": true,
+    "keywords": [],
+    "license": "custom",
+    "minQuotaTier": null,
+    "modelCapabilities": [],
+    "modelLimits": {
+      "otherLimits": {},
+      "supportedInputModalities": [
+        "text"
+      ],
+      "supportedLanguages": [],
+      "supportedOutputModalities": [
+        "text"
+      ],
+      "textLimits": {
+        "inputContextWindow": null,
+        "maxOutputTokens": 16384
+      }
+    },
+    "playgroundLimits": {
+      "rateLimitTier": null
+    },
+    "summary": null,
     "tradeRestricted": true,
     "variantInformation": null
   },
