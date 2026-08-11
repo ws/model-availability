@@ -1568,130 +1568,6 @@
     "tradeRestricted": true,
     "variantInformation": null
   },
-  "DeepSeek-V3-0324": {
-    "name": "DeepSeek-V3-0324",
-    "displayName": "DeepSeek-V3-0324",
-    "publisher": "DeepSeek",
-    "registryName": "azureml-deepseek",
-    "version": "1",
-    "lifecycle": "Retired",
-    "deploymentOptions": [
-      "ServerlessMaaS",
-      "UnifiedEndpointMaaS"
-    ],
-    "allowedDeploymentTemplates": [],
-    "assetId": "azureml://registries/azureml-deepseek/models/DeepSeek-V3-0324/versions/1",
-    "author": null,
-    "azureOffers": [
-      "standard-paygo"
-    ],
-    "deploymentOptionDetails": {},
-    "deprecation": {
-      "inferenceRetirementDate": "2026-07-13T00:00:00+00:00"
-    },
-    "fineTuningTasks": [],
-    "hiddenLayerScanned": null,
-    "hostedOn": [],
-    "inferenceTasks": [
-      "chat-completion"
-    ],
-    "isDirectFromAzure": true,
-    "keywords": [
-      "Agents",
-      "Coding"
-    ],
-    "license": "MIT",
-    "minQuotaTier": null,
-    "modelCapabilities": [
-      "agentsV2",
-      "streaming",
-      "tool-calling"
-    ],
-    "modelLimits": {
-      "otherLimits": {},
-      "supportedInputModalities": [
-        "text"
-      ],
-      "supportedLanguages": [
-        "en"
-      ],
-      "supportedOutputModalities": [
-        "text"
-      ],
-      "textLimits": {
-        "inputContextWindow": 131072,
-        "maxOutputTokens": 131072
-      }
-    },
-    "playgroundLimits": {
-      "rateLimitTier": "high"
-    },
-    "summary": "DeepSeek-V3-0324 demonstrates notable improvements over its predecessor, DeepSeek-V3, in several key aspects, including enhanced reasoning, improved function calling, and superior code generation capabilities.",
-    "tradeRestricted": true,
-    "variantInformation": null
-  },
-  "DeepSeek-V3.1": {
-    "name": "DeepSeek-V3.1",
-    "displayName": "DeepSeek-V3.1",
-    "publisher": "DeepSeek",
-    "registryName": "azureml-deepseek",
-    "version": "1",
-    "lifecycle": "Retired",
-    "deploymentOptions": [
-      "ServerlessMaaS",
-      "UnifiedEndpointMaaS"
-    ],
-    "allowedDeploymentTemplates": [],
-    "assetId": "azureml://registries/azureml-deepseek/models/DeepSeek-V3.1/versions/1",
-    "author": null,
-    "azureOffers": [
-      "standard-paygo"
-    ],
-    "deploymentOptionDetails": {},
-    "deprecation": {
-      "inferenceRetirementDate": "2026-07-13T00:00:00+00:00"
-    },
-    "fineTuningTasks": [],
-    "hiddenLayerScanned": null,
-    "hostedOn": [],
-    "inferenceTasks": [
-      "chat-completion"
-    ],
-    "isDirectFromAzure": true,
-    "keywords": [
-      "Agents",
-      "Coding"
-    ],
-    "license": "custom",
-    "minQuotaTier": null,
-    "modelCapabilities": [
-      "agentsV2",
-      "streaming",
-      "tool-calling"
-    ],
-    "modelLimits": {
-      "otherLimits": {},
-      "supportedInputModalities": [
-        "text"
-      ],
-      "supportedLanguages": [
-        "en"
-      ],
-      "supportedOutputModalities": [
-        "text"
-      ],
-      "textLimits": {
-        "inputContextWindow": 131072,
-        "maxOutputTokens": 131072
-      }
-    },
-    "playgroundLimits": {
-      "rateLimitTier": "high"
-    },
-    "summary": "DeepSeek-V3.1 is a hybrid model that enhances tool usage, thinking efficiency, and supports both thinking and non-thinking modes via chat template switching",
-    "tradeRestricted": true,
-    "variantInformation": null
-  },
   "DeepSeek-V3.2": {
     "name": "DeepSeek-V3.2",
     "displayName": "DeepSeek-V3.2",
@@ -4708,15 +4584,13 @@
     "displayName": "Llama-3.2-11B-Vision-Instruct",
     "publisher": "Meta",
     "registryName": "azureml-meta",
-    "version": "6",
-    "lifecycle": null,
+    "version": "2",
+    "lifecycle": "Retired",
     "deploymentOptions": [
-      "MaaP",
-      "ServerlessMaaS",
-      "UnifiedEndpointMaaS"
+      "Serverless API"
     ],
     "allowedDeploymentTemplates": [],
-    "assetId": "azureml://registries/azureml-meta/models/Llama-3.2-11B-Vision-Instruct/versions/6",
+    "assetId": "azureml://registries/azureml-meta/models/Llama-3.2-11B-Vision-Instruct/versions/2",
     "author": null,
     "azureOffers": [
       "VM",
@@ -4724,7 +4598,7 @@
     ],
     "deploymentOptionDetails": {},
     "deprecation": {
-      "inferenceRetirementDate": "2026-06-13T00:00:00+00:00"
+      "inferenceRetirementDate": null
     },
     "fineTuningTasks": [],
     "hiddenLayerScanned": null,
@@ -4740,9 +4614,7 @@
     ],
     "license": "custom",
     "minQuotaTier": null,
-    "modelCapabilities": [
-      "streaming"
-    ],
+    "modelCapabilities": [],
     "modelLimits": {
       "otherLimits": {},
       "supportedInputModalities": [
@@ -4779,15 +4651,13 @@
     "displayName": "Llama-3.2-90B-Vision-Instruct",
     "publisher": "Meta",
     "registryName": "azureml-meta",
-    "version": "5",
-    "lifecycle": null,
+    "version": "3",
+    "lifecycle": "Retired",
     "deploymentOptions": [
-      "MaaP",
-      "ServerlessMaaS",
-      "UnifiedEndpointMaaS"
+      "Serverless API"
     ],
     "allowedDeploymentTemplates": [],
-    "assetId": "azureml://registries/azureml-meta/models/Llama-3.2-90B-Vision-Instruct/versions/5",
+    "assetId": "azureml://registries/azureml-meta/models/Llama-3.2-90B-Vision-Instruct/versions/3",
     "author": null,
     "azureOffers": [
       "VM",
@@ -4795,7 +4665,7 @@
     ],
     "deploymentOptionDetails": {},
     "deprecation": {
-      "inferenceRetirementDate": "2026-06-13T00:00:00+00:00"
+      "inferenceRetirementDate": null
     },
     "fineTuningTasks": [],
     "hiddenLayerScanned": null,
@@ -4811,9 +4681,7 @@
     ],
     "license": "custom",
     "minQuotaTier": null,
-    "modelCapabilities": [
-      "streaming"
-    ],
+    "modelCapabilities": [],
     "modelLimits": {
       "otherLimits": {},
       "supportedInputModalities": [
@@ -4995,15 +4863,13 @@
     "displayName": "Llama 4 Scout 17B 16E Instruct",
     "publisher": "Meta",
     "registryName": "azureml-meta",
-    "version": "4",
-    "lifecycle": null,
+    "version": "1",
+    "lifecycle": "Generally Available",
     "deploymentOptions": [
-      "MaaP",
-      "ServerlessMaaS",
-      "UnifiedEndpointMaaS"
+      "Serverless API"
     ],
     "allowedDeploymentTemplates": [],
-    "assetId": "azureml://registries/azureml-meta/models/Llama-4-Scout-17B-16E-Instruct/versions/4",
+    "assetId": "azureml://registries/azureml-meta/models/Llama-4-Scout-17B-16E-Instruct/versions/1",
     "author": null,
     "azureOffers": [
       "VM",
@@ -5013,9 +4879,7 @@
     "deprecation": {
       "inferenceRetirementDate": null
     },
-    "fineTuningTasks": [
-      "chat-completion"
-    ],
+    "fineTuningTasks": [],
     "hiddenLayerScanned": true,
     "hostedOn": [],
     "inferenceTasks": [
@@ -5030,8 +4894,8 @@
     "license": "custom",
     "minQuotaTier": null,
     "modelCapabilities": [
-      "agents",
-      "assistants",
+      "agent",
+      "assistant",
       "streaming",
       "tool-calling"
     ],
@@ -6855,219 +6719,6 @@
     "tradeRestricted": false,
     "variantInformation": null
   },
-  "Phi-4-mini-reasoning": {
-    "name": "Phi-4-mini-reasoning",
-    "displayName": "Phi-4-mini-reasoning",
-    "publisher": "Microsoft",
-    "registryName": "azureml",
-    "version": "1",
-    "lifecycle": null,
-    "deploymentOptions": [
-      "MaaP",
-      "ServerlessMaaS",
-      "UnifiedEndpointMaaS"
-    ],
-    "allowedDeploymentTemplates": [],
-    "assetId": "azureml://registries/azureml/models/Phi-4-mini-reasoning/versions/1",
-    "author": null,
-    "azureOffers": [
-      "VM",
-      "standard-paygo"
-    ],
-    "deploymentOptionDetails": {},
-    "deprecation": {
-      "inferenceRetirementDate": null
-    },
-    "fineTuningTasks": [],
-    "hiddenLayerScanned": null,
-    "hostedOn": [],
-    "inferenceTasks": [
-      "chat-completion"
-    ],
-    "isDirectFromAzure": null,
-    "keywords": [
-      "Large context",
-      "Low latency",
-      "Reasoning"
-    ],
-    "license": "MIT",
-    "minQuotaTier": null,
-    "modelCapabilities": [
-      "reasoning"
-    ],
-    "modelLimits": {
-      "otherLimits": {},
-      "supportedInputModalities": [
-        "text"
-      ],
-      "supportedLanguages": [
-        "en"
-      ],
-      "supportedOutputModalities": [
-        "text"
-      ],
-      "textLimits": {
-        "inputContextWindow": 128000,
-        "maxOutputTokens": 128000
-      }
-    },
-    "playgroundLimits": {
-      "rateLimitTier": "low"
-    },
-    "summary": "Lightweight math reasoning model optimized for multi-step problem solving",
-    "tradeRestricted": false,
-    "variantInformation": null
-  },
-  "Phi-4-multimodal-instruct": {
-    "name": "Phi-4-multimodal-instruct",
-    "displayName": "Phi-4-multimodal-instruct",
-    "publisher": "Microsoft",
-    "registryName": "azureml",
-    "version": "2",
-    "lifecycle": null,
-    "deploymentOptions": [
-      "MaaP",
-      "ServerlessMaaS",
-      "UnifiedEndpointMaaS"
-    ],
-    "allowedDeploymentTemplates": [],
-    "assetId": "azureml://registries/azureml/models/Phi-4-multimodal-instruct/versions/2",
-    "author": null,
-    "azureOffers": [
-      "VM",
-      "standard-paygo"
-    ],
-    "deploymentOptionDetails": {},
-    "deprecation": {
-      "inferenceRetirementDate": null
-    },
-    "fineTuningTasks": [],
-    "hiddenLayerScanned": true,
-    "hostedOn": [],
-    "inferenceTasks": [
-      "chat-completion"
-    ],
-    "isDirectFromAzure": null,
-    "keywords": [
-      "Audio",
-      "Summarization",
-      "Vision"
-    ],
-    "license": "MIT",
-    "minQuotaTier": null,
-    "modelCapabilities": [
-      "streaming"
-    ],
-    "modelLimits": {
-      "otherLimits": {},
-      "supportedInputModalities": [
-        "audio",
-        "image",
-        "text"
-      ],
-      "supportedLanguages": [
-        "ar",
-        "cs",
-        "da",
-        "de",
-        "en",
-        "es",
-        "fi",
-        "fr",
-        "he",
-        "hu",
-        "it",
-        "ja",
-        "ko",
-        "nl",
-        "pl",
-        "pt",
-        "ru",
-        "sv",
-        "th",
-        "tr",
-        "uk",
-        "zh"
-      ],
-      "supportedOutputModalities": [
-        "text"
-      ],
-      "textLimits": {
-        "inputContextWindow": 128000,
-        "maxOutputTokens": 4096
-      }
-    },
-    "playgroundLimits": {
-      "rateLimitTier": "low"
-    },
-    "summary": "First small multimodal model to have 3 modality inputs (text, audio, image), excelling in quality and efficiency",
-    "tradeRestricted": false,
-    "variantInformation": null
-  },
-  "Phi-4-reasoning": {
-    "name": "Phi-4-reasoning",
-    "displayName": "Phi-4-reasoning",
-    "publisher": "Microsoft",
-    "registryName": "azureml",
-    "version": "1",
-    "lifecycle": null,
-    "deploymentOptions": [
-      "MaaP",
-      "ServerlessMaaS",
-      "UnifiedEndpointMaaS"
-    ],
-    "allowedDeploymentTemplates": [],
-    "assetId": "azureml://registries/azureml/models/Phi-4-reasoning/versions/1",
-    "author": null,
-    "azureOffers": [
-      "VM",
-      "standard-paygo"
-    ],
-    "deploymentOptionDetails": {},
-    "deprecation": {
-      "inferenceRetirementDate": null
-    },
-    "fineTuningTasks": [],
-    "hiddenLayerScanned": null,
-    "hostedOn": [],
-    "inferenceTasks": [
-      "chat-completion"
-    ],
-    "isDirectFromAzure": null,
-    "keywords": [
-      "Large context",
-      "Low latency",
-      "Reasoning"
-    ],
-    "license": "MIT",
-    "minQuotaTier": null,
-    "modelCapabilities": [
-      "reasoning",
-      "streaming"
-    ],
-    "modelLimits": {
-      "otherLimits": {},
-      "supportedInputModalities": [
-        "text"
-      ],
-      "supportedLanguages": [
-        "en"
-      ],
-      "supportedOutputModalities": [
-        "text"
-      ],
-      "textLimits": {
-        "inputContextWindow": 32768,
-        "maxOutputTokens": 32768
-      }
-    },
-    "playgroundLimits": {
-      "rateLimitTier": "low"
-    },
-    "summary": "State-of-the-art open-weight reasoning model.",
-    "tradeRestricted": false,
-    "variantInformation": null
-  },
   "Stable-Diffusion-3.5-Large": {
     "name": "Stable-Diffusion-3.5-Large",
     "displayName": "Stable Diffusion 3.5 Large",
@@ -7522,77 +7173,6 @@
       "rateLimitTier": null
     },
     "summary": "Claude Mythos Preview (gated research preview) is a new class of intelligence for cybersecurity, coding, and long-running agents. Only available as a gated research preview with access prioritized for defensive cybersecurity use cases",
-    "tradeRestricted": true,
-    "variantInformation": null
-  },
-  "claude-opus-4-1": {
-    "name": "claude-opus-4-1",
-    "displayName": "Claude Opus 4.1",
-    "publisher": "Anthropic",
-    "registryName": "azureml-anthropic",
-    "version": "20250805",
-    "lifecycle": "Retired",
-    "deploymentOptions": [
-      "Serverless API",
-      "UnifiedEndpointMaaS"
-    ],
-    "allowedDeploymentTemplates": [],
-    "assetId": "azureml://registries/azureml-anthropic/models/claude-opus-4-1/versions/20250805",
-    "author": null,
-    "azureOffers": [
-      "standard-paygo"
-    ],
-    "deploymentOptionDetails": {},
-    "deprecation": {
-      "inferenceRetirementDate": null
-    },
-    "fineTuningTasks": [],
-    "hiddenLayerScanned": null,
-    "hostedOn": [],
-    "inferenceTasks": [
-      "messages"
-    ],
-    "isDirectFromAzure": null,
-    "keywords": [
-      "Reasoning"
-    ],
-    "license": null,
-    "minQuotaTier": null,
-    "modelCapabilities": [
-      "agentsV2",
-      "reasoning",
-      "streaming",
-      "tool-calling"
-    ],
-    "modelLimits": {
-      "otherLimits": {},
-      "supportedInputModalities": [
-        "code",
-        "image",
-        "text"
-      ],
-      "supportedLanguages": [
-        "ar",
-        "en",
-        "es",
-        "fr",
-        "hi",
-        "ja",
-        "ko",
-        "zh"
-      ],
-      "supportedOutputModalities": [
-        "text"
-      ],
-      "textLimits": {
-        "inputContextWindow": 200000,
-        "maxOutputTokens": 32000
-      }
-    },
-    "playgroundLimits": {
-      "rateLimitTier": null
-    },
-    "summary": "Claude Opus 4.1 is an industry leader for coding. It delivers sustained performance on long-running tasks that require focused effort and thousands of steps, significantly expanding what AI agents can solve.",
     "tradeRestricted": true,
     "variantInformation": null
   },
@@ -8405,63 +7985,6 @@
       "rateLimitTier": "low"
     },
     "summary": "computer-use-preview is the model for Computer Use Agent for use in Responses API. You can use computer-use-preview model to get instructions to control a browser on your computer screen and take action on a user's behalf.",
-    "tradeRestricted": true,
-    "variantInformation": null
-  },
-  "davinci-002": {
-    "name": "davinci-002",
-    "displayName": "davinci-002",
-    "publisher": "OpenAI",
-    "registryName": "azure-openai",
-    "version": "3",
-    "lifecycle": null,
-    "deploymentOptions": [
-      "AOAI",
-      "MaaP",
-      "UnifiedEndpointMaaS"
-    ],
-    "allowedDeploymentTemplates": [],
-    "assetId": "azureml://registries/azure-openai/models/davinci-002/versions/3",
-    "author": null,
-    "azureOffers": [
-      "VM",
-      "standard-paygo"
-    ],
-    "deploymentOptionDetails": {},
-    "deprecation": {
-      "inferenceRetirementDate": null
-    },
-    "fineTuningTasks": [
-      "completions"
-    ],
-    "hiddenLayerScanned": null,
-    "hostedOn": [],
-    "inferenceTasks": [
-      "completions"
-    ],
-    "isDirectFromAzure": true,
-    "keywords": [],
-    "license": "custom",
-    "minQuotaTier": null,
-    "modelCapabilities": [],
-    "modelLimits": {
-      "otherLimits": {},
-      "supportedInputModalities": [
-        "text"
-      ],
-      "supportedLanguages": [],
-      "supportedOutputModalities": [
-        "text"
-      ],
-      "textLimits": {
-        "inputContextWindow": null,
-        "maxOutputTokens": 16384
-      }
-    },
-    "playgroundLimits": {
-      "rateLimitTier": null
-    },
-    "summary": null,
     "tradeRestricted": true,
     "variantInformation": null
   },
@@ -9616,71 +9139,6 @@
     "tradeRestricted": true,
     "variantInformation": null
   },
-  "gpt-5-chat": {
-    "name": "gpt-5-chat",
-    "displayName": "OpenAI gpt-5-chat (preview)",
-    "publisher": "OpenAI",
-    "registryName": "azure-openai",
-    "version": "2025-10-03",
-    "lifecycle": "Retired",
-    "deploymentOptions": [
-      "AOAI",
-      "UnifiedEndpointMaaS"
-    ],
-    "allowedDeploymentTemplates": [],
-    "assetId": "azureml://registries/azure-openai/models/gpt-5-chat/versions/2025-10-03",
-    "author": null,
-    "azureOffers": null,
-    "deploymentOptionDetails": {},
-    "deprecation": {
-      "inferenceRetirementDate": null
-    },
-    "fineTuningTasks": [],
-    "hiddenLayerScanned": null,
-    "hostedOn": [],
-    "inferenceTasks": [
-      "chat-completion",
-      "responses"
-    ],
-    "isDirectFromAzure": true,
-    "keywords": [
-      "Multilingual",
-      "Multimodal",
-      "Multipurpose"
-    ],
-    "license": "custom",
-    "minQuotaTier": null,
-    "modelCapabilities": [
-      "agents",
-      "agentsV2",
-      "reasoning",
-      "streaming",
-      "tool-calling"
-    ],
-    "modelLimits": {
-      "otherLimits": {},
-      "supportedInputModalities": [
-        "image",
-        "text"
-      ],
-      "supportedLanguages": [
-        "en"
-      ],
-      "supportedOutputModalities": [
-        "text"
-      ],
-      "textLimits": {
-        "inputContextWindow": 128000,
-        "maxOutputTokens": 16384
-      }
-    },
-    "playgroundLimits": {
-      "rateLimitTier": "custom"
-    },
-    "summary": "gpt-5-chat (preview) is an advanced, natural, multimodal, and context-aware conversations for enterprise applications.",
-    "tradeRestricted": true,
-    "variantInformation": null
-  },
   "gpt-5-codex": {
     "name": "gpt-5-codex",
     "displayName": "gpt-5-codex",
@@ -10015,71 +9473,6 @@
     "tradeRestricted": true,
     "variantInformation": null
   },
-  "gpt-5.1-chat": {
-    "name": "gpt-5.1-chat",
-    "displayName": "OpenAI gpt-5.1-chat (preview)",
-    "publisher": "OpenAI",
-    "registryName": "azure-openai",
-    "version": "2025-11-13",
-    "lifecycle": "Retired",
-    "deploymentOptions": [
-      "AOAI",
-      "Instant",
-      "UnifiedEndpointMaaS"
-    ],
-    "allowedDeploymentTemplates": [],
-    "assetId": "azureml://registries/azure-openai/models/gpt-5.1-chat/versions/2025-11-13",
-    "author": null,
-    "azureOffers": null,
-    "deploymentOptionDetails": {},
-    "deprecation": {
-      "inferenceRetirementDate": null
-    },
-    "fineTuningTasks": [],
-    "hiddenLayerScanned": null,
-    "hostedOn": [],
-    "inferenceTasks": [
-      "chat-completion",
-      "responses"
-    ],
-    "isDirectFromAzure": true,
-    "keywords": [
-      "Multilingual",
-      "Multimodal",
-      "Multipurpose"
-    ],
-    "license": "custom",
-    "minQuotaTier": null,
-    "modelCapabilities": [
-      "agentsV2",
-      "reasoning",
-      "streaming",
-      "tool-calling"
-    ],
-    "modelLimits": {
-      "otherLimits": {},
-      "supportedInputModalities": [
-        "image",
-        "text"
-      ],
-      "supportedLanguages": [
-        "en"
-      ],
-      "supportedOutputModalities": [
-        "text"
-      ],
-      "textLimits": {
-        "inputContextWindow": 128000,
-        "maxOutputTokens": 16384
-      }
-    },
-    "playgroundLimits": {
-      "rateLimitTier": "custom"
-    },
-    "summary": "gpt-5.1-chat (preview) is an advanced, natural, multimodal, and context-aware conversations for enterprise applications.",
-    "tradeRestricted": true,
-    "variantInformation": null
-  },
   "gpt-5.1-codex": {
     "name": "gpt-5.1-codex",
     "displayName": "gpt-5.1-codex",
@@ -10340,71 +9733,6 @@
     "tradeRestricted": true,
     "variantInformation": null
   },
-  "gpt-5.2-chat": {
-    "name": "gpt-5.2-chat",
-    "displayName": "OpenAI gpt-5.2-chat (preview)",
-    "publisher": "OpenAI",
-    "registryName": "azure-openai",
-    "version": "2026-02-10",
-    "lifecycle": "Retired",
-    "deploymentOptions": [
-      "AOAI",
-      "Instant",
-      "UnifiedEndpointMaaS"
-    ],
-    "allowedDeploymentTemplates": [],
-    "assetId": "azureml://registries/azure-openai/models/gpt-5.2-chat/versions/2026-02-10",
-    "author": null,
-    "azureOffers": null,
-    "deploymentOptionDetails": {},
-    "deprecation": {
-      "inferenceRetirementDate": null
-    },
-    "fineTuningTasks": [],
-    "hiddenLayerScanned": null,
-    "hostedOn": [],
-    "inferenceTasks": [
-      "chat-completion",
-      "responses"
-    ],
-    "isDirectFromAzure": true,
-    "keywords": [
-      "Multilingual",
-      "Multimodal",
-      "Multipurpose"
-    ],
-    "license": "custom",
-    "minQuotaTier": null,
-    "modelCapabilities": [
-      "agentsV2",
-      "reasoning",
-      "streaming",
-      "tool-calling"
-    ],
-    "modelLimits": {
-      "otherLimits": {},
-      "supportedInputModalities": [
-        "image",
-        "text"
-      ],
-      "supportedLanguages": [
-        "en"
-      ],
-      "supportedOutputModalities": [
-        "text"
-      ],
-      "textLimits": {
-        "inputContextWindow": 128000,
-        "maxOutputTokens": 16384
-      }
-    },
-    "playgroundLimits": {
-      "rateLimitTier": null
-    },
-    "summary": "gpt-5.2-chat (preview) is an advanced, natural, multimodal, and context-aware conversations for enterprise applications.",
-    "tradeRestricted": true,
-    "variantInformation": null
-  },
   "gpt-5.2-codex": {
     "name": "gpt-5.2-codex",
     "displayName": "gpt-5.2-codex",
@@ -10467,71 +9795,6 @@
       "rateLimitTier": null
     },
     "summary": "gpt-5.2-codex is designed for steerability, front end development, and interactivity. ",
-    "tradeRestricted": true,
-    "variantInformation": null
-  },
-  "gpt-5.3-chat": {
-    "name": "gpt-5.3-chat",
-    "displayName": "OpenAI gpt-5.3-chat (preview)",
-    "publisher": "OpenAI",
-    "registryName": "azure-openai",
-    "version": "2026-03-03",
-    "lifecycle": "Retired",
-    "deploymentOptions": [
-      "AOAI",
-      "Instant",
-      "UnifiedEndpointMaaS"
-    ],
-    "allowedDeploymentTemplates": [],
-    "assetId": "azureml://registries/azure-openai/models/gpt-5.3-chat/versions/2026-03-03",
-    "author": null,
-    "azureOffers": null,
-    "deploymentOptionDetails": {},
-    "deprecation": {
-      "inferenceRetirementDate": null
-    },
-    "fineTuningTasks": [],
-    "hiddenLayerScanned": null,
-    "hostedOn": [],
-    "inferenceTasks": [
-      "chat-completion",
-      "responses"
-    ],
-    "isDirectFromAzure": true,
-    "keywords": [
-      "Multilingual",
-      "Multimodal",
-      "Multipurpose"
-    ],
-    "license": "custom",
-    "minQuotaTier": null,
-    "modelCapabilities": [
-      "agentsV2",
-      "reasoning",
-      "streaming",
-      "tool-calling"
-    ],
-    "modelLimits": {
-      "otherLimits": {},
-      "supportedInputModalities": [
-        "image",
-        "text"
-      ],
-      "supportedLanguages": [
-        "en"
-      ],
-      "supportedOutputModalities": [
-        "text"
-      ],
-      "textLimits": {
-        "inputContextWindow": 128000,
-        "maxOutputTokens": 16384
-      }
-    },
-    "playgroundLimits": {
-      "rateLimitTier": null
-    },
-    "summary": "gpt-5.3-chat (preview) is an advanced, natural, multimodal, and context-aware conversations for enterprise applications.",
     "tradeRestricted": true,
     "variantInformation": null
   },
@@ -13029,91 +12292,6 @@
       "rateLimitTier": "custom"
     },
     "summary": "Grok Code Fast 1 is a fast, economical AI model for agentic coding, built from scratch with a new architecture, trained on programming-rich data, and fine-tuned for real-world coding tasks like bug fixes and project setup. ",
-    "tradeRestricted": true,
-    "variantInformation": null
-  },
-  "mistral-document-ai-2505": {
-    "name": "mistral-document-ai-2505",
-    "displayName": "Mistral Document AI (25.05)",
-    "publisher": "Mistral AI",
-    "registryName": "azureml-mistral",
-    "version": "1",
-    "lifecycle": "Retired",
-    "deploymentOptions": [
-      "Serverless API",
-      "UnifiedEndpointMaaS"
-    ],
-    "allowedDeploymentTemplates": [],
-    "assetId": "azureml://registries/azureml-mistral/models/mistral-document-ai-2505/versions/1",
-    "author": null,
-    "azureOffers": [
-      "standard-paygo"
-    ],
-    "deploymentOptionDetails": {},
-    "deprecation": {
-      "inferenceRetirementDate": "2026-07-20T00:00:00+00:00"
-    },
-    "fineTuningTasks": [],
-    "hiddenLayerScanned": null,
-    "hostedOn": [],
-    "inferenceTasks": [
-      "image-to-text"
-    ],
-    "isDirectFromAzure": true,
-    "keywords": [
-      "Low latency",
-      "Vision"
-    ],
-    "license": "custom",
-    "minQuotaTier": null,
-    "modelCapabilities": [],
-    "modelLimits": {
-      "otherLimits": {},
-      "supportedInputModalities": [
-        "image",
-        "pdf"
-      ],
-      "supportedLanguages": [
-        "af",
-        "ar",
-        "bn",
-        "cy",
-        "de",
-        "el",
-        "en",
-        "es",
-        "fr",
-        "id",
-        "is",
-        "it",
-        "ja",
-        "ko",
-        "lv",
-        "mr",
-        "ne",
-        "pa",
-        "pl",
-        "ru",
-        "sw",
-        "te",
-        "th",
-        "tr",
-        "uk",
-        "ur",
-        "zh"
-      ],
-      "supportedOutputModalities": [
-        "text"
-      ],
-      "textLimits": {
-        "inputContextWindow": 128000,
-        "maxOutputTokens": 4096
-      }
-    },
-    "playgroundLimits": {
-      "rateLimitTier": null
-    },
-    "summary": "Document conversion to markdown with interleaved images and text",
     "tradeRestricted": true,
     "variantInformation": null
   },
