@@ -48,7 +48,7 @@ from botocore.awsrequest import AWSRequest
 # Shared canonicalizer (lib/common.py). Repo root on sys.path so this
 # stdlib-only helper imports without a PEP 723 dependency entry.
 sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
-from lib.common import DriftGate, normalize_deep
+from lib.common import normalize_deep
 
 DEFAULT_REGION = "us-east-1"
 
@@ -92,16 +92,6 @@ def read_snapshot(path: Path) -> dict[str, dict]:
     except (json.JSONDecodeError, OSError):
         return {}
     return snapshot if isinstance(snapshot, dict) else {}
-
-
-def vanished_ids(models: list[dict], known: set[str]) -> list[str]:
-    """Committed ids the API no longer returns (would mutate the file).
-
-    New models are fine — they slot in by `created` and appear as pure
-    additions. But a model we already represent disappearing would drop it from
-    the file, so that fails the run for human review.
-    """
-    return sorted(known - {m.get("id", "") for m in models})
 
 
 def order_by_created(models: list[dict]) -> dict[str, dict]:
@@ -161,17 +151,6 @@ def main() -> int:
         help="Bedrock mantle project id (default: $AWS_BEDROCK_MANTLE_PROJECT_ID)",
     )
     parser.add_argument(
-        "--allow-drift",
-        action="store_true",
-        help="Accept any drift instead of erroring (skips the marker handshake)",
-    )
-    parser.add_argument(
-        "--accept-pending",
-        action="store_true",
-        help="Accept exactly the drift recorded in the pending-drift marker "
-        "(the workflow passes this on re-runs — the ack half of the handshake)",
-    )
-    parser.add_argument(
         "--output",
         type=Path,
         default=OUTPUT_PATH,
@@ -197,26 +176,6 @@ def main() -> int:
     models = response.get("data", [])
     snapshot = read_snapshot(args.output)
 
-    # Drift detection: the committed catalog is the source of truth for what we
-    # already represent in this region. New models are free (pure additions),
-    # but a model we already have vanishing upstream would drop it from the
-    # file, so that fails for human review, acknowledged through the DriftGate
-    # handshake. The kind is region-qualified so an acknowledgement recorded
-    # for one region can never authorize a removal in another.
-    gate = DriftGate(args.output, allow_all=args.allow_drift, accept_pending=args.accept_pending)
-    drift = gate.unacked(
-        f"vanished:{args.region}", vanished_ids(models, set(snapshot.get(args.region, {})))
-    )
-    if drift:
-        print(
-            f"error: {len(drift)} committed model(s) no longer returned by the API:",
-            file=sys.stderr,
-        )
-        for mid in drift:
-            print(f"  {mid}", file=sys.stderr)
-        gate.record()
-        return 1
-
     catalog = order_by_created(models)
     catalog = {mid: order_model_keys(model) for mid, model in catalog.items()}
 
@@ -236,7 +195,6 @@ def main() -> int:
     tmp.replace(args.output)
 
     write_csv(snapshot, args.output.with_suffix(".csv"))
-    gate.clear()
 
     print(
         f"Wrote {len(catalog)} mantle models for {args.region} to {args.output}",

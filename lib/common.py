@@ -41,8 +41,8 @@ def normalize_deep(obj):
 class DriftGate:
     """Two-phase drift acknowledgement: record on failure, accept on re-run.
 
-    Drift (a committed model vanishing, an immutable field moving) fails the
-    run for human review. The acknowledgement has to be possible from the
+    Immutable-field drift fails the run for human review. The acknowledgement
+    has to be possible from the
     GitHub mobile app, which can re-run a failed workflow but can't pass
     flags — so the failing run records exactly the drift it saw in a marker
     file next to the snapshot (`<snapshot>.pending-drift.json`, committed by
@@ -54,11 +54,11 @@ class DriftGate:
     Scheduled runs never pass `accept_pending`, so a pending marker keeps
     failing (and notifying) daily until a human re-runs.
 
-    Usage, per drift kind (region-qualify the kind for per-region snapshots):
+    Usage, per drift kind:
 
         gate = DriftGate(args.output, allow_all=args.allow_drift,
                          accept_pending=args.accept_pending)
-        drift = gate.unacked("vanished", vanished_ids(...))
+        drift = gate.unacked("created", changed_ids(...))
         if drift:
             ...print the ids...
             gate.record()

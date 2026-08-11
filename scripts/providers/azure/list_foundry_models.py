@@ -28,13 +28,6 @@ locations). Models are ordered by name (the stable catalog key) — createdTime
 can't be used for ordering because it drifts between scrapes. A sibling
 foundry_models.csv is written for human review.
 
-Drift detection: the committed catalog is the source of truth for what we
-already represent. New models are free (pure additions). A model we already
-have vanishing upstream is usually a transient blip (a momentary server hiccup,
-or the pagination race below) rather than a real removal, so we don't trust a
-single fetch: when a committed model goes missing we re-fetch once and only
-drop the ones still absent the second time. Anything that reappears was false
-drift and is kept.
 """
 
 from __future__ import annotations
@@ -95,11 +88,10 @@ def fetch_maas_models() -> list[dict]:
     executed as separate HTTP requests seconds apart. The default sort is by
     popularity — a value that reshuffles between requests — so a model whose
     rank crosses a page boundary (skip=100, 200, ...) between requests gets
-    skipped entirely, showing up as a spurious removal (false drift). Sorting
-    by `name` (stable across requests) pins the page boundaries so offset
-    paging stays gap-free; the only way to lose a model now is a genuine
-    catalog change mid-scrape. Any residual blip is caught by the confirming
-    re-fetch in main() before a model is actually dropped.
+    skipped entirely, showing up as a spurious removal. Sorting by `name`
+    (stable across requests) pins the page boundaries so offset paging stays
+    gap-free; the only way to lose a model now is a genuine catalog change
+    mid-scrape.
     """
     body = {
         "filters": [
@@ -198,12 +190,6 @@ def apply_committed_asset_ids(models: list[dict], committed: dict[str, dict]) ->
             m["assetId"] = old
 
 
-def vanished_names(models: list[dict], known: set[str]) -> list[str]:
-    """Committed names the API no longer returns, compared case-insensitively."""
-    present = {canonical(m.get("name", "")) for m in models}
-    return sorted(n for n in known if canonical(n) not in present)
-
-
 def order_by_name(models: list[dict]) -> dict[str, dict]:
     """Map of name -> model, ordered by name (the stable catalog key).
 
@@ -287,37 +273,8 @@ def main() -> int:
     # Keep the committed casing for models we already represent, so a case-only
     # change upstream doesn't rewrite the key (identity is case-insensitive).
     existing = read_existing_catalog(args.output)
-    known = set(existing)
-    apply_committed_casing(models, known)
+    apply_committed_casing(models, set(existing))
     apply_committed_asset_ids(models, existing)
-
-    # Drift detection: the committed catalog is the source of truth for what we
-    # already represent. New models are free (pure additions); a committed model
-    # vanishing upstream is usually a transient blip, so confirm it with a second
-    # fetch before dropping it. Union the two fetches (a model present in either
-    # survives) and re-derive drift — anything still missing was absent from both
-    # fetches and is a real removal; anything that reappeared is kept.
-    drift = vanished_names(models, known)
-    if drift:
-        print(
-            f"note: {len(drift)} committed model(s) missing on first fetch "
-            f"({', '.join(drift)}); re-fetching to confirm...",
-            file=sys.stderr,
-        )
-        try:
-            raw += fetch_maas_models()
-        except urllib.error.HTTPError as err:
-            print(f"HTTP {err.code} {err.reason}\n{err.read().decode()}", file=sys.stderr)
-            return 1
-        models = latest_versions(raw)
-        apply_committed_casing(models, known)
-        apply_committed_asset_ids(models, existing)
-        confirmed = vanished_names(models, known)
-        healed = sorted(set(drift) - set(confirmed))
-        if healed:
-            print(f"  false drift, reappeared and kept: {', '.join(healed)}", file=sys.stderr)
-        if confirmed:
-            print(f"  confirmed removed: {', '.join(confirmed)}", file=sys.stderr)
 
     catalog = order_by_name(models)
     catalog = {name: order_model_keys(m) for name, m in catalog.items()}

@@ -73,7 +73,7 @@ import google.auth.transport
 # Shared canonicalizer (lib/common.py). Repo root on sys.path so this
 # stdlib-only helper imports without a PEP 723 dependency entry.
 sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
-from lib.common import DriftGate, normalize_deep
+from lib.common import normalize_deep
 
 BASE_URL = "https://generativelanguage.googleapis.com/v1beta/models"
 PAGE_SIZE = 200
@@ -262,31 +262,6 @@ def order_by_list(models: list[dict]) -> dict[str, dict]:
     return {model_key(m): m for m in sorted(models, key=sort_key)}
 
 
-def read_existing_ids(path: Path) -> set[str]:
-    """Return the model ids already present in the committed snapshot.
-
-    This is the drift baseline: the committed catalog is the source of truth
-    for what we already represent. Missing/corrupt file -> set().
-    """
-    if not path.exists():
-        return set()
-    try:
-        with path.open(encoding="utf-8") as f:
-            return set(json.load(f))
-    except (json.JSONDecodeError, OSError):
-        return set()
-
-
-def vanished_ids(models: list[dict], known: set[str]) -> list[str]:
-    """Committed ids the API no longer returns (would mutate the existing set).
-
-    New models are fine — they append at the bottom and can't disturb anything.
-    But a model we already represent disappearing would drop it from the file
-    and shift everything after it, so that fails the run for human review.
-    """
-    return sorted(known - {model_key(m) for m in models})
-
-
 # Leading keys for each model, in the order they should appear; any remaining
 # keys follow alphabetically.
 MODEL_KEY_ORDER = ("name", "displayName", "description", "version")
@@ -317,17 +292,6 @@ def write_csv(catalog: dict[str, dict], path: Path) -> None:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument(
-        "--allow-drift",
-        action="store_true",
-        help="Accept any drift instead of erroring (skips the marker handshake)",
-    )
-    parser.add_argument(
-        "--accept-pending",
-        action="store_true",
-        help="Accept exactly the drift recorded in the pending-drift marker "
-        "(the workflow passes this on re-runs — the ack half of the handshake)",
-    )
     parser.add_argument(
         "--output",
         type=Path,
@@ -362,23 +326,6 @@ def main() -> int:
     # never reach the catalog and their absence isn't mistaken for drift.
     models = [m for m in models if model_key(m) not in EXCLUDE]
 
-    # Drift detection: the committed catalog is the source of truth for what we
-    # already represent. New models are free (they append at the bottom), but a
-    # model we already have vanishing upstream would drop it from the file, so
-    # that fails the run for human review, acknowledged through the DriftGate
-    # handshake (re-run the failed workflow, or --accept-pending locally).
-    gate = DriftGate(args.output, allow_all=args.allow_drift, accept_pending=args.accept_pending)
-    drift = gate.unacked("vanished", vanished_ids(models, read_existing_ids(args.output) - EXCLUDE))
-    if drift:
-        print(
-            f"error: {len(drift)} committed model(s) no longer returned by the API:",
-            file=sys.stderr,
-        )
-        for mid in drift:
-            print(f"  {mid}", file=sys.stderr)
-        gate.record()
-        return 1
-
     # Emit in the hardcoded MODEL_ORDER. Key by the bare model id, with the full
     # resource path preserved in each value's `name`.
     ordered = order_by_list(models)
@@ -395,7 +342,6 @@ def main() -> int:
     tmp.replace(args.output)
 
     write_csv(catalog, args.output.with_suffix(".csv"))
-    gate.clear()
 
     print(f"Wrote {len(catalog)} Gemini API models to {args.output}", file=sys.stderr)
     return 0

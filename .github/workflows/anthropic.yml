@@ -5,7 +5,16 @@ on:
     # Every day at 03:00 UTC — staggered from AWS (00:00), Azure (01:00), and
     # Google (02:00) so the workflows don't race on the commit/push.
     - cron: "0 3 * * *"
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      accept_pending:
+        description: "Accept the drift recorded in the pending-drift marker"
+        type: boolean
+        default: false
+      allow_drift:
+        description: "Accept ALL drift, even unrecorded (blanket --allow-drift)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write # push the updated snapshots back to the repo
@@ -57,12 +66,15 @@ jobs:
           ANTHROPIC_SERVICE_ACCOUNT_ID: ${{ vars.ANTHROPIC_SERVICE_ACCOUNT_ID }}
           ANTHROPIC_WORKSPACE_ID: ${{ vars.ANTHROPIC_WORKSPACE_ID }}
           ANTHROPIC_IDENTITY_TOKEN_FILE: ${{ runner.temp }}/anthropic_oidc_token
-        # A re-run or manual dispatch is the human acknowledgement of recorded
-        # drift (doable from the GitHub mobile app); scheduled runs never
-        # accept, so unacknowledged drift keeps failing daily.
+        # The human acknowledgement of recorded drift is a re-run of the failed
+        # run (one tap in the GitHub mobile app) or a manual dispatch with the
+        # accept_pending box ticked. Scheduled runs never accept, so
+        # unacknowledged drift keeps failing daily. On a schedule the inputs
+        # context is empty, so both expressions fall through to no flag.
         run: >
           uv run scripts/providers/anthropic/list_models.py
-          ${{ (github.run_attempt > 1 || github.event_name == 'workflow_dispatch') && '--accept-pending' || '' }}
+          ${{ (github.run_attempt > 1 || inputs.accept_pending) && '--accept-pending' || '' }}
+          ${{ inputs.allow_drift && '--allow-drift' || '' }}
 
       # Drift-ack handshake, step 1: a drift failure above recorded exactly
       # what it saw in a pending-drift marker. Commit it so the next re-run

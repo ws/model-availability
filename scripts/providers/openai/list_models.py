@@ -20,11 +20,8 @@ keyed by model id (the API is global — no region dimension), ordered by
 `created` ascending (id as a tiebreaker) so the newest models sit at the
 bottom. A sibling models.csv is written for human review.
 
-Drift detection: the committed catalog is the source of truth for what we
-already represent. New models are free (pure additions), but a model we already
-have vanishing upstream fails the run for human review. Acknowledge via the
-DriftGate handshake (re-run the failed workflow, or --accept-pending locally)
-to accept exactly the recorded drift, or --allow-drift to accept everything.
+The `created` timestamp is pinned when it changes by less than 24 hours;
+larger changes require acknowledgement through the DriftGate handshake.
 
 The shebang loads a .env file (uv's built-in --env-file) from the current
 working directory, so run this from the repo root.
@@ -113,16 +110,6 @@ def fetch_models() -> list[dict]:
     return [json.loads(m.to_json()) for m in client.models.list()]
 
 
-def vanished_ids(models: list[dict], known: set[str]) -> list[str]:
-    """Committed ids the API no longer returns (would mutate the file).
-
-    New models are fine — they slot in by `created` and appear as pure
-    additions. But a model we already represent disappearing would drop it from
-    the file, so that fails the run for human review.
-    """
-    return sorted(known - {m.get("id", "") for m in models})
-
-
 def reconcile_created(models: list[dict], committed: dict[str, int]) -> list[str]:
     """Pin `created` to the committed value; return ids that jumped > 24h.
 
@@ -172,17 +159,6 @@ def order_model_keys(model: dict) -> dict:
     rest = sorted(k for k in present if k not in MODEL_KEY_ORDER)
     keys = [k for k in MODEL_KEY_ORDER if k in present] + rest
     return {k: normalize_deep(model[k]) for k in keys}
-
-
-def read_existing_ids(path: Path) -> set[str]:
-    """Return the model ids already in the committed snapshot ({} if absent)."""
-    if not path.exists():
-        return set()
-    try:
-        with path.open(encoding="utf-8") as f:
-            return set(json.load(f))
-    except (json.JSONDecodeError, OSError):
-        return set()
 
 
 def read_existing_created(path: Path) -> dict[str, int]:
@@ -244,34 +220,19 @@ def main() -> int:
         print(f"error: {err}", file=sys.stderr)
         return 1
 
-    # Drift detection: the committed catalog is the source of truth for what we
-    # already represent. New models are free (pure additions), but a model we
-    # already have vanishing upstream — or `created` (immutable; pinned to the
-    # committed value within 24h) jumping — fails for human review, acknowledged
-    # through the DriftGate handshake. Both checks run before failing so one
-    # marker records the whole picture and one acknowledgement covers it.
+    # `created` is immutable, so a material timestamp change requires review.
     gate = DriftGate(args.output, allow_all=args.allow_drift, accept_pending=args.accept_pending)
-    vanished = gate.unacked("vanished", vanished_ids(models, read_existing_ids(args.output)))
     created_drift = gate.unacked(
         "created", reconcile_created(models, read_existing_created(args.output))
     )
-    if vanished or created_drift:
-        if vanished:
-            print(
-                f"error: {len(vanished)} committed model(s) no longer returned "
-                "by the API:",
-                file=sys.stderr,
-            )
-            for mid in vanished:
-                print(f"  {mid}", file=sys.stderr)
-        if created_drift:
-            print(
-                f"error: {len(created_drift)} committed model(s) changed "
-                "`created` by more than 24h — it should be immutable:",
-                file=sys.stderr,
-            )
-            for mid in created_drift:
-                print(f"  {mid}", file=sys.stderr)
+    if created_drift:
+        print(
+            f"error: {len(created_drift)} committed model(s) changed "
+            "`created` by more than 24h — it should be immutable:",
+            file=sys.stderr,
+        )
+        for mid in created_drift:
+            print(f"  {mid}", file=sys.stderr)
         gate.record()
         return 1
 

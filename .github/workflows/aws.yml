@@ -6,7 +6,7 @@ on:
     # delayed under load; exact timing isn't important for a daily snapshot.
     # Staggered from the Google workflow to avoid racing on the commit/push.
     - cron: "0 0 * * *"
-  workflow_dispatch: {}
+  workflow_dispatch:
 
 permissions:
   contents: write # push the updated snapshots back to the repo
@@ -28,11 +28,6 @@ jobs:
       AWS_BEDROCK_MANTLE_PROJECT_ID: ${{ vars.AWS_BEDROCK_MANTLE_PROJECT_ID }}
     steps:
       - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
-        with:
-          # Check out the branch tip, not the run's original SHA: a re-run of a
-          # failed drift run must see the pending-drift marker that the failed
-          # attempt committed (the ack-by-re-run handshake below).
-          ref: main
 
       # OIDC: assume an AWS role via short-lived credentials — no access keys
       # stored in the repo. The role ARN is a repo secret; configure-aws-
@@ -53,38 +48,11 @@ jobs:
 
       # Invoke via `uv run` (not the shebang) so credentials come from the
       # assumed-role env and no .env file is written to the runner's disk.
-      # A re-run or manual dispatch is the human acknowledgement of recorded
-      # drift (doable from the GitHub mobile app); scheduled runs never
-      # accept, so unacknowledged drift keeps failing daily.
       - name: Scrape Bedrock foundation models
-        run: >
-          uv run scripts/providers/bedrock/list_foundation_models.py
-          ${{ (github.run_attempt > 1 || github.event_name == 'workflow_dispatch') && '--accept-pending' || '' }}
+        run: uv run scripts/providers/bedrock/list_foundation_models.py
 
       - name: Scrape Bedrock mantle models
-        run: >
-          uv run scripts/providers/bedrock/list_mantle_models.py
-          ${{ (github.run_attempt > 1 || github.event_name == 'workflow_dispatch') && '--accept-pending' || '' }}
-
-      # Drift-ack handshake, step 1: a drift failure above recorded exactly
-      # what it saw in a pending-drift marker. Commit it (and only it — a
-      # snapshot the earlier scrape step wrote before the failure waits for
-      # the next successful run and its deterministic message) so the next
-      # re-run checks it out and accepts exactly that drift. Auth/network
-      # failures write no marker, so this stages nothing and stays a no-op.
-      - name: Commit pending-drift marker
-        if: failure()
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          find data/providers/bedrock -name '*.pending-drift.json' -exec git add -- {} +
-          if git diff --staged --quiet; then
-            echo "No pending-drift marker to commit."
-            exit 0
-          fi
-          git commit -m "AWS: record pending drift (re-run the workflow to accept)"
-          git pull --rebase --autostash
-          git push
+        run: uv run scripts/providers/bedrock/list_mantle_models.py
 
       - name: Stage and summarize changes
         id: summary
