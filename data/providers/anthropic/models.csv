@@ -1,5 +1,4 @@
 id,display_name,created_at,max_input_tokens,max_tokens
-claude-opus-4-1-20250805,Claude Opus 4.1,2025-08-05,200000,32000
 claude-sonnet-4-5-20250929,Claude Sonnet 4.5,2025-09-29,1000000,64000
 claude-haiku-4-5-20251001,Claude Haiku 4.5,2025-10-15,200000,64000
 claude-opus-4-5-20251101,Claude Opus 4.5,2025-11-24,200000,64000
