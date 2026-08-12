@@ -93,7 +93,7 @@ Meta-Llama-3-70B-Instruct,Meta-Llama-3-70B-Instruct,Meta,Retired
 Meta-Llama-3-8B-Instruct,Meta-Llama-3-8B-Instruct,Meta,Retired
 Meta-Llama-3.1-405B-Instruct,Meta-Llama-3.1-405B-Instruct,Meta,Retired
 Meta-Llama-3.1-70B-Instruct,Meta-Llama-3.1-70B-Instruct,Meta,Retired
-Meta-Llama-3.1-8B-Instruct,Meta-Llama-3.1-8B-Instruct,Meta,
+Meta-Llama-3.1-8B-Instruct,Meta-Llama-3.1-8B-Instruct,Meta,Retired
 Ministral-3B,Ministral 3B,Mistral AI,Generally Available
 Mistral-Large-3,Mistral Large 3,Mistral AI,Generally Available
 Phi-3-medium-4k-instruct,Phi-3-medium instruct (4k),Microsoft,Retired
@@ -106,7 +106,6 @@ Phi-3.5-MoE-instruct,Phi-3.5-MoE instruct (128k),Microsoft,Retired
 Phi-3.5-mini-instruct,Phi-3.5-mini instruct (128k),Microsoft,Retired
 Phi-3.5-vision-instruct,Phi-3.5-vision instruct (128k),Microsoft,Retired
 Phi-4,Phi-4,Microsoft,
-Phi-4-mini-instruct,Phi-4-mini-instruct,Microsoft,
 Stable-Diffusion-3.5-Large,Stable Diffusion 3.5 Large,StabilityAI,Retired
 Stable-Image-Core,Stable Image Core,StabilityAI,Retired
 Stable-Image-Ultra,Stable Image Ultra,StabilityAI,Retired
