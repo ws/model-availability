@@ -5169,6 +5169,63 @@
     "tradeRestricted": true,
     "variantInformation": null
   },
+  "MAI-Thinking-1": {
+    "name": "MAI-Thinking-1",
+    "displayName": "MAI-Thinking-1",
+    "publisher": "Microsoft",
+    "registryName": "azure-mai",
+    "version": "2026-06-01",
+    "lifecycle": "Preview",
+    "deploymentOptions": [
+      "Serverless API",
+      "UnifiedEndpointMaaS"
+    ],
+    "allowedDeploymentTemplates": [],
+    "assetId": "azureml://registries/azure-mai/models/MAI-Thinking-1/versions/2026-06-01",
+    "author": "Microsoft AI",
+    "azureOffers": [
+      "standard-paygo"
+    ],
+    "deploymentOptionDetails": {},
+    "deprecation": {
+      "inferenceRetirementDate": null
+    },
+    "fineTuningTasks": [],
+    "hiddenLayerScanned": null,
+    "hostedOn": [],
+    "inferenceTasks": [
+      "chat-completion"
+    ],
+    "isDirectFromAzure": true,
+    "keywords": [
+      "Reasoning"
+    ],
+    "license": "other",
+    "minQuotaTier": null,
+    "modelCapabilities": [],
+    "modelLimits": {
+      "otherLimits": {},
+      "supportedInputModalities": [
+        "text"
+      ],
+      "supportedLanguages": [
+        "en"
+      ],
+      "supportedOutputModalities": [
+        "text"
+      ],
+      "textLimits": {
+        "inputContextWindow": 256000,
+        "maxOutputTokens": 64000
+      }
+    },
+    "playgroundLimits": {
+      "rateLimitTier": null
+    },
+    "summary": "MAI-Thinking-1 is Microsoft's reasoning model that delivers top-tier reasoning at the best price-to-performance ratio in its weight class.",
+    "tradeRestricted": true,
+    "variantInformation": null
+  },
   "MAI-Transcribe-1": {
     "name": "MAI-Transcribe-1",
     "displayName": "MAI-Transcribe-1",
@@ -5751,13 +5808,15 @@
     "displayName": "Meta-Llama-3.1-8B-Instruct",
     "publisher": "Meta",
     "registryName": "azureml-meta",
-    "version": "5",
-    "lifecycle": "Retired",
+    "version": "6",
+    "lifecycle": null,
     "deploymentOptions": [
-      "Serverless API"
+      "MaaP",
+      "ServerlessMaaS",
+      "UnifiedEndpointMaaS"
     ],
     "allowedDeploymentTemplates": [],
-    "assetId": "azureml://registries/azureml-meta/models/Meta-Llama-3.1-8B-Instruct/versions/5",
+    "assetId": "azureml://registries/azureml-meta/models/Meta-Llama-3.1-8B-Instruct/versions/6",
     "author": null,
     "azureOffers": [
       "VM",
@@ -5765,7 +5824,7 @@
     ],
     "deploymentOptionDetails": {},
     "deprecation": {
-      "inferenceRetirementDate": null
+      "inferenceRetirementDate": "2026-06-13T00:00:00+00:00"
     },
     "fineTuningTasks": [
       "chat-completion"
@@ -6629,6 +6688,91 @@
       "rateLimitTier": "low"
     },
     "summary": "Phi-4 14B, a highly capable model for low latency scenarios.",
+    "tradeRestricted": false,
+    "variantInformation": null
+  },
+  "Phi-4-mini-instruct": {
+    "name": "Phi-4-mini-instruct",
+    "displayName": "Phi-4-mini-instruct",
+    "publisher": "Microsoft",
+    "registryName": "azureml",
+    "version": "1",
+    "lifecycle": null,
+    "deploymentOptions": [
+      "MaaP",
+      "ServerlessMaaS",
+      "UnifiedEndpointMaaS"
+    ],
+    "allowedDeploymentTemplates": [],
+    "assetId": "azureml://registries/azureml/models/Phi-4-mini-instruct/versions/1",
+    "author": null,
+    "azureOffers": [
+      "VM",
+      "standard-paygo"
+    ],
+    "deploymentOptionDetails": {},
+    "deprecation": {
+      "inferenceRetirementDate": null
+    },
+    "fineTuningTasks": [
+      "chat-completion"
+    ],
+    "hiddenLayerScanned": true,
+    "hostedOn": [],
+    "inferenceTasks": [
+      "chat-completion"
+    ],
+    "isDirectFromAzure": null,
+    "keywords": [
+      "Agents",
+      "Multilingual",
+      "Reasoning"
+    ],
+    "license": "MIT",
+    "minQuotaTier": null,
+    "modelCapabilities": [],
+    "modelLimits": {
+      "otherLimits": {},
+      "supportedInputModalities": [
+        "text"
+      ],
+      "supportedLanguages": [
+        "ar",
+        "cs",
+        "da",
+        "de",
+        "en",
+        "es",
+        "fi",
+        "fr",
+        "he",
+        "hu",
+        "it",
+        "ja",
+        "ko",
+        "nl",
+        "no",
+        "pl",
+        "pt",
+        "ru",
+        "sv",
+        "th",
+        "tr",
+        "uk",
+        "zh"
+      ],
+      "supportedOutputModalities": [
+        "text"
+      ],
+      "textLimits": {
+        "inputContextWindow": 128000,
+        "maxOutputTokens": 4096
+      }
+    },
+    "playgroundLimits": {
+      "rateLimitTier": "low"
+    },
+    "summary": "3.8B parameters Small Language Model outperforming larger models in reasoning, math, coding, and function-calling",
     "tradeRestricted": false,
     "variantInformation": null
   },
