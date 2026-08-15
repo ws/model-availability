@@ -118,3 +118,6 @@ us-east-1,anthropic.claude-opus-4-8,Claude Opus 4.8,Anthropic,2026-05-28,ACTIVE
 us-east-1,anthropic.claude-fable-5,Claude Fable 5,Anthropic,2026-06-09,ACTIVE
 us-east-1,anthropic.claude-sonnet-5,Claude Sonnet 5,Anthropic,2026-06-30,ACTIVE
 us-east-1,anthropic.claude-opus-5,Claude Opus 5,Anthropic,2026-07-23,ACTIVE
+us-east-1,openai.gpt-5.6-luna,GPT-5.6 Luna,OpenAI,2026-08-13,ACTIVE
+us-east-1,openai.gpt-5.6-sol,GPT-5.6 Sol,OpenAI,2026-08-13,ACTIVE
+us-east-1,openai.gpt-5.6-terra,GPT-5.6 Terra,OpenAI,2026-08-13,ACTIVE
