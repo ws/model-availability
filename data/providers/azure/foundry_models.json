@@ -13470,6 +13470,64 @@
     "tradeRestricted": true,
     "variantInformation": null
   },
+  "qwen3.6-35b-a3b": {
+    "name": "qwen3.6-35b-a3b",
+    "displayName": "Qwen3.6-35B",
+    "publisher": "Alibaba",
+    "registryName": "azureml-alibaba",
+    "version": "1",
+    "lifecycle": "Preview",
+    "deploymentOptions": [
+      "UnifiedEndpointMaaS"
+    ],
+    "allowedDeploymentTemplates": [],
+    "assetId": "azureml://registries/azureml-alibaba/models/qwen3.6-35b-a3b/versions/1",
+    "author": null,
+    "azureOffers": null,
+    "deploymentOptionDetails": {},
+    "deprecation": {
+      "inferenceRetirementDate": null
+    },
+    "fineTuningTasks": [
+      "chat-completion"
+    ],
+    "hiddenLayerScanned": null,
+    "hostedOn": [],
+    "inferenceTasks": [
+      "chat-completion"
+    ],
+    "isDirectFromAzure": true,
+    "keywords": [],
+    "license": "custom",
+    "minQuotaTier": null,
+    "modelCapabilities": [
+      "fine-tuning",
+      "streaming",
+      "tool-calling"
+    ],
+    "modelLimits": {
+      "otherLimits": {},
+      "supportedInputModalities": [
+        "text"
+      ],
+      "supportedLanguages": [
+        "en"
+      ],
+      "supportedOutputModalities": [
+        "text"
+      ],
+      "textLimits": {
+        "inputContextWindow": 262144,
+        "maxOutputTokens": null
+      }
+    },
+    "playgroundLimits": {
+      "rateLimitTier": null
+    },
+    "summary": "Qwen3.6-35B is a 35B-parameter, 3B-activated model designed for reasoning, coding, and agentic tasks.",
+    "tradeRestricted": true,
+    "variantInformation": null
+  },
   "sora-2": {
     "name": "sora-2",
     "displayName": "OpenAI Sora-2",

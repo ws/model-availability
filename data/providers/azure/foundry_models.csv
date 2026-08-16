@@ -196,6 +196,7 @@ o3-mini,OpenAI o3-mini,OpenAI,Deprecated
 o3-pro,o3-pro,OpenAI,Generally Available
 o4-mini,OpenAI o4-mini,OpenAI,Deprecated
 qwen3-32b,qwen3-32b,Alibaba,Generally Available
+qwen3.6-35b-a3b,Qwen3.6-35B,Alibaba,Preview
 sora-2,OpenAI Sora-2,OpenAI,Preview
 text-embedding-3-large,OpenAI Text Embedding 3 (large),OpenAI,Generally Available
 text-embedding-3-small,OpenAI Text Embedding 3 (small),OpenAI,Generally Available
