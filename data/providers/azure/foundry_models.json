@@ -1449,9 +1449,8 @@
     "publisher": "DeepSeek",
     "registryName": "azureml-deepseek",
     "version": "1",
-    "lifecycle": "Deprecated",
+    "lifecycle": "Retired",
     "deploymentOptions": [
-      "Serverless API",
       "ServerlessMaaS",
       "UnifiedEndpointMaaS"
     ],
@@ -1759,7 +1758,7 @@
     "publisher": "DeepSeek",
     "registryName": "azureml-deepseek",
     "version": "2026-04-23",
-    "lifecycle": "Preview",
+    "lifecycle": "Generally Available",
     "deploymentOptions": [
       "Serverless API",
       "ServerlessMaaS",
@@ -5245,7 +5244,7 @@
     ],
     "deploymentOptionDetails": {},
     "deprecation": {
-      "inferenceRetirementDate": null
+      "inferenceRetirementDate": "2026-09-15T00:00:00+00:00"
     },
     "fineTuningTasks": [],
     "hiddenLayerScanned": null,
@@ -10711,9 +10710,11 @@
     "publisher": "OpenAI",
     "registryName": "azure-openai",
     "version": "2026-08-06",
-    "lifecycle": null,
+    "lifecycle": "Preview",
     "deploymentOptions": [
       "AOAI",
+      "Instant",
+      "Serverless API",
       "UnifiedEndpointMaaS"
     ],
     "allowedDeploymentTemplates": [],
@@ -11103,6 +11104,7 @@
     "version": "11",
     "lifecycle": "Generally Available",
     "deploymentOptions": [
+      "Foundry Local on Azure Local",
       "MaaP",
       "Serverless API",
       "ServerlessMaaS",
@@ -11904,6 +11906,7 @@
     "version": "1",
     "lifecycle": "Generally Available",
     "deploymentOptions": [
+      "Instant",
       "Serverless API",
       "ServerlessMaaS",
       "UnifiedEndpointMaaS"
@@ -13419,6 +13422,7 @@
     "version": "1",
     "lifecycle": "Generally Available",
     "deploymentOptions": [
+      "Foundry Local on Azure Local",
       "Serverless API",
       "UnifiedEndpointMaaS"
     ],

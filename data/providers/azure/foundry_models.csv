@@ -25,12 +25,12 @@ Cohere-embed-v3-multilingual,Cohere Embed v3 Multilingual,Cohere,Generally Avail
 Cohere-rerank-v4.0-fast,Cohere Rerank v4.0 Fast,Cohere,Generally available
 Cohere-rerank-v4.0-pro,Cohere Rerank v4.0 Pro,Cohere,Generally Available
 CxrReportGen-Premium,CXRReportGen Premium,Microsoft,
-DeepSeek-R1,DeepSeek-R1,DeepSeek,Deprecated
+DeepSeek-R1,DeepSeek-R1,DeepSeek,Retired
 DeepSeek-R1-0528,DeepSeek-R1-0528,DeepSeek,Retired
 DeepSeek-V3.2,DeepSeek-V3.2,DeepSeek,Generally Available
 DeepSeek-V3.2-Speciale,DeepSeek-V3.2-Speciale,DeepSeek,Generally Available
 DeepSeek-V4-Flash,DeepSeek-V4-Flash,DeepSeek,Generally Available
-DeepSeek-V4-Pro,DeepSeek-V4-Pro,DeepSeek,Preview
+DeepSeek-V4-Pro,DeepSeek-V4-Pro,DeepSeek,Generally Available
 FLUX.2-flex,FLUX.2-flex,Black Forest Labs,Generally Available
 FLUX.2-pro,FLUX.2 [pro],Black Forest Labs,Generally Available
 FW-DeepSeek-V3.1,DeepSeek V3.1,Fireworks,Generally Available
@@ -160,7 +160,7 @@ gpt-5.6-terra,OpenAI gpt-5.6-terra,OpenAI,Generally Available
 gpt-audio,OpenAI gpt-audio,OpenAI,Generally Available
 gpt-audio-1.5,OpenAI gpt-audio,OpenAI,Generally Available
 gpt-audio-mini,OpenAI gpt-audio-mini,OpenAI,Generally Available
-gpt-chat-latest,OpenAI gpt-chat-latest (preview),OpenAI,
+gpt-chat-latest,OpenAI gpt-chat-latest (preview),OpenAI,Preview
 gpt-image-1-mini,GPT-image-1-mini,OpenAI,Generally Available
 gpt-image-1.5,GPT-image-1.5,OpenAI,Generally Available
 gpt-image-2,GPT-image-2,OpenAI,Generally Available
