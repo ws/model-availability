@@ -284,54 +284,6 @@
       ],
       "responseStreamingSupported": false
     },
-    "cohere.command-r-plus-v1:0": {
-      "modelName": "Command R+",
-      "providerName": "Cohere",
-      "modelId": "cohere.command-r-plus-v1:0",
-      "modelArn": "arn:aws:bedrock:us-east-1::foundation-model/cohere.command-r-plus-v1:0",
-      "modelLifecycle": {
-        "endOfLifeTime": "2026-08-19 08:00:00+00:00",
-        "legacyTime": "2026-02-19 08:00:00+00:00",
-        "publicExtendedAccessTime": "2026-05-19 08:00:00+00:00",
-        "startOfLifeTime": "2024-04-30 08:00:00+00:00",
-        "status": "LEGACY"
-      },
-      "customizationsSupported": [],
-      "inferenceTypesSupported": [
-        "ON_DEMAND"
-      ],
-      "inputModalities": [
-        "TEXT"
-      ],
-      "outputModalities": [
-        "TEXT"
-      ],
-      "responseStreamingSupported": true
-    },
-    "cohere.command-r-v1:0": {
-      "modelName": "Command R",
-      "providerName": "Cohere",
-      "modelId": "cohere.command-r-v1:0",
-      "modelArn": "arn:aws:bedrock:us-east-1::foundation-model/cohere.command-r-v1:0",
-      "modelLifecycle": {
-        "endOfLifeTime": "2026-08-19 08:00:00+00:00",
-        "legacyTime": "2026-02-19 08:00:00+00:00",
-        "publicExtendedAccessTime": "2026-05-19 08:00:00+00:00",
-        "startOfLifeTime": "2024-04-30 08:00:00+00:00",
-        "status": "LEGACY"
-      },
-      "customizationsSupported": [],
-      "inferenceTypesSupported": [
-        "ON_DEMAND"
-      ],
-      "inputModalities": [
-        "TEXT"
-      ],
-      "outputModalities": [
-        "TEXT"
-      ],
-      "responseStreamingSupported": true
-    },
     "mistral.mistral-small-2402-v1:0": {
       "modelName": "Mistral Small (24.02)",
       "providerName": "Mistral AI",
@@ -2697,6 +2649,28 @@
       "modelArn": "arn:aws:bedrock:us-east-1::foundation-model/openai.gpt-5.6-terra",
       "modelLifecycle": {
         "startOfLifeTime": "2026-08-13 17:00:00+00:00",
+        "status": "ACTIVE"
+      },
+      "customizationsSupported": [],
+      "inferenceTypesSupported": [
+        "INFERENCE_PROFILE"
+      ],
+      "inputModalities": [
+        "IMAGE",
+        "TEXT"
+      ],
+      "outputModalities": [
+        "TEXT"
+      ],
+      "responseStreamingSupported": true
+    },
+    "xai.grok-4.6": {
+      "modelName": "Grok 4.6",
+      "providerName": "xAI",
+      "modelId": "xai.grok-4.6",
+      "modelArn": "arn:aws:bedrock:us-east-1::foundation-model/xai.grok-4.6",
+      "modelLifecycle": {
+        "startOfLifeTime": "2026-08-19 17:00:00+00:00",
         "status": "ACTIVE"
       },
       "customizationsSupported": [],
