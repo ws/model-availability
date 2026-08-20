@@ -1388,13 +1388,14 @@
     "displayName": "CXRReportGen Premium",
     "publisher": "Microsoft",
     "registryName": "azureml-ai-frontiers-p",
-    "version": "2",
-    "lifecycle": null,
+    "version": "1",
+    "lifecycle": "Preview",
     "deploymentOptions": [
+      "Serverless API",
       "UnifiedEndpointMaaS"
     ],
     "allowedDeploymentTemplates": [],
-    "assetId": "azureml://registries/azureml-ai-frontiers-p/models/CxrReportGen-Premium/versions/2",
+    "assetId": "azureml://registries/azureml-ai-frontiers-p/models/CxrReportGen-Premium/versions/1",
     "author": null,
     "azureOffers": [
       "standard-paygo"
@@ -1749,6 +1750,69 @@
       "rateLimitTier": "high"
     },
     "summary": "DeepSeek V4 is an efficient MoE model family with 1M context and near state-of-the-art open-source reasoning performance.",
+    "tradeRestricted": true,
+    "variantInformation": null
+  },
+  "DeepSeek-V4-Flash-0731": {
+    "name": "DeepSeek-V4-Flash-0731",
+    "displayName": "DeepSeek-V4-Flash-0731",
+    "publisher": "DeepSeek",
+    "registryName": "azureml-deepseek",
+    "version": "2026-07-31",
+    "lifecycle": "Preview",
+    "deploymentOptions": [
+      "Serverless API",
+      "ServerlessMaaS",
+      "UnifiedEndpointMaaS"
+    ],
+    "allowedDeploymentTemplates": [],
+    "assetId": "azureml://registries/azureml-deepseek/models/DeepSeek-V4-Flash-0731/versions/2026-07-31",
+    "author": null,
+    "azureOffers": [
+      "standard-paygo"
+    ],
+    "deploymentOptionDetails": {},
+    "deprecation": {
+      "inferenceRetirementDate": null
+    },
+    "fineTuningTasks": [],
+    "hiddenLayerScanned": null,
+    "hostedOn": [],
+    "inferenceTasks": [
+      "chat-completion"
+    ],
+    "isDirectFromAzure": true,
+    "keywords": [
+      "Coding"
+    ],
+    "license": "custom",
+    "minQuotaTier": null,
+    "modelCapabilities": [
+      "agentsV2",
+      "streaming",
+      "tool-calling"
+    ],
+    "modelLimits": {
+      "otherLimits": {},
+      "supportedInputModalities": [
+        "text"
+      ],
+      "supportedLanguages": [
+        "en",
+        "zh"
+      ],
+      "supportedOutputModalities": [
+        "text"
+      ],
+      "textLimits": {
+        "inputContextWindow": 1000000,
+        "maxOutputTokens": 128000
+      }
+    },
+    "playgroundLimits": {
+      "rateLimitTier": "high"
+    },
+    "summary": "DeepSeek-V4-Flash-0731 is the official release of DeepSeek-V4-Flash, superseding the preview version, with substantially enhanced agentic capabilities.",
     "tradeRestricted": true,
     "variantInformation": null
   },
@@ -2124,6 +2188,70 @@
       "rateLimitTier": null
     },
     "summary": "DeepSeek V4 Flash is a 284B-parameter Mixture-of-Experts model with 13B activated parameters, supporting a 1M token context window with highly efficient long-context intelligence.",
+    "tradeRestricted": true,
+    "variantInformation": null
+  },
+  "FW-DeepSeek-V4-Flash-0731": {
+    "name": "FW-DeepSeek-V4-Flash-0731",
+    "displayName": "DeepSeek V4 Flash 0731",
+    "publisher": "Fireworks",
+    "registryName": "azureml-fireworks",
+    "version": "1",
+    "lifecycle": "Generally Available",
+    "deploymentOptions": [
+      "Serverless API",
+      "UnifiedEndpointMaaS"
+    ],
+    "allowedDeploymentTemplates": [],
+    "assetId": "azureml://registries/azureml-fireworks/models/FW-DeepSeek-V4-Flash-0731/versions/1",
+    "author": "Deepseek",
+    "azureOffers": [
+      "PTU",
+      "standard-paygo"
+    ],
+    "deploymentOptionDetails": {},
+    "deprecation": {
+      "inferenceRetirementDate": null
+    },
+    "fineTuningTasks": [],
+    "hiddenLayerScanned": null,
+    "hostedOn": [],
+    "inferenceTasks": [
+      "chat-completion"
+    ],
+    "isDirectFromAzure": null,
+    "keywords": [
+      "Agents",
+      "Coding"
+    ],
+    "license": "other",
+    "minQuotaTier": null,
+    "modelCapabilities": [
+      "agentsV2",
+      "reasoning",
+      "streaming",
+      "tool-calling"
+    ],
+    "modelLimits": {
+      "otherLimits": {},
+      "supportedInputModalities": [
+        "text"
+      ],
+      "supportedLanguages": [
+        "en"
+      ],
+      "supportedOutputModalities": [
+        "text"
+      ],
+      "textLimits": {
+        "inputContextWindow": 1048576,
+        "maxOutputTokens": null
+      }
+    },
+    "playgroundLimits": {
+      "rateLimitTier": null
+    },
+    "summary": "DeepSeek V4 Flash 0731 is the official 304B-parameter release of DeepSeek V4 Flash, with a 1M-token context window, DSpark speculative decoding, and substantially enhanced agentic capabilities.",
     "tradeRestricted": true,
     "variantInformation": null
   },
@@ -3620,6 +3748,76 @@
       "rateLimitTier": null
     },
     "summary": "Nemotron 3 Ultra NVFP4 is a frontier-scale Mixture-of-Experts language model from NVIDIA with approximately 550B total parameters and 55B active parameters, a hybrid Mamba-2 and LatentMoE architecture, configurable reasoning, function calling, and a 262,14",
+    "tradeRestricted": true,
+    "variantInformation": null
+  },
+  "FW-Nemotron-Lightning-3.5-30B-A3B": {
+    "name": "FW-Nemotron-Lightning-3.5-30B-A3B",
+    "displayName": "Nemotron Lightning 3.5 30B A3B",
+    "publisher": "Fireworks",
+    "registryName": "azureml-fireworks",
+    "version": "1",
+    "lifecycle": "Generally Available",
+    "deploymentOptions": [
+      "Serverless API",
+      "UnifiedEndpointMaaS"
+    ],
+    "allowedDeploymentTemplates": [],
+    "assetId": "azureml://registries/azureml-fireworks/models/FW-Nemotron-Lightning-3.5-30B-A3B/versions/1",
+    "author": "Nvidia",
+    "azureOffers": [
+      "PTU",
+      "standard-paygo"
+    ],
+    "deploymentOptionDetails": {},
+    "deprecation": {
+      "inferenceRetirementDate": null
+    },
+    "fineTuningTasks": [],
+    "hiddenLayerScanned": null,
+    "hostedOn": [],
+    "inferenceTasks": [
+      "chat-completion"
+    ],
+    "isDirectFromAzure": null,
+    "keywords": [
+      "Agents",
+      "Coding",
+      "Conversation"
+    ],
+    "license": "other",
+    "minQuotaTier": null,
+    "modelCapabilities": [
+      "agentsV2",
+      "reasoning",
+      "streaming",
+      "tool-calling"
+    ],
+    "modelLimits": {
+      "otherLimits": {},
+      "supportedInputModalities": [
+        "text"
+      ],
+      "supportedLanguages": [
+        "de",
+        "en",
+        "es",
+        "fr",
+        "it",
+        "ja"
+      ],
+      "supportedOutputModalities": [
+        "text"
+      ],
+      "textLimits": {
+        "inputContextWindow": 262144,
+        "maxOutputTokens": null
+      }
+    },
+    "playgroundLimits": {
+      "rateLimitTier": null
+    },
+    "summary": "Nemotron Lightning 3.5 30B A3B is a 30B-parameter Mixture-of-Experts language model from NVIDIA with 3B active parameters, a hybrid Mamba-Transformer architecture, configurable reasoning, Multi-Token Prediction, function calling, and a 262,144-token Firewo",
     "tradeRestricted": true,
     "variantInformation": null
   },
@@ -5497,13 +5695,14 @@
     "displayName": "MedImageInsight Premium",
     "publisher": "Microsoft",
     "registryName": "azureml-ai-frontiers-p",
-    "version": "2",
-    "lifecycle": null,
+    "version": "1",
+    "lifecycle": "Preview",
     "deploymentOptions": [
+      "Serverless API",
       "UnifiedEndpointMaaS"
     ],
     "allowedDeploymentTemplates": [],
-    "assetId": "azureml://registries/azureml-ai-frontiers-p/models/MedImageInsight-Premium/versions/2",
+    "assetId": "azureml://registries/azureml-ai-frontiers-p/models/MedImageInsight-Premium/versions/1",
     "author": null,
     "azureOffers": [
       "standard-paygo"
@@ -5807,15 +6006,13 @@
     "displayName": "Meta-Llama-3.1-8B-Instruct",
     "publisher": "Meta",
     "registryName": "azureml-meta",
-    "version": "6",
-    "lifecycle": null,
+    "version": "5",
+    "lifecycle": "Retired",
     "deploymentOptions": [
-      "MaaP",
-      "ServerlessMaaS",
-      "UnifiedEndpointMaaS"
+      "Serverless API"
     ],
     "allowedDeploymentTemplates": [],
-    "assetId": "azureml://registries/azureml-meta/models/Meta-Llama-3.1-8B-Instruct/versions/6",
+    "assetId": "azureml://registries/azureml-meta/models/Meta-Llama-3.1-8B-Instruct/versions/5",
     "author": null,
     "azureOffers": [
       "VM",
@@ -5823,7 +6020,7 @@
     ],
     "deploymentOptionDetails": {},
     "deprecation": {
-      "inferenceRetirementDate": "2026-06-13T00:00:00+00:00"
+      "inferenceRetirementDate": null
     },
     "fineTuningTasks": [
       "chat-completion"
@@ -6687,91 +6884,6 @@
       "rateLimitTier": "low"
     },
     "summary": "Phi-4 14B, a highly capable model for low latency scenarios.",
-    "tradeRestricted": false,
-    "variantInformation": null
-  },
-  "Phi-4-mini-instruct": {
-    "name": "Phi-4-mini-instruct",
-    "displayName": "Phi-4-mini-instruct",
-    "publisher": "Microsoft",
-    "registryName": "azureml",
-    "version": "1",
-    "lifecycle": null,
-    "deploymentOptions": [
-      "MaaP",
-      "ServerlessMaaS",
-      "UnifiedEndpointMaaS"
-    ],
-    "allowedDeploymentTemplates": [],
-    "assetId": "azureml://registries/azureml/models/Phi-4-mini-instruct/versions/1",
-    "author": null,
-    "azureOffers": [
-      "VM",
-      "standard-paygo"
-    ],
-    "deploymentOptionDetails": {},
-    "deprecation": {
-      "inferenceRetirementDate": null
-    },
-    "fineTuningTasks": [
-      "chat-completion"
-    ],
-    "hiddenLayerScanned": true,
-    "hostedOn": [],
-    "inferenceTasks": [
-      "chat-completion"
-    ],
-    "isDirectFromAzure": null,
-    "keywords": [
-      "Agents",
-      "Multilingual",
-      "Reasoning"
-    ],
-    "license": "MIT",
-    "minQuotaTier": null,
-    "modelCapabilities": [],
-    "modelLimits": {
-      "otherLimits": {},
-      "supportedInputModalities": [
-        "text"
-      ],
-      "supportedLanguages": [
-        "ar",
-        "cs",
-        "da",
-        "de",
-        "en",
-        "es",
-        "fi",
-        "fr",
-        "he",
-        "hu",
-        "it",
-        "ja",
-        "ko",
-        "nl",
-        "no",
-        "pl",
-        "pt",
-        "ru",
-        "sv",
-        "th",
-        "tr",
-        "uk",
-        "zh"
-      ],
-      "supportedOutputModalities": [
-        "text"
-      ],
-      "textLimits": {
-        "inputContextWindow": 128000,
-        "maxOutputTokens": 4096
-      }
-    },
-    "playgroundLimits": {
-      "rateLimitTier": "low"
-    },
-    "summary": "3.8B parameters Small Language Model outperforming larger models in reasoning, math, coding, and function-calling",
     "tradeRestricted": false,
     "variantInformation": null
   },
